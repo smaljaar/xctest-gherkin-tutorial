@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C7704731D511569005A6459 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7704721D511569005A6459 /* AppDelegate.swift */; };
+		1C7704751D511569005A6459 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7704741D511569005A6459 /* ViewController.swift */; };
+		1C77047A1D511569005A6459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C7704791D511569005A6459 /* Assets.xcassets */; };
+		1C77047D1D511569005A6459 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C77047B1D511569005A6459 /* LaunchScreen.storyboard */; };
+		1C7704881D511569005A6459 /* EspressoBankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7704871D511569005A6459 /* EspressoBankTests.swift */; };
+		1C7704931D511569005A6459 /* EspressoBankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7704921D511569005A6459 /* EspressoBankUITests.swift */; };
+		1CECD97B1D51175000CD2773 /* iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CECD97A1D51175000CD2773 /* iphone.storyboard */; };
+		1CECD97D1D511F2C00CD2773 /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CECD97C1D511F2C00CD2773 /* TransactionsTableViewController.swift */; };
+		1CECD97F1D51219300CD2773 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CECD97E1D51219300CD2773 /* TransactionCell.xib */; };
+		1CECD9811D5127E700CD2773 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CECD9801D5127E700CD2773 /* TransactionCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C7704841D511569005A6459 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C7704671D511569005A6459 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C77046E1D511569005A6459;
+			remoteInfo = EspressoBank;
+		};
+		1C77048F1D511569005A6459 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C7704671D511569005A6459 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C77046E1D511569005A6459;
+			remoteInfo = EspressoBank;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1C77046F1D511569005A6459 /* EspressoBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EspressoBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C7704721D511569005A6459 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1C7704741D511569005A6459 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1C7704791D511569005A6459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1C77047C1D511569005A6459 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1C77047E1D511569005A6459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C7704831D511569005A6459 /* EspressoBankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EspressoBankTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C7704871D511569005A6459 /* EspressoBankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspressoBankTests.swift; sourceTree = "<group>"; };
+		1C7704891D511569005A6459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C77048E1D511569005A6459 /* EspressoBankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EspressoBankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C7704921D511569005A6459 /* EspressoBankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspressoBankUITests.swift; sourceTree = "<group>"; };
+		1C7704941D511569005A6459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CECD97A1D51175000CD2773 /* iphone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iphone.storyboard; path = ../iphone.storyboard; sourceTree = "<group>"; };
+		1CECD97C1D511F2C00CD2773 /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
+		1CECD97E1D51219300CD2773 /* TransactionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
+		1CECD9801D5127E700CD2773 /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionCell.swift; path = ../TransactionCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C77046C1D511569005A6459 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C7704801D511569005A6459 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C77048B1D511569005A6459 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C7704661D511569005A6459 = {
+			isa = PBXGroup;
+			children = (
+				1C7704711D511569005A6459 /* EspressoBank */,
+				1C7704861D511569005A6459 /* EspressoBankTests */,
+				1C7704911D511569005A6459 /* EspressoBankUITests */,
+				1C7704701D511569005A6459 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1C7704701D511569005A6459 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C77046F1D511569005A6459 /* EspressoBank.app */,
+				1C7704831D511569005A6459 /* EspressoBankTests.xctest */,
+				1C77048E1D511569005A6459 /* EspressoBankUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C7704711D511569005A6459 /* EspressoBank */ = {
+			isa = PBXGroup;
+			children = (
+				1CECD97A1D51175000CD2773 /* iphone.storyboard */,
+				1C7704721D511569005A6459 /* AppDelegate.swift */,
+				1C7704741D511569005A6459 /* ViewController.swift */,
+				1C7704791D511569005A6459 /* Assets.xcassets */,
+				1C77047B1D511569005A6459 /* LaunchScreen.storyboard */,
+				1C77047E1D511569005A6459 /* Info.plist */,
+				1CECD9821D5127F400CD2773 /* Transactions */,
+			);
+			path = EspressoBank;
+			sourceTree = "<group>";
+		};
+		1C7704861D511569005A6459 /* EspressoBankTests */ = {
+			isa = PBXGroup;
+			children = (
+				1C7704871D511569005A6459 /* EspressoBankTests.swift */,
+				1C7704891D511569005A6459 /* Info.plist */,
+			);
+			path = EspressoBankTests;
+			sourceTree = "<group>";
+		};
+		1C7704911D511569005A6459 /* EspressoBankUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1C7704921D511569005A6459 /* EspressoBankUITests.swift */,
+				1C7704941D511569005A6459 /* Info.plist */,
+			);
+			path = EspressoBankUITests;
+			sourceTree = "<group>";
+		};
+		1CECD9821D5127F400CD2773 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				1CECD97C1D511F2C00CD2773 /* TransactionsTableViewController.swift */,
+				1CECD9801D5127E700CD2773 /* TransactionCell.swift */,
+				1CECD97E1D51219300CD2773 /* TransactionCell.xib */,
+			);
+			name = Transactions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C77046E1D511569005A6459 /* EspressoBank */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C7704971D511569005A6459 /* Build configuration list for PBXNativeTarget "EspressoBank" */;
+			buildPhases = (
+				1C77046B1D511569005A6459 /* Sources */,
+				1C77046C1D511569005A6459 /* Frameworks */,
+				1C77046D1D511569005A6459 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EspressoBank;
+			productName = EspressoBank;
+			productReference = 1C77046F1D511569005A6459 /* EspressoBank.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1C7704821D511569005A6459 /* EspressoBankTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C77049A1D511569005A6459 /* Build configuration list for PBXNativeTarget "EspressoBankTests" */;
+			buildPhases = (
+				1C77047F1D511569005A6459 /* Sources */,
+				1C7704801D511569005A6459 /* Frameworks */,
+				1C7704811D511569005A6459 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C7704851D511569005A6459 /* PBXTargetDependency */,
+			);
+			name = EspressoBankTests;
+			productName = EspressoBankTests;
+			productReference = 1C7704831D511569005A6459 /* EspressoBankTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1C77048D1D511569005A6459 /* EspressoBankUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C77049D1D511569005A6459 /* Build configuration list for PBXNativeTarget "EspressoBankUITests" */;
+			buildPhases = (
+				1C77048A1D511569005A6459 /* Sources */,
+				1C77048B1D511569005A6459 /* Frameworks */,
+				1C77048C1D511569005A6459 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C7704901D511569005A6459 /* PBXTargetDependency */,
+			);
+			name = EspressoBankUITests;
+			productName = EspressoBankUITests;
+			productReference = 1C77048E1D511569005A6459 /* EspressoBankUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1C7704671D511569005A6459 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Samuël Maljaars";
+				TargetAttributes = {
+					1C77046E1D511569005A6459 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ZQ6ZH4F869;
+					};
+					1C7704821D511569005A6459 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 1C77046E1D511569005A6459;
+					};
+					1C77048D1D511569005A6459 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 1C77046E1D511569005A6459;
+					};
+				};
+			};
+			buildConfigurationList = 1C77046A1D511569005A6459 /* Build configuration list for PBXProject "EspressoBank" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1C7704661D511569005A6459;
+			productRefGroup = 1C7704701D511569005A6459 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C77046E1D511569005A6459 /* EspressoBank */,
+				1C7704821D511569005A6459 /* EspressoBankTests */,
+				1C77048D1D511569005A6459 /* EspressoBankUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C77046D1D511569005A6459 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CECD97B1D51175000CD2773 /* iphone.storyboard in Resources */,
+				1C77047D1D511569005A6459 /* LaunchScreen.storyboard in Resources */,
+				1CECD97F1D51219300CD2773 /* TransactionCell.xib in Resources */,
+				1C77047A1D511569005A6459 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C7704811D511569005A6459 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C77048C1D511569005A6459 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C77046B1D511569005A6459 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C7704751D511569005A6459 /* ViewController.swift in Sources */,
+				1C7704731D511569005A6459 /* AppDelegate.swift in Sources */,
+				1CECD9811D5127E700CD2773 /* TransactionCell.swift in Sources */,
+				1CECD97D1D511F2C00CD2773 /* TransactionsTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C77047F1D511569005A6459 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C7704881D511569005A6459 /* EspressoBankTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C77048A1D511569005A6459 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C7704931D511569005A6459 /* EspressoBankUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C7704851D511569005A6459 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C77046E1D511569005A6459 /* EspressoBank */;
+			targetProxy = 1C7704841D511569005A6459 /* PBXContainerItemProxy */;
+		};
+		1C7704901D511569005A6459 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C77046E1D511569005A6459 /* EspressoBank */;
+			targetProxy = 1C77048F1D511569005A6459 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1C77047B1D511569005A6459 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C77047C1D511569005A6459 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1C7704951D511569005A6459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1C7704961D511569005A6459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1C7704981D511569005A6459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = EspressoBank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Capgemini.EspressoBank;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1C7704991D511569005A6459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = EspressoBank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Capgemini.EspressoBank;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		1C77049B1D511569005A6459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EspressoBankTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Capgemini.EspressoBankTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EspressoBank.app/EspressoBank";
+			};
+			name = Debug;
+		};
+		1C77049C1D511569005A6459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EspressoBankTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Capgemini.EspressoBankTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EspressoBank.app/EspressoBank";
+			};
+			name = Release;
+		};
+		1C77049E1D511569005A6459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EspressoBankUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Capgemini.EspressoBankUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EspressoBank;
+			};
+			name = Debug;
+		};
+		1C77049F1D511569005A6459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EspressoBankUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Capgemini.EspressoBankUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EspressoBank;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C77046A1D511569005A6459 /* Build configuration list for PBXProject "EspressoBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C7704951D511569005A6459 /* Debug */,
+				1C7704961D511569005A6459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C7704971D511569005A6459 /* Build configuration list for PBXNativeTarget "EspressoBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C7704981D511569005A6459 /* Debug */,
+				1C7704991D511569005A6459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C77049A1D511569005A6459 /* Build configuration list for PBXNativeTarget "EspressoBankTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C77049B1D511569005A6459 /* Debug */,
+				1C77049C1D511569005A6459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C77049D1D511569005A6459 /* Build configuration list for PBXNativeTarget "EspressoBankUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C77049E1D511569005A6459 /* Debug */,
+				1C77049F1D511569005A6459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1C7704671D511569005A6459 /* Project object */;
+}
