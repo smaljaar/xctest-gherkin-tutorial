@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yXC-Ib-RKj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yXC-Ib-RKj">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTW-PZ-MIh">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Ne4-k2-W1y"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="UQ5-CM-fLz"/>
@@ -30,7 +30,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Espresso Bank" id="4SH-Wm-iAm"/>
+                                    <navigationItem title="Transactions" prompt="Espresso Bank" id="4SH-Wm-iAm"/>
                                 </items>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -46,11 +46,14 @@
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-1"/>
                                 <state key="normal" title="Transfer"/>
+                                <connections>
+                                    <segue destination="q25-yj-eHu" kind="show" identifier="TransactionsToTransfer" id="HTb-tB-Uv3"/>
+                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QST-vw-BBh">
                                 <rect key="frame" x="0.0" y="120" width="600" height="360"/>
                                 <connections>
-                                    <segue destination="SKh-m4-W3M" kind="embed" id="1i8-Cs-kAp"/>
+                                    <segue destination="SKh-m4-W3M" kind="embed" id="6b2-oM-5v7"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -78,7 +81,7 @@
             <objects>
                 <tableViewController id="SKh-m4-W3M" customClass="TransactionsTableViewController" customModule="EspressoBank" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9ls-gE-sSW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="360"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -86,7 +89,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uah-G6-5eR" id="43t-un-P3G">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -99,7 +102,225 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9EE-35-z20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2673" y="-1178"/>
+            <point key="canvasLocation" x="-1869" y="-1061"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tHZ-j1-At2">
+            <objects>
+                <viewController id="q25-yj-eHu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fWA-to-8SQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="aHQ-9A-1qE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rbK-aS-j98">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAp-IT-xqz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="AZo-mT-Lge"/>
+                                    <constraint firstAttribute="height" constant="44" id="OUD-cc-1vM"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.066666666669999999" green="0.54117647059999996" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Transfer" prompt="Espresso Bank" id="g9O-Xm-0TB"/>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="OUD-cc-1vM"/>
+                                    </mask>
+                                </variation>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQc-2m-kEy">
+                                <rect key="frame" x="102" y="528" width="396" height="64"/>
+                                <color key="backgroundColor" red="0.1019607843" green="0.7843137255" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="J9u-YA-Lbd"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-1"/>
+                                <state key="normal" title="Send payment"/>
+                                <connections>
+                                    <segue destination="Y7e-LZ-1ab" kind="show" id="Fdl-Ig-fL4"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xFm-Xw-Fh8">
+                                <rect key="frame" x="163" y="285" width="96" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rhj-ZX-gNO">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IBAN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DPW-Gr-ld0">
+                                        <rect key="frame" x="0.0" y="30" width="96" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mrn-Ob-VbM">
+                                        <rect key="frame" x="0.0" y="60" width="96" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7a2-41-YEy">
+                                        <rect key="frame" x="0.0" y="90" width="96" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rhj-ZX-gNO" firstAttribute="centerY" secondItem="rbK-aS-j98" secondAttribute="centerY" id="0ch-PS-XQT"/>
+                            <constraint firstItem="SQc-2m-kEy" firstAttribute="width" secondItem="rbK-aS-j98" secondAttribute="width" multiplier="0.66" id="6ve-gD-ank"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rAp-IT-xqz" secondAttribute="trailing" constant="-20" id="73H-hd-YlE"/>
+                            <constraint firstItem="aHQ-9A-1qE" firstAttribute="top" secondItem="SQc-2m-kEy" secondAttribute="bottom" constant="8" symbolic="YES" id="8ll-l6-bh4"/>
+                            <constraint firstItem="rAp-IT-xqz" firstAttribute="leading" secondItem="rbK-aS-j98" secondAttribute="leadingMargin" constant="-20" id="Adz-yz-0NR"/>
+                            <constraint firstItem="SQc-2m-kEy" firstAttribute="centerX" secondItem="rbK-aS-j98" secondAttribute="centerX" id="Zjw-bn-s2i"/>
+                            <constraint firstItem="rhj-ZX-gNO" firstAttribute="centerX" secondItem="rbK-aS-j98" secondAttribute="centerX" id="fe7-gN-A7V"/>
+                            <constraint firstItem="rAp-IT-xqz" firstAttribute="top" secondItem="fWA-to-8SQ" secondAttribute="bottom" constant="-20" id="fyb-54-Cmi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eIV-V8-lQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2193" y="-1819"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Zx6-b6-99R">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Izd-Fd-505" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Y7e-LZ-1ab" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eNe-cf-fQM"/>
+                        <viewControllerLayoutGuide type="bottom" id="kvS-pR-hNw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BAZ-fp-Ax6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxM-cY-UkQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1s1-Fu-2lW"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="WNO-hV-BSY"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.066666666669999999" green="0.54117647059999996" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Confirmation" prompt="Espresso Bank" id="vhi-tE-Unf"/>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1s1-Fu-2lW"/>
+                                    </mask>
+                                </variation>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRF-id-Ia3">
+                                <rect key="frame" x="102" y="528" width="396" height="64"/>
+                                <color key="backgroundColor" red="0.1019607843" green="0.7843137255" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="hxT-zL-NB1"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-1"/>
+                                <state key="normal" title="Confirm Payment"/>
+                                <connections>
+                                    <segue destination="YMa-5M-uMu" kind="show" id="zIw-dI-pbc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QxM-cY-UkQ" firstAttribute="top" secondItem="eNe-cf-fQM" secondAttribute="bottom" constant="-20" id="0fN-os-7cU"/>
+                            <constraint firstItem="QxM-cY-UkQ" firstAttribute="leading" secondItem="BAZ-fp-Ax6" secondAttribute="leadingMargin" constant="-20" id="GON-Yu-mSd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QxM-cY-UkQ" secondAttribute="trailing" constant="-20" id="HUE-83-Ncb"/>
+                            <constraint firstItem="kvS-pR-hNw" firstAttribute="top" secondItem="FRF-id-Ia3" secondAttribute="bottom" constant="8" symbolic="YES" id="R3X-z0-vvY"/>
+                            <constraint firstItem="FRF-id-Ia3" firstAttribute="centerX" secondItem="BAZ-fp-Ax6" secondAttribute="centerX" id="acg-f4-xy1"/>
+                            <constraint firstItem="FRF-id-Ia3" firstAttribute="width" secondItem="BAZ-fp-Ax6" secondAttribute="width" multiplier="0.66" id="xk8-Yo-Ptt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1540" y="-1819"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mGs-Y8-iL7">
+            <objects>
+                <viewController id="YMa-5M-uMu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UKe-x7-SoF"/>
+                        <viewControllerLayoutGuide type="bottom" id="kX5-En-4Ix"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o7p-sg-GiB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Om8-Xe-APt">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="aXn-yx-rTt"/>
+                                    <constraint firstAttribute="height" constant="44" id="upx-vv-oaN"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.066666666669999999" green="0.54117647059999996" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Transactions" prompt="Espresso Bank" id="pCO-yw-ZHX"/>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="upx-vv-oaN"/>
+                                    </mask>
+                                </variation>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JD-xa-zyr">
+                                <rect key="frame" x="102" y="528" width="396" height="64"/>
+                                <color key="backgroundColor" red="0.1019607843" green="0.7843137255" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="KNY-GE-iB7"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-1"/>
+                                <state key="normal" title="Transfer"/>
+                                <connections>
+                                    <segue destination="q25-yj-eHu" kind="show" id="EMc-T7-YM5"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNl-jD-9QE">
+                                <rect key="frame" x="0.0" y="120" width="600" height="360"/>
+                                <connections>
+                                    <segue destination="SKh-m4-W3M" kind="embed" id="wgS-LL-2jN"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Om8-Xe-APt" firstAttribute="leading" secondItem="o7p-sg-GiB" secondAttribute="leadingMargin" constant="-20" id="0Vi-cA-VqF"/>
+                            <constraint firstItem="Om8-Xe-APt" firstAttribute="top" secondItem="UKe-x7-SoF" secondAttribute="bottom" constant="-20" id="5Hk-yC-7w7"/>
+                            <constraint firstItem="5JD-xa-zyr" firstAttribute="width" secondItem="o7p-sg-GiB" secondAttribute="width" multiplier="0.66" id="AGq-j3-v29"/>
+                            <constraint firstItem="NNl-jD-9QE" firstAttribute="height" secondItem="o7p-sg-GiB" secondAttribute="height" multiplier="0.6" id="Ks6-cs-owx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Om8-Xe-APt" secondAttribute="trailing" constant="-20" id="Pi1-aJ-GvB"/>
+                            <constraint firstItem="NNl-jD-9QE" firstAttribute="width" secondItem="o7p-sg-GiB" secondAttribute="width" id="aYB-U9-IaF"/>
+                            <constraint firstItem="NNl-jD-9QE" firstAttribute="centerX" secondItem="o7p-sg-GiB" secondAttribute="centerX" id="pOJ-Tg-yrJ"/>
+                            <constraint firstItem="NNl-jD-9QE" firstAttribute="centerY" secondItem="o7p-sg-GiB" secondAttribute="centerY" id="pdc-xx-XxL"/>
+                            <constraint firstItem="kX5-En-4Ix" firstAttribute="top" secondItem="5JD-xa-zyr" secondAttribute="bottom" constant="8" symbolic="YES" id="tV0-Tf-v44"/>
+                            <constraint firstItem="5JD-xa-zyr" firstAttribute="centerX" secondItem="o7p-sg-GiB" secondAttribute="centerX" id="wQe-Nd-70K"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F0b-rZ-h5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-877" y="-1819"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="wgS-LL-2jN"/>
+        <segue reference="EMc-T7-YM5"/>
+    </inferredMetricsTieBreakers>
 </document>

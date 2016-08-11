@@ -8,11 +8,23 @@
 
 import UIKit
 
-class TransactionsTableViewController: UITableViewController {
+struct TransactionCellModel {
+    let beneficiaryName: String
+    let iban: String
+    let amount: String
+}
+
+class TransactionsTableViewController: UIViewController {
+    
+    var transactions = [TransactionCellModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let dummyTrx = TransactionCellModel(beneficiaryName: "Samuël Maljaars", iban: "NL69 INGB 0123 4567 89", amount: "€ 100,00")
+        
+        transactions.append(dummyTrx)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -21,41 +33,6 @@ class TransactionsTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
-    }
-
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let reuse = "resuseId"
-        
-        tableView.registerNib(UINib(nibName: "TransactionCell", bundle: nil), forCellReuseIdentifier: reuse)
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuse, forIndexPath: indexPath) as! TransactionCell
-        
-
-        // Configure the cell...
-        
-        
-        cell.beneficiaryName.text = "Samuël Maljaars"
-        cell.iban.text = "NL69 INGB 0123 4567 89"
-        cell.amount.text = "€ 100,00"
-
-        return cell
-    }
-    
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 66.0
     }
 
     /*
@@ -68,4 +45,43 @@ class TransactionsTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension TransactionsTableViewController: UITableViewDataSource {
+    // MARK: - Table view data source
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return transactions.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let reuse = "resuseId"
+        
+        tableView.registerNib(UINib(nibName: "TransactionCell", bundle: nil), forCellReuseIdentifier: reuse)
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(reuse, forIndexPath: indexPath) as! TransactionCell
+        
+
+        // Configure the cell...
+        
+        
+        cell.beneficiaryName.text = transactions[indexPath.row].beneficiaryName
+        cell.iban.text = transactions[indexPath.row].iban
+        cell.amount.text = transactions[indexPath.row].amount
+        
+        return cell
+    }
+}
+
+extension TransactionsTableViewController: UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 66.0
+    }
 }
