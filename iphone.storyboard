@@ -81,7 +81,7 @@
             <objects>
                 <tableViewController id="SKh-m4-W3M" customClass="TransactionsTableViewController" customModule="EspressoBank" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9ls-gE-sSW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="360"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -89,7 +89,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uah-G6-5eR" id="43t-un-P3G">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -104,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="-1869" y="-1061"/>
         </scene>
-        <!--View Controller-->
+        <!--Send Payment View Controller-->
         <scene sceneID="tHZ-j1-At2">
             <objects>
-                <viewController id="q25-yj-eHu" sceneMemberID="viewController">
+                <viewController id="q25-yj-eHu" customClass="SendPaymentViewController" customModule="EspressoBank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fWA-to-8SQ"/>
                         <viewControllerLayoutGuide type="bottom" id="aHQ-9A-1qE"/>
@@ -144,57 +144,64 @@
                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-1"/>
                                 <state key="normal" title="Send payment"/>
                                 <connections>
-                                    <segue destination="Y7e-LZ-1ab" kind="show" id="Fdl-Ig-fL4"/>
+                                    <segue destination="Y7e-LZ-1ab" kind="show" identifier="&quot;sendPaymentSegue&quot;" id="Fdl-Ig-fL4"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xFm-Xw-Fh8">
-                                <rect key="frame" x="163" y="285" width="96" height="120"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="xFm-Xw-Fh8">
+                                <rect key="frame" x="150" y="189" width="300" height="222"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rhj-ZX-gNO">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rhj-ZX-gNO">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IBAN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DPW-Gr-ld0">
-                                        <rect key="frame" x="0.0" y="30" width="96" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IBAN" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DPW-Gr-ld0">
+                                        <rect key="frame" x="0.0" y="64" width="300" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mrn-Ob-VbM">
-                                        <rect key="frame" x="0.0" y="60" width="96" height="30"/>
+                                        <rect key="frame" x="0.0" y="128" width="300" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7a2-41-YEy">
-                                        <rect key="frame" x="0.0" y="90" width="96" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7a2-41-YEy">
+                                        <rect key="frame" x="0.0" y="192" width="300" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes"/>
                                     </textField>
                                 </subviews>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rhj-ZX-gNO" firstAttribute="centerY" secondItem="rbK-aS-j98" secondAttribute="centerY" id="0ch-PS-XQT"/>
+                            <constraint firstItem="xFm-Xw-Fh8" firstAttribute="width" secondItem="rbK-aS-j98" secondAttribute="width" multiplier="0.5" id="5TN-9O-vuK"/>
                             <constraint firstItem="SQc-2m-kEy" firstAttribute="width" secondItem="rbK-aS-j98" secondAttribute="width" multiplier="0.66" id="6ve-gD-ank"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rAp-IT-xqz" secondAttribute="trailing" constant="-20" id="73H-hd-YlE"/>
                             <constraint firstItem="aHQ-9A-1qE" firstAttribute="top" secondItem="SQc-2m-kEy" secondAttribute="bottom" constant="8" symbolic="YES" id="8ll-l6-bh4"/>
                             <constraint firstItem="rAp-IT-xqz" firstAttribute="leading" secondItem="rbK-aS-j98" secondAttribute="leadingMargin" constant="-20" id="Adz-yz-0NR"/>
                             <constraint firstItem="SQc-2m-kEy" firstAttribute="centerX" secondItem="rbK-aS-j98" secondAttribute="centerX" id="Zjw-bn-s2i"/>
-                            <constraint firstItem="rhj-ZX-gNO" firstAttribute="centerX" secondItem="rbK-aS-j98" secondAttribute="centerX" id="fe7-gN-A7V"/>
                             <constraint firstItem="rAp-IT-xqz" firstAttribute="top" secondItem="fWA-to-8SQ" secondAttribute="bottom" constant="-20" id="fyb-54-Cmi"/>
+                            <constraint firstItem="xFm-Xw-Fh8" firstAttribute="centerX" secondItem="rbK-aS-j98" secondAttribute="centerX" id="vhQ-Z2-Z2N"/>
+                            <constraint firstItem="xFm-Xw-Fh8" firstAttribute="centerY" secondItem="rbK-aS-j98" secondAttribute="centerY" id="zhF-nN-G9K"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amount" destination="Mrn-Ob-VbM" id="Wmh-CG-jt6"/>
+                        <outlet property="iban" destination="DPW-Gr-ld0" id="4ub-Dt-1JI"/>
+                        <outlet property="name" destination="rhj-ZX-gNO" id="z0H-Rb-QQD"/>
+                        <outlet property="paymentDescription" destination="7a2-41-YEy" id="786-c6-a65"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIV-V8-lQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2193" y="-1819"/>
         </scene>
-        <!--View Controller-->
+        <!--Confirmation View Controller-->
         <scene sceneID="Zx6-b6-99R">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Izd-Fd-505" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Y7e-LZ-1ab" sceneMemberID="viewController">
+                <viewController id="Y7e-LZ-1ab" customClass="ConfirmationViewController" customModule="EspressoBank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eNe-cf-fQM"/>
                         <viewControllerLayoutGuide type="bottom" id="kvS-pR-hNw"/>
@@ -234,18 +241,83 @@
                                     <segue destination="YMa-5M-uMu" kind="show" id="zIw-dI-pbc"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="3ui-PQ-ceB">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipient Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQ6-0k-zQr">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="39.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Samuel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJY-aL-EX4">
+                                        <rect key="frame" x="0.0" y="39.5" width="300" height="35.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apl-cV-ZAP">
+                                        <rect key="frame" x="0.0" y="75" width="300" height="39.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NL69 INGB 0123 4567 89" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFu-yp-5wQ">
+                                        <rect key="frame" x="0.0" y="114.5" width="300" height="35.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yI0-tM-ypQ">
+                                        <rect key="frame" x="0.0" y="150" width="300" height="39.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€ 100,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oqt-x2-J5i">
+                                        <rect key="frame" x="0.0" y="189.5" width="300" height="35.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocr-yV-Bvr">
+                                        <rect key="frame" x="0.0" y="225" width="300" height="39.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XCTest-Gherkin hellooooo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pss-n9-PQv">
+                                        <rect key="frame" x="0.0" y="264.5" width="300" height="35.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QxM-cY-UkQ" firstAttribute="top" secondItem="eNe-cf-fQM" secondAttribute="bottom" constant="-20" id="0fN-os-7cU"/>
+                            <constraint firstItem="3ui-PQ-ceB" firstAttribute="width" secondItem="BAZ-fp-Ax6" secondAttribute="width" multiplier="0.5" id="9st-eq-do3"/>
+                            <constraint firstItem="3ui-PQ-ceB" firstAttribute="centerY" secondItem="BAZ-fp-Ax6" secondAttribute="centerY" id="Eer-LL-h8j"/>
                             <constraint firstItem="QxM-cY-UkQ" firstAttribute="leading" secondItem="BAZ-fp-Ax6" secondAttribute="leadingMargin" constant="-20" id="GON-Yu-mSd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QxM-cY-UkQ" secondAttribute="trailing" constant="-20" id="HUE-83-Ncb"/>
                             <constraint firstItem="kvS-pR-hNw" firstAttribute="top" secondItem="FRF-id-Ia3" secondAttribute="bottom" constant="8" symbolic="YES" id="R3X-z0-vvY"/>
+                            <constraint firstItem="3ui-PQ-ceB" firstAttribute="centerX" secondItem="BAZ-fp-Ax6" secondAttribute="centerX" id="XLY-94-MaK"/>
                             <constraint firstItem="FRF-id-Ia3" firstAttribute="centerX" secondItem="BAZ-fp-Ax6" secondAttribute="centerX" id="acg-f4-xy1"/>
+                            <constraint firstItem="3ui-PQ-ceB" firstAttribute="height" secondItem="BAZ-fp-Ax6" secondAttribute="height" multiplier="0.5" id="frA-ZP-f8Z"/>
                             <constraint firstItem="FRF-id-Ia3" firstAttribute="width" secondItem="BAZ-fp-Ax6" secondAttribute="width" multiplier="0.66" id="xk8-Yo-Ptt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amount" destination="Oqt-x2-J5i" id="toG-cZ-Zcv"/>
+                        <outlet property="iban" destination="PFu-yp-5wQ" id="6EK-3Q-Jwh"/>
+                        <outlet property="name" destination="dJY-aL-EX4" id="Gju-or-vJt"/>
+                        <outlet property="paymentDescription" destination="Pss-n9-PQv" id="LNf-2l-yeh"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Izd-Fd-505" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1540" y="-1819"/>
         </scene>
@@ -320,7 +392,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="HTb-tB-Uv3"/>
         <segue reference="wgS-LL-2jN"/>
-        <segue reference="EMc-T7-YM5"/>
     </inferredMetricsTieBreakers>
 </document>
