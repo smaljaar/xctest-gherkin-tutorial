@@ -10,6 +10,8 @@ import UIKit
 
 class ConfirmationViewController: UIViewController {
 
+    let history = PaymentHistory.sharedInstance
+    
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var iban: UILabel!
     @IBOutlet weak var amount: UILabel!

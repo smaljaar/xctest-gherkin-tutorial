@@ -8,19 +8,6 @@
 
 import UIKit
 
-struct Payment {
-    var name: String
-    var iban: String
-    var amount: NSNumber
-    var paymentDescription: String
-}
-
-let history = PaymentHistory()
-
-class PaymentHistory {
-    var payments = [Payment]()
-}
-
 class SendPaymentViewController: UIViewController {
 
     var payment = Payment(name: "", iban: "", amount: 0.0, paymentDescription: "")
@@ -47,7 +34,7 @@ class SendPaymentViewController: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        history.payments.append(payment)
+        PaymentHistory.sharedInstance.payments.append(payment)
 
     }
 }

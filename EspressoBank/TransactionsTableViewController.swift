@@ -8,22 +8,13 @@
 
 import UIKit
 
-struct TransactionCellModel {
-    let beneficiaryName: String
-    let iban: String
-    let amount: String
-}
 
 class TransactionsTableViewController: UIViewController {
-    
-    var transactions = [TransactionCellModel]()
 
+    let transactions = PaymentHistory.sharedInstance.payments
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let dummyTrx = TransactionCellModel(beneficiaryName: "Samuël Maljaars", iban: "NL69 INGB 0123 4567 89", amount: "€ 100,00")
-        
-        transactions.append(dummyTrx)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -70,10 +61,9 @@ extension TransactionsTableViewController: UITableViewDataSource {
 
         // Configure the cell...
         
-        
-        cell.beneficiaryName.text = transactions[indexPath.row].beneficiaryName
+        cell.beneficiaryName.text = transactions[indexPath.row].name
         cell.iban.text = transactions[indexPath.row].iban
-        cell.amount.text = transactions[indexPath.row].amount
+        cell.amount.text = transactions[indexPath.row].amount.stringValue
         
         return cell
     }
