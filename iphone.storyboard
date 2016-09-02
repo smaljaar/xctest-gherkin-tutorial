@@ -3,14 +3,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--TransactionsMaster-->
         <scene sceneID="3XC-zT-bZ4">
             <objects>
-                <viewController id="yXC-Ib-RKj" sceneMemberID="viewController">
+                <viewController id="yXC-Ib-RKj" userLabel="TransactionsMaster" customClass="TransactionViewController" customModule="EspressoBank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y0g-vV-ME8"/>
                         <viewControllerLayoutGuide type="bottom" id="gqa-rw-lFo"/>
@@ -20,23 +21,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTW-PZ-MIh">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Ne4-k2-W1y"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="UQ5-CM-fLz"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="UQ5-CM-fLz"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.066666666666666666" green="0.54117647058823526" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Transactions" prompt="Espresso Bank" id="4SH-Wm-iAm"/>
+                                    <navigationItem title="Transactions" id="4SH-Wm-iAm"/>
                                 </items>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Ne4-k2-W1y"/>
-                                    </mask>
-                                </variation>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX5-Jp-bUO">
                                 <rect key="frame" x="102" y="528" width="396" height="64"/>
@@ -51,26 +46,82 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QST-vw-BBh">
-                                <rect key="frame" x="0.0" y="120" width="600" height="360"/>
+                                <rect key="frame" x="0.0" y="146" width="600" height="374"/>
                                 <connections>
                                     <segue destination="SKh-m4-W3M" kind="embed" id="6b2-oM-5v7"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jqa-tx-2K7" userLabel="AccountCell">
+                                <rect key="frame" x="12" y="63" width="576" height="75"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smaljaar" translatesAutoresizingMaskIntoConstraints="NO" id="bR2-AJ-xz2">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bR2-AJ-xz2" secondAttribute="height" multiplier="1:1" id="8e8-AZ-lCS"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NL69 INGB 0123 4567 89" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NC0-mt-TrE">
+                                        <rect key="frame" x="78" y="46" width="199" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€ 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jq-UZ-2Ny">
+                                        <rect key="frame" x="532" y="27" width="44" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Samuël Maljaars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhL-rV-zbM">
+                                        <rect key="frame" x="78" y="8" width="125" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5jq-UZ-2Ny" secondAttribute="trailing" id="4pY-UB-uQx"/>
+                                    <constraint firstItem="rhL-rV-zbM" firstAttribute="leading" secondItem="bR2-AJ-xz2" secondAttribute="trailing" constant="8" id="9rs-OQ-akL"/>
+                                    <constraint firstItem="bR2-AJ-xz2" firstAttribute="leading" secondItem="Jqa-tx-2K7" secondAttribute="leading" id="Tv9-Ck-VgM"/>
+                                    <constraint firstItem="rhL-rV-zbM" firstAttribute="top" secondItem="Jqa-tx-2K7" secondAttribute="top" constant="8" id="ZKT-tc-ECA"/>
+                                    <constraint firstAttribute="bottom" secondItem="bR2-AJ-xz2" secondAttribute="bottom" constant="5" id="b21-Qj-vwE"/>
+                                    <constraint firstAttribute="bottom" secondItem="NC0-mt-TrE" secondAttribute="bottom" constant="8" id="eFY-VQ-ZpD"/>
+                                    <constraint firstAttribute="height" constant="75" id="g5X-gV-Fc0"/>
+                                    <constraint firstItem="NC0-mt-TrE" firstAttribute="leading" secondItem="bR2-AJ-xz2" secondAttribute="trailing" constant="8" id="k44-CP-CCW"/>
+                                    <constraint firstItem="5jq-UZ-2Ny" firstAttribute="centerY" secondItem="Jqa-tx-2K7" secondAttribute="centerY" id="r2M-YW-GpG"/>
+                                    <constraint firstItem="bR2-AJ-xz2" firstAttribute="top" secondItem="Jqa-tx-2K7" secondAttribute="top" id="tsq-jo-CRc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dX5-Jp-bUO" firstAttribute="top" secondItem="QST-vw-BBh" secondAttribute="bottom" constant="8" symbolic="YES" id="67l-Vq-6Gl"/>
                             <constraint firstItem="CTW-PZ-MIh" firstAttribute="leading" secondItem="3PH-QP-ErF" secondAttribute="leadingMargin" constant="-20" id="HXN-8G-tp9"/>
                             <constraint firstItem="QST-vw-BBh" firstAttribute="centerX" secondItem="3PH-QP-ErF" secondAttribute="centerX" id="Lii-BE-bV5"/>
+                            <constraint firstItem="QST-vw-BBh" firstAttribute="top" secondItem="Jqa-tx-2K7" secondAttribute="bottom" constant="8" id="LqD-u7-PIu"/>
                             <constraint firstItem="CTW-PZ-MIh" firstAttribute="top" secondItem="Y0g-vV-ME8" secondAttribute="bottom" constant="-20" id="Pqs-xo-KCh"/>
                             <constraint firstItem="dX5-Jp-bUO" firstAttribute="centerX" secondItem="3PH-QP-ErF" secondAttribute="centerX" id="Z4T-EH-GJq"/>
-                            <constraint firstItem="QST-vw-BBh" firstAttribute="centerY" secondItem="3PH-QP-ErF" secondAttribute="centerY" id="cQk-63-hEl"/>
+                            <constraint firstItem="Jqa-tx-2K7" firstAttribute="top" secondItem="CTW-PZ-MIh" secondAttribute="bottom" constant="8" id="bof-T7-ptA"/>
+                            <constraint firstItem="QST-vw-BBh" firstAttribute="centerY" secondItem="3PH-QP-ErF" secondAttribute="centerY" multiplier="1.2" id="cQk-63-hEl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jqa-tx-2K7" secondAttribute="trailingMargin" id="gzZ-cc-9qA"/>
                             <constraint firstItem="QST-vw-BBh" firstAttribute="width" secondItem="3PH-QP-ErF" secondAttribute="width" id="iLp-cE-Urq"/>
                             <constraint firstItem="gqa-rw-lFo" firstAttribute="top" secondItem="dX5-Jp-bUO" secondAttribute="bottom" constant="8" symbolic="YES" id="jh6-Vx-gkv"/>
                             <constraint firstItem="dX5-Jp-bUO" firstAttribute="width" secondItem="3PH-QP-ErF" secondAttribute="width" multiplier="0.66" id="qwO-qv-kUm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CTW-PZ-MIh" secondAttribute="trailing" constant="-20" id="tDy-qb-x1v"/>
-                            <constraint firstItem="QST-vw-BBh" firstAttribute="height" secondItem="3PH-QP-ErF" secondAttribute="height" multiplier="0.6" id="zgQ-kn-vIk"/>
+                            <constraint firstItem="Jqa-tx-2K7" firstAttribute="leadingMargin" secondItem="3PH-QP-ErF" secondAttribute="leadingMargin" id="y4C-uu-3SN"/>
+                            <constraint firstItem="QST-vw-BBh" firstAttribute="height" secondItem="3PH-QP-ErF" secondAttribute="height" multiplier="0.5" id="zgQ-kn-vIk"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cQk-63-hEl"/>
+                                <exclude reference="zgQ-kn-vIk"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="accountBalance" destination="5jq-UZ-2Ny" id="u2k-TW-xBA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QkK-vl-u67" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,7 +132,7 @@
             <objects>
                 <tableViewController id="SKh-m4-W3M" customClass="TransactionsTableViewController" customModule="EspressoBank" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9ls-gE-sSW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="360"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="374"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -102,7 +153,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9EE-35-z20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1869" y="-1061"/>
+            <point key="canvasLocation" x="-2867" y="-1153"/>
         </scene>
         <!--Send Payment View Controller-->
         <scene sceneID="tHZ-j1-At2">
@@ -117,23 +168,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAp-IT-xqz">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="AZo-mT-Lge"/>
-                                    <constraint firstAttribute="height" constant="44" id="OUD-cc-1vM"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="AZo-mT-Lge"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.066666666669999999" green="0.54117647059999996" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Transfer" prompt="Espresso Bank" id="g9O-Xm-0TB"/>
+                                    <navigationItem title="Transfer" id="g9O-Xm-0TB"/>
                                 </items>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="OUD-cc-1vM"/>
-                                    </mask>
-                                </variation>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQc-2m-kEy">
                                 <rect key="frame" x="102" y="528" width="396" height="64"/>
@@ -196,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIV-V8-lQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2193" y="-1819"/>
+            <point key="canvasLocation" x="-1853" y="-1819"/>
         </scene>
         <!--Confirmation View Controller-->
         <scene sceneID="Zx6-b6-99R">
@@ -211,23 +256,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxM-cY-UkQ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="1s1-Fu-2lW"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="WNO-hV-BSY"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="WNO-hV-BSY"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.066666666669999999" green="0.54117647059999996" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Confirmation" prompt="Espresso Bank" id="vhi-tE-Unf"/>
+                                    <navigationItem title="Confirmation" id="vhi-tE-Unf"/>
                                 </items>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="1s1-Fu-2lW"/>
-                                    </mask>
-                                </variation>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRF-id-Ia3">
                                 <rect key="frame" x="102" y="528" width="396" height="64"/>
@@ -238,7 +277,8 @@
                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-1"/>
                                 <state key="normal" title="Confirm Payment"/>
                                 <connections>
-                                    <segue destination="YMa-5M-uMu" kind="show" id="zIw-dI-pbc"/>
+                                    <action selector="confirmPay:" destination="Y7e-LZ-1ab" eventType="touchUpInside" id="dG9-7W-rnz"/>
+                                    <segue destination="yXC-Ib-RKj" kind="show" id="VgG-xr-RYh"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="3ui-PQ-ceB">
@@ -319,80 +359,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Izd-Fd-505" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1540" y="-1819"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="mGs-Y8-iL7">
-            <objects>
-                <viewController id="YMa-5M-uMu" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UKe-x7-SoF"/>
-                        <viewControllerLayoutGuide type="bottom" id="kX5-En-4Ix"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="o7p-sg-GiB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Om8-Xe-APt">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="aXn-yx-rTt"/>
-                                    <constraint firstAttribute="height" constant="44" id="upx-vv-oaN"/>
-                                </constraints>
-                                <color key="barTintColor" red="0.066666666669999999" green="0.54117647059999996" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Transactions" prompt="Espresso Bank" id="pCO-yw-ZHX"/>
-                                </items>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="upx-vv-oaN"/>
-                                    </mask>
-                                </variation>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JD-xa-zyr">
-                                <rect key="frame" x="102" y="528" width="396" height="64"/>
-                                <color key="backgroundColor" red="0.1019607843" green="0.7843137255" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="KNY-GE-iB7"/>
-                                </constraints>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-1"/>
-                                <state key="normal" title="Transfer"/>
-                                <connections>
-                                    <segue destination="q25-yj-eHu" kind="show" id="EMc-T7-YM5"/>
-                                </connections>
-                            </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNl-jD-9QE">
-                                <rect key="frame" x="0.0" y="120" width="600" height="360"/>
-                                <connections>
-                                    <segue destination="SKh-m4-W3M" kind="embed" id="wgS-LL-2jN"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Om8-Xe-APt" firstAttribute="leading" secondItem="o7p-sg-GiB" secondAttribute="leadingMargin" constant="-20" id="0Vi-cA-VqF"/>
-                            <constraint firstItem="Om8-Xe-APt" firstAttribute="top" secondItem="UKe-x7-SoF" secondAttribute="bottom" constant="-20" id="5Hk-yC-7w7"/>
-                            <constraint firstItem="5JD-xa-zyr" firstAttribute="width" secondItem="o7p-sg-GiB" secondAttribute="width" multiplier="0.66" id="AGq-j3-v29"/>
-                            <constraint firstItem="NNl-jD-9QE" firstAttribute="height" secondItem="o7p-sg-GiB" secondAttribute="height" multiplier="0.6" id="Ks6-cs-owx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Om8-Xe-APt" secondAttribute="trailing" constant="-20" id="Pi1-aJ-GvB"/>
-                            <constraint firstItem="NNl-jD-9QE" firstAttribute="width" secondItem="o7p-sg-GiB" secondAttribute="width" id="aYB-U9-IaF"/>
-                            <constraint firstItem="NNl-jD-9QE" firstAttribute="centerX" secondItem="o7p-sg-GiB" secondAttribute="centerX" id="pOJ-Tg-yrJ"/>
-                            <constraint firstItem="NNl-jD-9QE" firstAttribute="centerY" secondItem="o7p-sg-GiB" secondAttribute="centerY" id="pdc-xx-XxL"/>
-                            <constraint firstItem="kX5-En-4Ix" firstAttribute="top" secondItem="5JD-xa-zyr" secondAttribute="bottom" constant="8" symbolic="YES" id="tV0-Tf-v44"/>
-                            <constraint firstItem="5JD-xa-zyr" firstAttribute="centerX" secondItem="o7p-sg-GiB" secondAttribute="centerX" id="wQe-Nd-70K"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F0b-rZ-h5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-877" y="-1819"/>
+            <point key="canvasLocation" x="-912" y="-1819"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="HTb-tB-Uv3"/>
-        <segue reference="wgS-LL-2jN"/>
-    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="smaljaar" width="200" height="200"/>
+    </resources>
 </document>

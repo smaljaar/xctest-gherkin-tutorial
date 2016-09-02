@@ -15,6 +15,7 @@
 		1C7C7D861D69F20C00E1A7E6 /* SendPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C7D851D69F20C00E1A7E6 /* SendPaymentViewController.swift */; };
 		1C7C7D881D69F43900E1A7E6 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C7D871D69F43900E1A7E6 /* ConfirmationViewController.swift */; };
 		1CB7023C1D78AB2F00E821A9 /* PaymentHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB7023B1D78AB2F00E821A9 /* PaymentHistory.swift */; };
+		1CB702401D79FDDF00E821A9 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB7023F1D79FDDF00E821A9 /* TransactionViewController.swift */; };
 		1CECD97B1D51175000CD2773 /* iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CECD97A1D51175000CD2773 /* iphone.storyboard */; };
 		1CECD97D1D511F2C00CD2773 /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CECD97C1D511F2C00CD2773 /* TransactionsTableViewController.swift */; };
 		1CECD97F1D51219300CD2773 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CECD97E1D51219300CD2773 /* TransactionCell.xib */; };
@@ -53,6 +54,7 @@
 		1C7C7D851D69F20C00E1A7E6 /* SendPaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendPaymentViewController.swift; sourceTree = "<group>"; };
 		1C7C7D871D69F43900E1A7E6 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		1CB7023B1D78AB2F00E821A9 /* PaymentHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentHistory.swift; sourceTree = "<group>"; };
+		1CB7023F1D79FDDF00E821A9 /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		1CECD97A1D51175000CD2773 /* iphone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iphone.storyboard; path = ../iphone.storyboard; sourceTree = "<group>"; };
 		1CECD97C1D511F2C00CD2773 /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
 		1CECD97E1D51219300CD2773 /* TransactionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
@@ -108,14 +110,12 @@
 			isa = PBXGroup;
 			children = (
 				1CECD97A1D51175000CD2773 /* iphone.storyboard */,
-				1C7704721D511569005A6459 /* AppDelegate.swift */,
-				1C7704791D511569005A6459 /* Assets.xcassets */,
-				1C77047B1D511569005A6459 /* LaunchScreen.storyboard */,
-				1C77047E1D511569005A6459 /* Info.plist */,
 				1CB7023B1D78AB2F00E821A9 /* PaymentHistory.swift */,
 				1CECD9821D5127F400CD2773 /* Transactions */,
 				1C7C7D851D69F20C00E1A7E6 /* SendPaymentViewController.swift */,
 				1C7C7D871D69F43900E1A7E6 /* ConfirmationViewController.swift */,
+				1C7704791D511569005A6459 /* Assets.xcassets */,
+				1CB702411D7A045500E821A9 /* App */,
 			);
 			path = EspressoBank;
 			sourceTree = "<group>";
@@ -138,9 +138,20 @@
 			path = EspressoBankUITests;
 			sourceTree = "<group>";
 		};
+		1CB702411D7A045500E821A9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1C7704721D511569005A6459 /* AppDelegate.swift */,
+				1C77047B1D511569005A6459 /* LaunchScreen.storyboard */,
+				1C77047E1D511569005A6459 /* Info.plist */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
 		1CECD9821D5127F400CD2773 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
+				1CB7023F1D79FDDF00E821A9 /* TransactionViewController.swift */,
 				1CECD97C1D511F2C00CD2773 /* TransactionsTableViewController.swift */,
 				1CECD9801D5127E700CD2773 /* TransactionCell.swift */,
 				1CECD97E1D51219300CD2773 /* TransactionCell.xib */,
@@ -282,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C7704731D511569005A6459 /* AppDelegate.swift in Sources */,
+				1CB702401D79FDDF00E821A9 /* TransactionViewController.swift in Sources */,
 				1CB7023C1D78AB2F00E821A9 /* PaymentHistory.swift in Sources */,
 				1C7C7D861D69F20C00E1A7E6 /* SendPaymentViewController.swift in Sources */,
 				1CECD9811D5127E700CD2773 /* TransactionCell.swift in Sources */,

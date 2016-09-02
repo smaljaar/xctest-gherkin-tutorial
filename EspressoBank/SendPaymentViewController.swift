@@ -10,7 +10,7 @@ import UIKit
 
 class SendPaymentViewController: UIViewController {
 
-    var payment = Payment(name: "", iban: "", amount: 0.0, paymentDescription: "")
+    var payment = Payment(name: "", iban: "", amount: 0, paymentDescription: "")
     
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var iban: UITextField!
@@ -24,18 +24,14 @@ class SendPaymentViewController: UIViewController {
         iban.delegate = self
         amount.delegate = self
         paymentDescription.delegate = self
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         PaymentHistory.sharedInstance.payments.append(payment)
-
     }
 }
 
@@ -58,7 +54,7 @@ extension SendPaymentViewController: UITextFieldDelegate {
             payment.iban = value
         case amount:
             if let myValue = Int(value){
-                payment.amount = NSNumber(integer: myValue)
+                payment.amount = myValue
                 
             }
         case paymentDescription:

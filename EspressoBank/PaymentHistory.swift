@@ -11,13 +11,18 @@ import Foundation
 struct Payment {
     var name: String
     var iban: String
-    var amount: NSNumber
+    var amount: Int
     var paymentDescription: String
 }
 
 
 class PaymentHistory {
     static let sharedInstance = PaymentHistory()
+    
+    private init(){}
+    
+    var currentBalance = 100
+    
 
     var payments = [Payment]()
 }

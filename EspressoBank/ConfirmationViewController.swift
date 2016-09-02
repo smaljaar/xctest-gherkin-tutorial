@@ -17,31 +17,20 @@ class ConfirmationViewController: UIViewController {
     @IBOutlet weak var amount: UILabel!
     @IBOutlet weak var paymentDescription: UILabel!
     
+    @IBAction func confirmPay(sender: AnyObject) {
+        history.currentBalance -= (history.payments.last?.amount)!
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
+    
         name.text = history.payments.last?.name
         iban.text = history.payments.last?.iban
         amount.text = history.payments.last?.amount.description
         paymentDescription.text = history.payments.last?.paymentDescription
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-
 }
