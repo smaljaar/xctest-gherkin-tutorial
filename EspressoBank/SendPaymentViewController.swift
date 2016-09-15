@@ -30,19 +30,19 @@ class SendPaymentViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         PaymentHistory.sharedInstance.payments.append(payment)
     }
 }
 
 extension SendPaymentViewController: UITextFieldDelegate {
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         guard let value = textField.text else {
             return
         }

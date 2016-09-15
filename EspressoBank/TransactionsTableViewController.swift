@@ -25,24 +25,24 @@ class TransactionsTableViewController: UIViewController {
 extension TransactionsTableViewController: UITableViewDataSource {
     // MARK: - Table view data source
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.transactions.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuse = "resuseId"
         
-        tableView.registerNib(UINib(nibName: "TransactionCell", bundle: nil), forCellReuseIdentifier: reuse)
+        tableView.register(UINib(nibName: "TransactionCell", bundle: nil), forCellReuseIdentifier: reuse)
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuse, forIndexPath: indexPath) as! TransactionCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuse, for: indexPath) as! TransactionCell
         
-        cell.beneficiaryName.text = transactions[indexPath.row].name
-        cell.iban.text = transactions[indexPath.row].iban
-        cell.amount.text = transactions[indexPath.row].amount.description
+        cell.beneficiaryName.text = transactions[(indexPath as NSIndexPath).row].name
+        cell.iban.text = transactions[(indexPath as NSIndexPath).row].iban
+        cell.amount.text = transactions[(indexPath as NSIndexPath).row].amount.description
         
         return cell
     }
@@ -50,7 +50,7 @@ extension TransactionsTableViewController: UITableViewDataSource {
 
 extension TransactionsTableViewController: UITableViewDelegate {
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 66.0
     }
 }

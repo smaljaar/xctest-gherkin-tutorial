@@ -17,7 +17,7 @@ class ConfirmationViewController: UIViewController {
     @IBOutlet weak var amount: UILabel!
     @IBOutlet weak var paymentDescription: UILabel!
     
-    @IBAction func confirmPay(sender: AnyObject) {
+    @IBAction func confirmPay(_ sender: AnyObject) {
         history.currentBalance -= (history.payments.last?.amount)!
     }
     

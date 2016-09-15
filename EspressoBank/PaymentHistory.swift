@@ -19,7 +19,7 @@ struct Payment {
 class PaymentHistory {
     static let sharedInstance = PaymentHistory()
     
-    private init(){}
+    fileprivate init(){}
     
     var currentBalance = 100
     
