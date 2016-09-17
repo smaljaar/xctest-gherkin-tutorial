@@ -117,6 +117,7 @@ open class NativeTestCase : XCTestCase {
         let selector = sel_registerName(scenario.selectorCString)
         let method = class_getInstanceMethod(self, #selector(featureScenarioTest))
         let success = class_addMethod(self, selector, method_getImplementation(method), method_getTypeEncoding(method))
+        XCTAssertTrue(success)
     }
     
 }
