@@ -53,7 +53,7 @@ extension SendPaymentViewController: UITextFieldDelegate {
         case iban:
             payment.iban = value
         case amount:
-            if let myValue = Int(value){
+            if let myValue = Double(value){
                 payment.amount = myValue
                 
             }

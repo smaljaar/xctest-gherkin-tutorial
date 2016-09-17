@@ -11,7 +11,7 @@ import Foundation
 struct Payment {
     var name: String
     var iban: String
-    var amount: Int
+    var amount: Double
     var paymentDescription: String
 }
 
@@ -21,7 +21,7 @@ class PaymentHistory {
     static let sharedInstance = PaymentHistory()
     fileprivate init(){}
     
-    var currentBalance = 100
+    var currentBalance = 100.0
     
     var payments = [Payment]()
 }
