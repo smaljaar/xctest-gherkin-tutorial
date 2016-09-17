@@ -17,12 +17,11 @@ struct Payment {
 
 
 class PaymentHistory {
+    //Singleton
     static let sharedInstance = PaymentHistory()
-    
     fileprivate init(){}
     
     var currentBalance = 100
     
-
     var payments = [Payment]()
 }

@@ -17,6 +17,8 @@ class TransactionViewController: UIViewController {
         
         let currentBalance = PaymentHistory.sharedInstance.currentBalance
         accountBalance.text = "€ \(currentBalance.description)"
+        
+        accountBalance.accessibilityIdentifier = "accountBalance"
     }
 
     override func didReceiveMemoryWarning() {

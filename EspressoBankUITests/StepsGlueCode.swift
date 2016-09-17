@@ -12,16 +12,29 @@ import XCTest
 class Steps : StepDefiner {
     
     override func defineSteps() {
-        step("I am on the dashboard") {XCTAssertTrue(true)}
-//        step("I tap on button "Transfer"") {XCTAssertTrue(true)}
-//        step("I see the screen "Transfer"") {XCTAssertTrue(true)}
-//        step("I enter "1.10" in the "amount" field") {XCTAssertTrue(true)}
-//        step("I enter "<name>" in the "beneficiary" field") {XCTAssertTrue(true)}
-//        step("I enter "<account number>" in the "accountnumber" field") {XCTAssertTrue(true)}
-//        step("I tap on button "Next"") {XCTAssertTrue(true)}
-//        step("I see the screen "Summary"") {XCTAssertTrue(true)}
-//        step("I tap on button "Transfer"") {XCTAssertTrue(true)}
-//        step("I see the screen "Espresso Bank"") {XCTAssertTrue(true)}
-//        step("my test has passed") {XCTAssertTrue(true)}
+        step("I am on the dashboard") {
+            XCUIApplication().launch()
+        }
+        
+        step("I tap on button (.*)") { (buttonAccId : String) in
+            XCUIApplication().buttons[buttonAccId].tap()
+        }
+        
+        step("I see the screen (.*)") {(screenName: String) in
+            print(screenName) 
+        }
+        
+        step("I enter (.*) in the (.*) field") { (matches : [String]) in
+            let textToEnter = matches[0]
+            let fieldAccId = matches[1]
+            
+            let field = XCUIApplication().descendants(matching: .any)[fieldAccId]
+            field.tap()
+            field.typeText(textToEnter + "\n")
+        }
+        
+        step("my test has passed") {
+            //done
+        }
     }
 }
