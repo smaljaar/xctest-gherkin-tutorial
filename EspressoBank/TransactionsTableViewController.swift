@@ -9,12 +9,13 @@
 import UIKit
 
 
-class TransactionsTableViewController: UIViewController {
+class TransactionsTableViewController: UITableViewController {
 
     let transactions = PaymentHistory.sharedInstance.payments
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.allowsSelection = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,18 +23,18 @@ class TransactionsTableViewController: UIViewController {
     }
 }
 
-extension TransactionsTableViewController: UITableViewDataSource {
+extension TransactionsTableViewController {
     // MARK: - Table view data source
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.transactions.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuse = "resuseId"
         
         tableView.register(UINib(nibName: "TransactionCell", bundle: nil), forCellReuseIdentifier: reuse)
@@ -48,9 +49,9 @@ extension TransactionsTableViewController: UITableViewDataSource {
     }
 }
 
-extension TransactionsTableViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+extension TransactionsTableViewController {
+    //MARK: UITableViewDelegate
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 66.0
     }
 }

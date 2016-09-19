@@ -131,7 +131,7 @@
             <objects>
                 <tableViewController id="SKh-m4-W3M" customClass="TransactionsTableViewController" customModule="EspressoBank" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9ls-gE-sSW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="432"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
@@ -142,7 +142,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9EE-35-z20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2867" y="-1153"/>
+            <point key="canvasLocation" x="-2586" y="-1081"/>
         </scene>
         <!--Transfer-->
         <scene sceneID="tHZ-j1-At2">
@@ -312,6 +312,6 @@
         <image name="smaljaar" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gwb-o4-irB"/>
+        <segue reference="VgG-xr-RYh"/>
     </inferredMetricsTieBreakers>
 </document>
