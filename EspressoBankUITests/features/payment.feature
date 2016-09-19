@@ -10,9 +10,9 @@ Feature: Payments
         And I enter <amount> in the amount field
         And I enter <name> in the beneficiary field
         And I enter <account number> in the accountnumber field
-        And I tap on button Next
+        And I tap on button Send payment
       And I see the screen Summary
-        And I tap on button Transfer
+        And I tap on button Confirm Payment
       And I see the screen Espresso Bank
     Then my test has passed
 

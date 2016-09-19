@@ -12,6 +12,7 @@ class ConfirmationViewController: UIViewController {
 
     let history = PaymentHistory.sharedInstance
     
+    @IBOutlet weak var confirmPayment: UIButton!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var iban: UILabel!
     @IBOutlet weak var amount: UILabel!
@@ -28,6 +29,7 @@ class ConfirmationViewController: UIViewController {
         iban.text = history.payments.last?.iban
         amount.text = history.payments.last?.amount.description
         paymentDescription.text = history.payments.last?.paymentDescription
+        confirmPayment.accessibilityIdentifier = confirmPayment.titleLabel?.text
     }
 
     override func didReceiveMemoryWarning() {

@@ -12,6 +12,8 @@ class TransactionViewController: UIViewController {
 
     @IBOutlet weak var accountBalance: UILabel!
     
+    @IBOutlet weak var transferButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,6 +21,9 @@ class TransactionViewController: UIViewController {
         accountBalance.text = "€ \(currentBalance.description)"
         
         accountBalance.accessibilityIdentifier = "accountBalance"
+        navigationItem.hidesBackButton = true
+        
+        transferButton.accessibilityIdentifier = transferButton.titleLabel?.text
     }
 
     override func didReceiveMemoryWarning() {

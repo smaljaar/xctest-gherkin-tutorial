@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yXC-Ib-RKj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iWd-YL-Aqo">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -9,6 +9,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="VTw-Hq-6yh">
+            <objects>
+                <navigationController id="iWd-YL-Aqo" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="4ln-SJ-XeU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.066666666666666666" green="0.52941176470588236" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yXC-Ib-RKj" kind="relationship" relationship="rootViewController" id="gwb-o4-irB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uNc-iM-a2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3713" y="-1819"/>
+        </scene>
         <!--TransactionsMaster-->
         <scene sceneID="3XC-zT-bZ4">
             <objects>
@@ -21,21 +40,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTW-PZ-MIh">
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="UQ5-CM-fLz"/>
-                                </constraints>
-                                <color key="barTintColor" red="0.066666666666666666" green="0.54117647058823526" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Transactions" id="4SH-Wm-iAm"/>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX5-Jp-bUO">
                                 <color key="backgroundColor" red="0.10196078431372549" green="0.78431372549019607" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration" identifier="Transfer"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="O9a-rY-mfk"/>
                                 </constraints>
@@ -91,18 +97,15 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dX5-Jp-bUO" firstAttribute="top" secondItem="QST-vw-BBh" secondAttribute="bottom" constant="8" symbolic="YES" id="67l-Vq-6Gl"/>
-                            <constraint firstItem="CTW-PZ-MIh" firstAttribute="leading" secondItem="3PH-QP-ErF" secondAttribute="leadingMargin" constant="-20" id="HXN-8G-tp9"/>
                             <constraint firstItem="QST-vw-BBh" firstAttribute="centerX" secondItem="3PH-QP-ErF" secondAttribute="centerX" id="Lii-BE-bV5"/>
+                            <constraint firstItem="Jqa-tx-2K7" firstAttribute="top" secondItem="Y0g-vV-ME8" secondAttribute="bottom" constant="8" id="Lj2-fT-h5F"/>
                             <constraint firstItem="QST-vw-BBh" firstAttribute="top" secondItem="Jqa-tx-2K7" secondAttribute="bottom" constant="8" id="LqD-u7-PIu"/>
-                            <constraint firstItem="CTW-PZ-MIh" firstAttribute="top" secondItem="Y0g-vV-ME8" secondAttribute="bottom" constant="-20" id="Pqs-xo-KCh"/>
                             <constraint firstItem="dX5-Jp-bUO" firstAttribute="centerX" secondItem="3PH-QP-ErF" secondAttribute="centerX" id="Z4T-EH-GJq"/>
-                            <constraint firstItem="Jqa-tx-2K7" firstAttribute="top" secondItem="CTW-PZ-MIh" secondAttribute="bottom" constant="8" id="bof-T7-ptA"/>
                             <constraint firstItem="QST-vw-BBh" firstAttribute="centerY" secondItem="3PH-QP-ErF" secondAttribute="centerY" multiplier="1.2" id="cQk-63-hEl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jqa-tx-2K7" secondAttribute="trailingMargin" id="gzZ-cc-9qA"/>
                             <constraint firstItem="QST-vw-BBh" firstAttribute="width" secondItem="3PH-QP-ErF" secondAttribute="width" id="iLp-cE-Urq"/>
                             <constraint firstItem="gqa-rw-lFo" firstAttribute="top" secondItem="dX5-Jp-bUO" secondAttribute="bottom" constant="8" symbolic="YES" id="jh6-Vx-gkv"/>
                             <constraint firstItem="dX5-Jp-bUO" firstAttribute="width" secondItem="3PH-QP-ErF" secondAttribute="width" multiplier="0.66" id="qwO-qv-kUm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CTW-PZ-MIh" secondAttribute="trailing" constant="-20" id="tDy-qb-x1v"/>
                             <constraint firstItem="Jqa-tx-2K7" firstAttribute="leadingMargin" secondItem="3PH-QP-ErF" secondAttribute="leadingMargin" id="y4C-uu-3SN"/>
                             <constraint firstItem="QST-vw-BBh" firstAttribute="height" secondItem="3PH-QP-ErF" secondAttribute="height" multiplier="0.5" id="zgQ-kn-vIk"/>
                         </constraints>
@@ -113,8 +116,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Transactions" id="tBo-yu-5XS"/>
                     <connections>
                         <outlet property="accountBalance" destination="5jq-UZ-2Ny" id="u2k-TW-xBA"/>
+                        <outlet property="transferButton" destination="dX5-Jp-bUO" id="SVW-zG-sN1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QkK-vl-u67" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -126,7 +131,7 @@
             <objects>
                 <tableViewController id="SKh-m4-W3M" customClass="TransactionsTableViewController" customModule="EspressoBank" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9ls-gE-sSW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="441"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="432"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
@@ -139,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="-2867" y="-1153"/>
         </scene>
-        <!--Send Payment View Controller-->
+        <!--Transfer-->
         <scene sceneID="tHZ-j1-At2">
             <objects>
-                <viewController id="q25-yj-eHu" customClass="SendPaymentViewController" customModule="EspressoBank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Transfer" id="q25-yj-eHu" customClass="SendPaymentViewController" customModule="EspressoBank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fWA-to-8SQ"/>
                         <viewControllerLayoutGuide type="bottom" id="aHQ-9A-1qE"/>
@@ -151,21 +156,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAp-IT-xqz">
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="AZo-mT-Lge"/>
-                                </constraints>
-                                <color key="barTintColor" red="0.066666666669999999" green="0.54117647059999996" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Transfer" id="g9O-Xm-0TB"/>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQc-2m-kEy">
                                 <color key="backgroundColor" red="0.1019607843" green="0.7843137255" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration" identifier="Next"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="J9u-YA-Lbd"/>
                                 </constraints>
@@ -204,11 +196,8 @@
                         <constraints>
                             <constraint firstItem="xFm-Xw-Fh8" firstAttribute="width" secondItem="rbK-aS-j98" secondAttribute="width" multiplier="0.5" id="5TN-9O-vuK"/>
                             <constraint firstItem="SQc-2m-kEy" firstAttribute="width" secondItem="rbK-aS-j98" secondAttribute="width" multiplier="0.66" id="6ve-gD-ank"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rAp-IT-xqz" secondAttribute="trailing" constant="-20" id="73H-hd-YlE"/>
                             <constraint firstItem="aHQ-9A-1qE" firstAttribute="top" secondItem="SQc-2m-kEy" secondAttribute="bottom" constant="8" symbolic="YES" id="8ll-l6-bh4"/>
-                            <constraint firstItem="rAp-IT-xqz" firstAttribute="leading" secondItem="rbK-aS-j98" secondAttribute="leadingMargin" constant="-20" id="Adz-yz-0NR"/>
                             <constraint firstItem="SQc-2m-kEy" firstAttribute="centerX" secondItem="rbK-aS-j98" secondAttribute="centerX" id="Zjw-bn-s2i"/>
-                            <constraint firstItem="rAp-IT-xqz" firstAttribute="top" secondItem="fWA-to-8SQ" secondAttribute="bottom" constant="-20" id="fyb-54-Cmi"/>
                             <constraint firstItem="xFm-Xw-Fh8" firstAttribute="centerX" secondItem="rbK-aS-j98" secondAttribute="centerX" id="vhQ-Z2-Z2N"/>
                             <constraint firstItem="xFm-Xw-Fh8" firstAttribute="centerY" secondItem="rbK-aS-j98" secondAttribute="centerY" id="zhF-nN-G9K"/>
                         </constraints>
@@ -218,16 +207,17 @@
                         <outlet property="iban" destination="DPW-Gr-ld0" id="4ub-Dt-1JI"/>
                         <outlet property="name" destination="rhj-ZX-gNO" id="z0H-Rb-QQD"/>
                         <outlet property="paymentDescription" destination="7a2-41-YEy" id="786-c6-a65"/>
+                        <outlet property="sendPayment" destination="SQc-2m-kEy" id="2Uc-EU-Xu8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIV-V8-lQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1853" y="-1819"/>
         </scene>
-        <!--Confirmation View Controller-->
+        <!--Confirmation-->
         <scene sceneID="Zx6-b6-99R">
             <objects>
-                <viewController id="Y7e-LZ-1ab" customClass="ConfirmationViewController" customModule="EspressoBank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Confirmation" id="Y7e-LZ-1ab" customClass="ConfirmationViewController" customModule="EspressoBank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eNe-cf-fQM"/>
                         <viewControllerLayoutGuide type="bottom" id="kvS-pR-hNw"/>
@@ -236,21 +226,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxM-cY-UkQ">
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="WNO-hV-BSY"/>
-                                </constraints>
-                                <color key="barTintColor" red="0.066666666669999999" green="0.54117647059999996" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Confirmation" id="vhi-tE-Unf"/>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRF-id-Ia3">
                                 <color key="backgroundColor" red="0.1019607843" green="0.7843137255" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration" identifier="Transfer"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="hxT-zL-NB1"/>
                                 </constraints>
@@ -309,11 +286,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="QxM-cY-UkQ" firstAttribute="top" secondItem="eNe-cf-fQM" secondAttribute="bottom" constant="-20" id="0fN-os-7cU"/>
                             <constraint firstItem="3ui-PQ-ceB" firstAttribute="width" secondItem="BAZ-fp-Ax6" secondAttribute="width" multiplier="0.5" id="9st-eq-do3"/>
                             <constraint firstItem="3ui-PQ-ceB" firstAttribute="centerY" secondItem="BAZ-fp-Ax6" secondAttribute="centerY" id="Eer-LL-h8j"/>
-                            <constraint firstItem="QxM-cY-UkQ" firstAttribute="leading" secondItem="BAZ-fp-Ax6" secondAttribute="leadingMargin" constant="-20" id="GON-Yu-mSd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QxM-cY-UkQ" secondAttribute="trailing" constant="-20" id="HUE-83-Ncb"/>
                             <constraint firstItem="kvS-pR-hNw" firstAttribute="top" secondItem="FRF-id-Ia3" secondAttribute="bottom" constant="8" symbolic="YES" id="R3X-z0-vvY"/>
                             <constraint firstItem="3ui-PQ-ceB" firstAttribute="centerX" secondItem="BAZ-fp-Ax6" secondAttribute="centerX" id="XLY-94-MaK"/>
                             <constraint firstItem="FRF-id-Ia3" firstAttribute="centerX" secondItem="BAZ-fp-Ax6" secondAttribute="centerX" id="acg-f4-xy1"/>
@@ -323,6 +297,7 @@
                     </view>
                     <connections>
                         <outlet property="amount" destination="Oqt-x2-J5i" id="toG-cZ-Zcv"/>
+                        <outlet property="confirmPayment" destination="FRF-id-Ia3" id="k8d-yg-6hQ"/>
                         <outlet property="iban" destination="PFu-yp-5wQ" id="6EK-3Q-Jwh"/>
                         <outlet property="name" destination="dJY-aL-EX4" id="Gju-or-vJt"/>
                         <outlet property="paymentDescription" destination="Pss-n9-PQv" id="LNf-2l-yeh"/>
@@ -336,4 +311,7 @@
     <resources>
         <image name="smaljaar" width="200" height="200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gwb-o4-irB"/>
+    </inferredMetricsTieBreakers>
 </document>

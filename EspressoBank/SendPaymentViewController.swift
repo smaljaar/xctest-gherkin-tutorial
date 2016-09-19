@@ -12,6 +12,7 @@ class SendPaymentViewController: UIViewController {
 
     var payment = Payment(name: "", iban: "", amount: 0, paymentDescription: "")
     
+    @IBOutlet weak var sendPayment: UIButton!
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var iban: UITextField!
     @IBOutlet weak var amount: UITextField!
@@ -24,6 +25,8 @@ class SendPaymentViewController: UIViewController {
         iban.delegate = self
         amount.delegate = self
         paymentDescription.delegate = self
+        
+        sendPayment.accessibilityIdentifier = sendPayment.titleLabel?.text
     }
 
     override func didReceiveMemoryWarning() {
