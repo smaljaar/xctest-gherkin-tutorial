@@ -43,7 +43,17 @@ extension TransactionsTableViewController {
         
         cell.beneficiaryName.text = transactions[(indexPath as NSIndexPath).row].name
         cell.iban.text = transactions[(indexPath as NSIndexPath).row].iban
-        cell.amount.text = transactions[(indexPath as NSIndexPath).row].amount.description
+        
+        let myAmount = transactions[(indexPath as NSIndexPath).row].amount
+        var prefix = ""
+        if myAmount > 0 {
+            prefix = "-"
+            cell.amount.textColor = UIColor.red
+        } else {
+            prefix = "+"
+            cell.amount.textColor = UIColor.green
+        }
+        cell.amount.text = "\(prefix) € \(myAmount.description)"
         
         return cell
     }
