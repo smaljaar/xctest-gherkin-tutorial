@@ -23,5 +23,8 @@ class PaymentHistory {
     
     var currentBalance = 100.0
     
-    var payments = [Payment]()
+    var payments = [
+        Payment(name: "Capgemini", iban: "NL99QWEB0987654321", amount: -350.0, paymentDescription: "Expenses Conference"),
+        Payment(name: "Starbucks", iban: "NL69INGB0123456789", amount: 5.50, paymentDescription: "Caramel Latte")
+    ]
 }

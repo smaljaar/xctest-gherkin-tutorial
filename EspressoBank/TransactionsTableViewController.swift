@@ -48,12 +48,11 @@ extension TransactionsTableViewController {
         var prefix = ""
         if myAmount > 0 {
             prefix = "-"
-            cell.amount.textColor = UIColor.red
         } else {
             prefix = "+"
-            cell.amount.textColor = UIColor.green
         }
-        cell.amount.text = "\(prefix) € \(myAmount.description)"
+        
+        cell.amount.text = "\(prefix) € \(abs(myAmount).description)"
         
         return cell
     }
