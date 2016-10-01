@@ -10,26 +10,22 @@ import UIKit
 
 class ConfirmationViewController: UIViewController {
 
-    let history = PaymentHistory.sharedInstance
+    let orchestrator = PaymentFlowOrchestrator.sharedInstance
     
-    @IBOutlet weak var confirmPayment: UIButton!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var iban: UILabel!
     @IBOutlet weak var amount: UILabel!
     @IBOutlet weak var paymentDescription: UILabel!
     
-    @IBAction func confirmPay(_ sender: AnyObject) {
-        history.currentBalance -= (history.payments.last?.amount)!
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        name.text = history.payments.last?.name
-        iban.text = history.payments.last?.iban
-        amount.text = history.payments.last?.amount.description
-        paymentDescription.text = history.payments.last?.paymentDescription
-        confirmPayment.accessibilityIdentifier = confirmPayment.titleLabel?.text
+        PaymentFlowOrchestrator.sharedInstance.state = .confirmation
+        
+        name.text = orchestrator.paymentToConfirm.last?.name
+        iban.text = orchestrator.paymentToConfirm.last?.iban
+        amount.text = orchestrator.paymentToConfirm.last?.amount.description
+        paymentDescription.text = orchestrator.paymentToConfirm.last?.paymentDescription
     }
 
     override func didReceiveMemoryWarning() {

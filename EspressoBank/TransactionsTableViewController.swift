@@ -15,7 +15,6 @@ class TransactionsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.allowsSelection = false
     }
 
     override func didReceiveMemoryWarning() {

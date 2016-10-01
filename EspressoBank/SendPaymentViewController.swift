@@ -9,10 +9,9 @@
 import UIKit
 
 class SendPaymentViewController: UIViewController {
-
-    var payment = Payment(name: "", iban: "", amount: 0, paymentDescription: "")
     
-    @IBOutlet weak var sendPayment: UIButton!
+    let orchestrator = PaymentFlowOrchestrator.sharedInstance
+    
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var iban: UITextField!
     @IBOutlet weak var amount: UITextField!
@@ -21,13 +20,13 @@ class SendPaymentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        PaymentFlowOrchestrator.sharedInstance.state = .payment
+        
         name.delegate = self
         iban.delegate = self
         amount.delegate = self
         paymentDescription.delegate = self
-        
-        sendPayment.accessibilityIdentifier = sendPayment.titleLabel?.text
-        
+                
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
 
@@ -36,8 +35,8 @@ class SendPaymentViewController: UIViewController {
     func keyboardWillShow(notification: NSNotification) {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= 0.5*keyboardSize.height
+            if view.frame.origin.y >= 0 {
+                self.view.frame.origin.y -= 0.3*keyboardSize.height
             }
         }
         
@@ -46,7 +45,7 @@ class SendPaymentViewController: UIViewController {
     func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y != 0 {
-                self.view.frame.origin.y += 0.5*keyboardSize.height
+                self.view.frame.origin.y += 0.3*keyboardSize.height
             }
         }
     }
@@ -60,9 +59,6 @@ class SendPaymentViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        PaymentHistory.sharedInstance.payments.append(payment)
-    }
 }
 
 extension SendPaymentViewController: UITextFieldDelegate {
@@ -73,25 +69,11 @@ extension SendPaymentViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let value = textField.text else {
+        guard let _ = textField.text, let amountText = amount.text else {
             return
         }
-        
-        switch textField {
-        case name:
-            payment.name = value
-        case iban:
-            payment.iban = value
-        case amount:
-            if let myValue = Double(value){
-                payment.amount = myValue
-                
-            }
-        case paymentDescription:
-            payment.paymentDescription = value
-        default:
-            break;
-        }
+   
+        let _ = orchestrator.validatePaymentParameters(name: name.text, iban: iban.text, amount: Double(amountText), paymentDescription: paymentDescription.text)
         
     }
     

@@ -36,6 +36,8 @@
 		1CECD97D1D511F2C00CD2773 /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CECD97C1D511F2C00CD2773 /* TransactionsTableViewController.swift */; };
 		1CECD97F1D51219300CD2773 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CECD97E1D51219300CD2773 /* TransactionCell.xib */; };
 		1CECD9811D5127E700CD2773 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CECD9801D5127E700CD2773 /* TransactionCell.swift */; };
+		1CEE53701D9EEF10007CCABE /* PaymentFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE536F1D9EEF10007CCABE /* PaymentFlowViewController.swift */; };
+		1CEE53721D9FF18D007CCABE /* PaymentFlowOrchestrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE53711D9FF18D007CCABE /* PaymentFlowOrchestrator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		1CECD97C1D511F2C00CD2773 /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
 		1CECD97E1D51219300CD2773 /* TransactionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
 		1CECD9801D5127E700CD2773 /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionCell.swift; path = ../TransactionCell.swift; sourceTree = "<group>"; };
+		1CEE536F1D9EEF10007CCABE /* PaymentFlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFlowViewController.swift; sourceTree = "<group>"; };
+		1CEE53711D9FF18D007CCABE /* PaymentFlowOrchestrator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFlowOrchestrator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +182,9 @@
 		1C7704711D511569005A6459 /* EspressoBank */ = {
 			isa = PBXGroup;
 			children = (
+				1CEE536F1D9EEF10007CCABE /* PaymentFlowViewController.swift */,
 				1CECD97A1D51175000CD2773 /* iphone.storyboard */,
+				1CEE53711D9FF18D007CCABE /* PaymentFlowOrchestrator.swift */,
 				1CB7023B1D78AB2F00E821A9 /* PaymentHistory.swift */,
 				1CECD9821D5127F400CD2773 /* Transactions */,
 				1C7C7D851D69F20C00E1A7E6 /* SendPaymentViewController.swift */,
@@ -369,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CEE53721D9FF18D007CCABE /* PaymentFlowOrchestrator.swift in Sources */,
 				1C7704731D511569005A6459 /* AppDelegate.swift in Sources */,
 				1CB702401D79FDDF00E821A9 /* TransactionViewController.swift in Sources */,
 				1CB7023C1D78AB2F00E821A9 /* PaymentHistory.swift in Sources */,
@@ -376,6 +383,7 @@
 				1CECD9811D5127E700CD2773 /* TransactionCell.swift in Sources */,
 				1CECD97D1D511F2C00CD2773 /* TransactionsTableViewController.swift in Sources */,
 				1C7C7D881D69F43900E1A7E6 /* ConfirmationViewController.swift in Sources */,
+				1CEE53701D9EEF10007CCABE /* PaymentFlowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

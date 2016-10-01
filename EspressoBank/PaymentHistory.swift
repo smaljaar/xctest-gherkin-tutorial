@@ -12,7 +12,7 @@ struct Payment {
     var name: String
     var iban: String
     var amount: Double
-    var paymentDescription: String
+    var paymentDescription: String?
 }
 
 
