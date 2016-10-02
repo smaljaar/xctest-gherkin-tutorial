@@ -54,7 +54,7 @@ class SendPaymentViewController: BaseViewController {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y >= 0 {
-                self.view.frame.origin.y -= 0.3*keyboardSize.height
+                self.view.frame.origin.y -= 0.2*keyboardSize.height
             }
         }
         
@@ -63,7 +63,7 @@ class SendPaymentViewController: BaseViewController {
     func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y != 0 {
-                self.view.frame.origin.y += 0.3*keyboardSize.height
+                self.view.frame.origin.y += 0.2*keyboardSize.height
             }
         }
     }

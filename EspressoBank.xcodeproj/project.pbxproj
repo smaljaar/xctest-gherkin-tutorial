@@ -39,6 +39,7 @@
 		1CEE53701D9EEF10007CCABE /* PaymentFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE536F1D9EEF10007CCABE /* PaymentFlowViewController.swift */; };
 		1CEE53721D9FF18D007CCABE /* PaymentFlowOrchestrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE53711D9FF18D007CCABE /* PaymentFlowOrchestrator.swift */; };
 		1CEE53741DA04F3D007CCABE /* PaymentFlowNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE53731DA04F3D007CCABE /* PaymentFlowNavigationController.swift */; };
+		1CEE53791DA110C5007CCABE /* PaymentFlowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE53781DA110C5007CCABE /* PaymentFlowButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		1CEE536F1D9EEF10007CCABE /* PaymentFlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFlowViewController.swift; sourceTree = "<group>"; };
 		1CEE53711D9FF18D007CCABE /* PaymentFlowOrchestrator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFlowOrchestrator.swift; sourceTree = "<group>"; };
 		1CEE53731DA04F3D007CCABE /* PaymentFlowNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFlowNavigationController.swift; sourceTree = "<group>"; };
+		1CEE53781DA110C5007CCABE /* PaymentFlowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFlowButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 				1CEE536F1D9EEF10007CCABE /* PaymentFlowViewController.swift */,
 				1CEE53711D9FF18D007CCABE /* PaymentFlowOrchestrator.swift */,
 				1CEE53731DA04F3D007CCABE /* PaymentFlowNavigationController.swift */,
+				1CEE53781DA110C5007CCABE /* PaymentFlowButton.swift */,
 			);
 			name = PaymentFlow;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				1CEE53741DA04F3D007CCABE /* PaymentFlowNavigationController.swift in Sources */,
 				1C7C7D861D69F20C00E1A7E6 /* SendPaymentViewController.swift in Sources */,
 				1CECD9811D5127E700CD2773 /* TransactionCell.swift in Sources */,
+				1CEE53791DA110C5007CCABE /* PaymentFlowButton.swift in Sources */,
 				1CECD97D1D511F2C00CD2773 /* TransactionsTableViewController.swift in Sources */,
 				1C7C7D881D69F43900E1A7E6 /* ConfirmationViewController.swift in Sources */,
 				1CEE53701D9EEF10007CCABE /* PaymentFlowViewController.swift in Sources */,

@@ -81,7 +81,6 @@ class PaymentFlowViewController: UIViewController, FlowDelegate {
         accountBalance.accessibilityIdentifier = "accountBalance"
         
         //Button
-        paymentFlowButton.setTitleColor(#colorLiteral(red: 0.2745098039, green: 0.3529411765, blue: 0.3921568627, alpha: 1), for: .normal)
         paymentFlowButton.setTitle(orchestrator.navigationButtonTitle(), for: .normal)
         paymentFlowButton.accessibilityIdentifier = paymentFlowButton.titleLabel?.text
         
