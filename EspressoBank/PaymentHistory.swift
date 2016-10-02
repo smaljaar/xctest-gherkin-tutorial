@@ -21,7 +21,13 @@ class PaymentHistory {
     static let sharedInstance = PaymentHistory()
     fileprivate init(){}
     
-    var currentBalance = 100.0
+    func currentBalance() -> Double {
+        var myBalance = startBalance
+        payments.forEach({myBalance -= $0.amount})
+        return myBalance
+    }
+    
+    let startBalance = 100.00
     
     var payments = [
         Payment(name: "Capgemini", iban: "NL99QWEB0987654321", amount: -350.0, paymentDescription: "Expenses Conference"),

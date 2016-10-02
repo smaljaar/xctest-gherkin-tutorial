@@ -8,16 +8,30 @@
 
 import UIKit
 
-class PaymentFlowViewController: UIViewController {
+//TODO Update balance
+//
+
+class BaseViewController: UIViewController {
+    var delegate: FlowDelegate!
+}
+
+
+class PaymentFlowViewController: UIViewController, FlowDelegate {
     let orchestrator = PaymentFlowOrchestrator.sharedInstance
     let history = PaymentHistory.sharedInstance
     
     @IBOutlet weak var accountBalance: UILabel!
     @IBOutlet weak var paymentFlowButton: UIButton!
     
+    func backButtonTapped() {
+        //todo
+        paymentFlowButton.setTitle(orchestrator.navigationButtonTitle(), for: .normal)
+
+    }
+    
     @IBAction func tapNext(_ sender: UIButton) {
         
-        var vcToShow: UIViewController!
+        var vcToShow: BaseViewController!
         
         switch orchestrator.state {
         case .payment:
@@ -29,7 +43,7 @@ class PaymentFlowViewController: UIViewController {
                 return
             } else {
                 orchestrator.state = .confirmation
-                vcToShow = storyboard!.instantiateViewController(withIdentifier: "confirmationVC")
+                vcToShow = storyboard!.instantiateViewController(withIdentifier: "confirmationVC") as! BaseViewController
             }
             
         case .confirmation:
@@ -41,16 +55,20 @@ class PaymentFlowViewController: UIViewController {
             history.payments.append(orchestrator.paymentToConfirm.last!)
             orchestrator.paymentToConfirm.removeAll()
             
-            vcToShow = storyboard!.instantiateViewController(withIdentifier: "transactionVC")
+            vcToShow = storyboard!.instantiateViewController(withIdentifier: "transactionVC") as! BaseViewController
+
+            accountBalance.text = "€ \(PaymentHistory.sharedInstance.currentBalance().description)"
+
             
         case .transactions:
             orchestrator.state = .payment
             
-            vcToShow = storyboard!.instantiateViewController(withIdentifier: "paymentVC")
+            vcToShow = storyboard!.instantiateViewController(withIdentifier: "paymentVC") as! BaseViewController
             
         }
-        
-        orchestrator.paymentNavigation.show(vcToShow, sender: nil)
+
+        vcToShow.delegate = self
+        orchestrator.paymentNavigation.show(vcToShow, sender: self)
         
         paymentFlowButton.setTitle(orchestrator.navigationButtonTitle(), for: .normal)
     }
@@ -59,9 +77,7 @@ class PaymentFlowViewController: UIViewController {
         super.viewDidLoad()
         
         //Balance
-        let currentBalance = PaymentHistory.sharedInstance.currentBalance
-        accountBalance.text = "€ \(currentBalance.description)"
-        
+        accountBalance.text = "€ \(PaymentHistory.sharedInstance.currentBalance().description)"
         accountBalance.accessibilityIdentifier = "accountBalance"
         
         //Button

@@ -8,8 +8,12 @@
 
 import UIKit
 
-class SendPaymentViewController: UIViewController {
-    
+protocol FlowDelegate {
+    func backButtonTapped()
+}
+
+class SendPaymentViewController: BaseViewController {
+        
     let orchestrator = PaymentFlowOrchestrator.sharedInstance
     
     @IBOutlet weak var name: UITextField!
@@ -19,9 +23,7 @@ class SendPaymentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        PaymentFlowOrchestrator.sharedInstance.state = .payment
-        
+                
         name.delegate = self
         iban.delegate = self
         amount.delegate = self
@@ -32,6 +34,22 @@ class SendPaymentViewController: UIViewController {
 
     }
 
+    override func willMove(toParentViewController parent: UIViewController?) {
+        if parent == nil {
+            print("send payment will move nil parent")
+            orchestrator.state = .transactions
+            delegate.backButtonTapped()
+        }
+    }
+    
+    override func didMove(toParentViewController parent: UIViewController?) {
+        if parent == nil {
+            print("send payment did move nil parent")
+            orchestrator.state = .transactions
+            delegate.backButtonTapped()
+        }
+    }
+    
     func keyboardWillShow(notification: NSNotification) {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {

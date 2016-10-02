@@ -79,10 +79,10 @@
                             <constraint firstItem="rQf-MB-lh3" firstAttribute="top" secondItem="eZJ-DS-61o" secondAttribute="bottom" constant="20" id="3WO-Kn-TL0"/>
                             <constraint firstItem="E0F-Bo-UFy" firstAttribute="width" secondItem="J0a-Iv-H52" secondAttribute="width" id="4el-Ka-wTF"/>
                             <constraint firstItem="kLS-Mh-pCH" firstAttribute="centerX" secondItem="E0F-Bo-UFy" secondAttribute="centerX" id="7oN-LB-Q2F"/>
-                            <constraint firstItem="kLS-Mh-pCH" firstAttribute="width" secondItem="E0F-Bo-UFy" secondAttribute="width" multiplier="0.9" id="IAV-g9-Kps"/>
+                            <constraint firstItem="kLS-Mh-pCH" firstAttribute="leading" secondItem="J0a-Iv-H52" secondAttribute="leading" constant="8" id="EHB-Im-Uf9"/>
                             <constraint firstItem="E0F-Bo-UFy" firstAttribute="height" secondItem="J0a-Iv-H52" secondAttribute="height" id="Iph-Fp-RD6"/>
-                            <constraint firstItem="E0F-Bo-UFy" firstAttribute="centerX" secondItem="J0a-Iv-H52" secondAttribute="centerX" id="N5j-uw-YMN"/>
                             <constraint firstItem="eZJ-DS-61o" firstAttribute="centerX" secondItem="E0F-Bo-UFy" secondAttribute="centerX" id="VJw-aM-Xrw"/>
+                            <constraint firstAttribute="trailing" secondItem="kLS-Mh-pCH" secondAttribute="trailing" constant="8" id="YXn-kS-oQV"/>
                             <constraint firstItem="E0F-Bo-UFy" firstAttribute="centerY" secondItem="J0a-Iv-H52" secondAttribute="centerY" id="cir-dX-cmm"/>
                             <constraint firstItem="kLS-Mh-pCH" firstAttribute="top" secondItem="J0a-Iv-H52" secondAttribute="top" constant="72" id="p6z-jS-GWe"/>
                             <constraint firstItem="eZJ-DS-61o" firstAttribute="width" secondItem="E0F-Bo-UFy" secondAttribute="width" multiplier="0.8" id="wAS-ZX-PP5"/>
@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="-4553" y="-1819"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Payment Flow Navigation Controller-->
         <scene sceneID="VTw-Hq-6yh">
             <objects>
-                <navigationController id="iWd-YL-Aqo" sceneMemberID="viewController">
+                <navigationController id="iWd-YL-Aqo" customClass="PaymentFlowNavigationController" customModule="EspressoBank" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="4ln-SJ-XeU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

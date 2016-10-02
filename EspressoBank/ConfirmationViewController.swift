@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConfirmationViewController: UIViewController {
+class ConfirmationViewController: BaseViewController {
 
     let orchestrator = PaymentFlowOrchestrator.sharedInstance
     
@@ -19,9 +19,7 @@ class ConfirmationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        PaymentFlowOrchestrator.sharedInstance.state = .confirmation
-        
+            
         name.text = orchestrator.paymentToConfirm.last?.name
         iban.text = orchestrator.paymentToConfirm.last?.iban
         amount.text = orchestrator.paymentToConfirm.last?.amount.description
@@ -30,5 +28,21 @@ class ConfirmationViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func willMove(toParentViewController parent: UIViewController?) {
+        if parent == nil {
+            print("confirmation vc will move nil parent")
+            orchestrator.state = .payment
+            delegate.backButtonTapped()
+        }
+    }
+    
+    override func didMove(toParentViewController parent: UIViewController?) {
+        if parent == nil {
+            print("confirmation vc did move nil parent")
+            orchestrator.state = .payment
+            delegate.backButtonTapped()
+        }
     }
 }

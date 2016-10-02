@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 class PaymentFlowOrchestrator {
-    
+        
     //Singleton
     static let sharedInstance = PaymentFlowOrchestrator()
     fileprivate init(){}
     
-    var paymentNavigation: UINavigationController!
+    var paymentNavigation: PaymentFlowNavigationController!
     
     var state = PaymentFlowState.transactions
     
