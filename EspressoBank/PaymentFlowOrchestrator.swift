@@ -30,10 +30,10 @@ class PaymentFlowOrchestrator {
             return "Transfer"
         case .payment:
             print(state.hashValue)
-            return "Send payment"
+            return "Send Payment"
         case .confirmation:
             print(state.hashValue)
-            return "Confirm"
+            return "Confirm Payment"
         }
     }
     
