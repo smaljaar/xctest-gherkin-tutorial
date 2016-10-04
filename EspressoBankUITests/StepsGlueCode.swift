@@ -11,6 +11,9 @@ import XCTest
 
 class Steps : StepDefiner {
     
+    //Exercise: add verification step
+    
+    
     override func defineSteps() {
         step("I am on the dashboard") {
             XCUIApplication().launch()
@@ -18,10 +21,6 @@ class Steps : StepDefiner {
         
         step("I tap on button (.*)") { (buttonAccId : String) in
             XCUIApplication().buttons[buttonAccId].tap()
-        }
-        
-        step("I see the screen (.*)") {(screenName: String) in
-            print(screenName) 
         }
         
         step("I enter (.*) in the (.*) field") { (matches : [String]) in

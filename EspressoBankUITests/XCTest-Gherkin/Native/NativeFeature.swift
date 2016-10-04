@@ -58,7 +58,12 @@ extension NativeFeature {
         // Filter comments (#) and tags (@), also filter white lines
         lines = lines.filter { $0.characters.first != "#" &&  $0.characters.first != "@" && $0.characters.count > 0}
 
-        guard lines.count > 0 else { return nil }
+        guard lines.count > 0 else {
+            
+            print("\n\nThe feature file is empty. Add Gherkin steps to the file payment.feature.\n\n")
+            
+            return nil
+        }
         
         // The feature description needs to be on the first line - we'll fail this method if it isn't!
         let (_,suffixOption) = lines.first!.componentsWithPrefix(FileTags.Feature)
