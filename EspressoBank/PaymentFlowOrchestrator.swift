@@ -37,23 +37,6 @@ class PaymentFlowOrchestrator {
         }
     }
     
-    var paymentToConfirm = [Payment]()
+    var paymentToConfirm: Payment?
     
-    func validatePaymentParameters(name: String?, iban: String?, amount: Double?, paymentDescription: String?) -> Bool {
-        
-        var payment: Payment!
-        
-        if let name = name, let iban = iban, let amount = amount {
-            if let paymentDescription = paymentDescription {
-                payment = Payment(name: name, iban: iban, amount: amount, paymentDescription: paymentDescription)
-            } else {
-                payment = Payment(name: name, iban: iban, amount: amount, paymentDescription: nil)
-            }
-        } else {
-            return false
-        }
-        
-        paymentToConfirm.append(payment)
-        return true
-    }
 }

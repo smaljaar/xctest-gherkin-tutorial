@@ -20,10 +20,10 @@ class ConfirmationViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
             
-        name.text = orchestrator.paymentToConfirm.last?.name
-        iban.text = orchestrator.paymentToConfirm.last?.iban
-        amount.text = orchestrator.paymentToConfirm.last?.amount.description
-        paymentDescription.text = orchestrator.paymentToConfirm.last?.paymentDescription
+        name.text = orchestrator.paymentToConfirm?.name
+        iban.text = orchestrator.paymentToConfirm?.iban
+        amount.text = orchestrator.paymentToConfirm?.amount.description
+        paymentDescription.text = orchestrator.paymentToConfirm?.paymentDescription
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,19 +8,26 @@
 
 import UIKit
 
-protocol FlowDelegate {
-    func backButtonTapped()
+protocol FlowPaymentDataDelegate {
+    func data() -> (name: String?, iban: String?, amount: String?, paymentDescription: String?)
 }
 
-class SendPaymentViewController: BaseViewController {
+class SendPaymentViewController: BaseViewController, FlowPaymentDataDelegate {
         
     let orchestrator = PaymentFlowOrchestrator.sharedInstance
+    
+    
+    func data() -> (name: String?, iban: String?, amount: String?, paymentDescription: String?) {
+        return (name: name.text, iban: iban.text, amount: amount.text, paymentDescription: paymentDescription.text)
+    }
     
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var iban: UITextField!
     @IBOutlet weak var amount: UITextField!
     @IBOutlet weak var paymentDescription: UITextField!
     
+    let numberToolbar: UIToolbar = UIToolbar()
+
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -32,6 +39,25 @@ class SendPaymentViewController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
 
+        numberToolbar.barStyle = UIBarStyle.default
+        numberToolbar.items = [
+            UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(cancelKeyboard)),
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
+            UIBarButtonItem(title: "Apply", style: UIBarButtonItemStyle.done, target: self, action: #selector(dismissKeyboard))
+        ]
+        
+        numberToolbar.sizeToFit()
+        
+        amount.inputAccessoryView = numberToolbar
+    }
+    
+    func dismissKeyboard () {
+        amount.resignFirstResponder()
+    }
+    
+    func cancelKeyboard () {
+        amount.text=""
+        amount.resignFirstResponder()
     }
 
     override func willMove(toParentViewController parent: UIViewController?) {
@@ -69,6 +95,7 @@ class SendPaymentViewController: BaseViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: self.view.window)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: self.view.window)
     }
@@ -77,6 +104,7 @@ class SendPaymentViewController: BaseViewController {
         super.didReceiveMemoryWarning()
     }
     
+    
 }
 
 extension SendPaymentViewController: UITextFieldDelegate {
@@ -84,15 +112,6 @@ extension SendPaymentViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let _ = textField.text, let amountText = amount.text else {
-            return
-        }
-   
-        let _ = orchestrator.validatePaymentParameters(name: name.text, iban: iban.text, amount: Double(amountText), paymentDescription: paymentDescription.text)
-        
     }
     
 }
