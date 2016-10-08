@@ -8,43 +8,22 @@
 
 import UIKit
 
-//TODO Update balance
-//
 
 class BaseViewController: UIViewController {
-    var delegate: FlowDelegate!
+    weak var delegate: FlowDelegate!
 }
 
-protocol FlowDelegate {
+protocol FlowDelegate: class {
     func backButtonTapped()
-    func validatePaymentData(name: String?, iban: String?, amount: String?, paymentDescription: String?)
 }
 
 extension PaymentFlowViewController: FlowDelegate {
-    
-    
+
     func backButtonTapped() {
-        
         paymentFlowButton.setTitle(orchestrator.navigationButtonTitle(), for: .normal)
         PaymentFlowOrchestrator.sharedInstance.paymentToConfirm = nil
-
-    }
-    
-    func validatePaymentData(name: String?, iban: String?, amount: String?, paymentDescription: String?){
-    
-        var payment: Payment!
-        
-        if let name = name, let iban = iban, let amount = amount, let amountDouble = Double(amount), name != "" && iban != "" {
-            if let paymentDescription = paymentDescription {
-                payment = Payment(name: name, iban: iban, amount: amountDouble, paymentDescription: paymentDescription)
-            } else {
-                payment = Payment(name: name, iban: iban, amount: amountDouble, paymentDescription: nil)
-            }
-            PaymentFlowOrchestrator.sharedInstance.paymentToConfirm = payment
-        }
     }
 }
-
 
 class PaymentFlowViewController: UIViewController {
     let orchestrator = PaymentFlowOrchestrator.sharedInstance
@@ -53,7 +32,7 @@ class PaymentFlowViewController: UIViewController {
     @IBOutlet weak var accountBalance: UILabel!
     @IBOutlet weak var paymentFlowButton: UIButton!
 
-    var flowDataDelegate: FlowPaymentDataDelegate!
+    weak var flowDataDelegate: FlowPaymentDataDelegate!
 
     @IBAction func tapNext(_ sender: UIButton) {
         
@@ -62,9 +41,7 @@ class PaymentFlowViewController: UIViewController {
         switch orchestrator.state {
         case .payment:
             
-            let data = flowDataDelegate.data()
-            
-            validatePaymentData(name: data.name, iban: data.iban, amount: data.amount, paymentDescription: data.paymentDescription)
+            flowDataDelegate.validatePaymentData()
             
             if orchestrator.paymentToConfirm == nil {
                 let alert = UIAlertController(title: "Payment not valid", message: "Check what ya entered yo", preferredStyle: .alert)

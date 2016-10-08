@@ -9,6 +9,7 @@
 import UIKit
 
 class TransactionsTableViewController: UITableViewController {
+    
     let orchestrator = PaymentFlowOrchestrator.sharedInstance
     let transactions = PaymentHistory.sharedInstance.payments
     
@@ -107,13 +108,5 @@ extension TransactionsTableViewController {
     //MARK: UITableViewDelegate
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 66.0
-    }
-    
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return nil
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0.0
     }
 }

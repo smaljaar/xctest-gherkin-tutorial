@@ -18,7 +18,6 @@ Scenario: As a user I want to tap on field in send payment screen
 
 
 
-
 # (2) add a scenario to the payment feature by only writing Gherkin.
 # now tap a transaction and then complete the payment
 # Start by un-commenting the next line and then add Given-When-Then lines.

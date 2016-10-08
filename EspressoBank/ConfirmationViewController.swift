@@ -10,7 +10,7 @@ import UIKit
 
 class ConfirmationViewController: BaseViewController {
 
-    let orchestrator = PaymentFlowOrchestrator.sharedInstance
+    weak var orchestrator = PaymentFlowOrchestrator.sharedInstance
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var iban: UILabel!
@@ -20,10 +20,10 @@ class ConfirmationViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
             
-        name.text = orchestrator.paymentToConfirm?.name
-        iban.text = orchestrator.paymentToConfirm?.iban
-        amount.text = orchestrator.paymentToConfirm?.amount.description
-        paymentDescription.text = orchestrator.paymentToConfirm?.paymentDescription
+        name.text = orchestrator?.paymentToConfirm?.name
+        iban.text = orchestrator?.paymentToConfirm?.iban
+        amount.text = orchestrator?.paymentToConfirm?.amount.description
+        paymentDescription.text = orchestrator?.paymentToConfirm?.paymentDescription
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +33,7 @@ class ConfirmationViewController: BaseViewController {
     override func willMove(toParentViewController parent: UIViewController?) {
         if parent == nil {
             print("confirmation vc will move nil parent")
-            orchestrator.state = .payment
+            orchestrator?.state = .payment
             delegate.backButtonTapped()
         }
     }
@@ -41,7 +41,7 @@ class ConfirmationViewController: BaseViewController {
     override func didMove(toParentViewController parent: UIViewController?) {
         if parent == nil {
             print("confirmation vc did move nil parent")
-            orchestrator.state = .payment
+            orchestrator?.state = .payment
             delegate.backButtonTapped()
         }
     }

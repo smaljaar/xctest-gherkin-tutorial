@@ -17,10 +17,7 @@ class Steps : StepDefiner {
         }
         
         step("I tap on the (.*) button on alert with title (.*)") { (matches: [String]) in
-            
             XCUIApplication().alerts[matches[1]].buttons[matches[0]].tap()
-            
-            
         }
         
         step("I tap on element (.*) with value (.*)") { (matches: [String]) in
@@ -40,11 +37,7 @@ class Steps : StepDefiner {
             field.tap()
             field.typeText(textToEnter + "\n")
         }
-        
-        step("my test has passed") {
-            //done
-        }
-        
+
         step("I see the element (.*)") { (match : String) in
             let element = XCUIApplication().descendants(matching: .any)[match]
             XCTAssertTrue(element.exists)

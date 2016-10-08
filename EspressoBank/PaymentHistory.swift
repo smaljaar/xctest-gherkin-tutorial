@@ -23,7 +23,7 @@ class PaymentHistory {
     
     func currentBalance() -> Double {
         var myBalance = startBalance
-        payments.forEach({myBalance -= $0.amount})
+        payments.forEach { myBalance -= $0.amount }
         return myBalance
     }
     

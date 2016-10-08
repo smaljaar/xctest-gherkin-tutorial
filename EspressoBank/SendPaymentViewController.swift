@@ -8,17 +8,26 @@
 
 import UIKit
 
-protocol FlowPaymentDataDelegate {
-    func data() -> (name: String?, iban: String?, amount: String?, paymentDescription: String?)
+protocol FlowPaymentDataDelegate: class {
+    func validatePaymentData()
 }
 
 class SendPaymentViewController: BaseViewController, FlowPaymentDataDelegate {
         
     let orchestrator = PaymentFlowOrchestrator.sharedInstance
     
-    
-    func data() -> (name: String?, iban: String?, amount: String?, paymentDescription: String?) {
-        return (name: name.text, iban: iban.text, amount: amount.text, paymentDescription: paymentDescription.text)
+    func validatePaymentData(){
+        
+        var payment: Payment!
+        
+        if let name = name.text, let iban = iban.text, let amount = amount.text, let amountDouble = Double(amount), name != "" && iban != "" {
+            if let paymentDescription = paymentDescription.text {
+                payment = Payment(name: name, iban: iban, amount: amountDouble, paymentDescription: paymentDescription)
+            } else {
+                payment = Payment(name: name, iban: iban, amount: amountDouble, paymentDescription: nil)
+            }
+            PaymentFlowOrchestrator.sharedInstance.paymentToConfirm = payment
+        }
     }
     
     @IBOutlet weak var name: UITextField!

@@ -32,6 +32,9 @@
                                 </constraints>
                                 <color key="tintColor" red="0.27450980390000002" green="0.35294117650000001" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-1"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
                                 <connections>
                                     <action selector="tapNext:" destination="CSt-Wi-Hmi" eventType="touchUpInside" id="6nL-DE-bEI"/>
                                 </connections>
@@ -95,12 +98,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="znG-P2-YQO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4553" y="-1819"/>
+            <point key="canvasLocation" x="-3727" y="-1819"/>
         </scene>
-        <!--Payment Flow Navigation Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="VTw-Hq-6yh">
             <objects>
-                <navigationController id="iWd-YL-Aqo" customClass="PaymentFlowNavigationController" customModule="EspressoBank" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="iWd-YL-Aqo" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="4ln-SJ-XeU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -114,7 +117,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNc-iM-a2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3713" y="-1819"/>
+            <point key="canvasLocation" x="-3727" y="-1043"/>
         </scene>
         <!--TransactionsMaster-->
         <scene sceneID="3XC-zT-bZ4">
@@ -147,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QkK-vl-u67" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2868" y="-1819.3403298350827"/>
+            <point key="canvasLocation" x="-2868" y="-1819"/>
         </scene>
         <!--Transactions Table View Controller-->
         <scene sceneID="Wci-pT-cUB">
@@ -167,7 +170,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9EE-35-z20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2869" y="-1043"/>
+            <point key="canvasLocation" x="-2868" y="-1160"/>
         </scene>
         <!--Transfer-->
         <scene sceneID="tHZ-j1-At2">
@@ -228,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIV-V8-lQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2153" y="-1819"/>
+            <point key="canvasLocation" x="-2094" y="-1819"/>
         </scene>
         <!--Confirmation-->
         <scene sceneID="Zx6-b6-99R">
@@ -306,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Izd-Fd-505" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1438" y="-1819"/>
+            <point key="canvasLocation" x="-1310" y="-1819"/>
         </scene>
     </scenes>
     <resources>
