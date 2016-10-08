@@ -21,6 +21,11 @@
                BlueprintName = "EspressoBankUITests"
                ReferencedContainer = "container:EspressoBank.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "UITestsWithoutGherkin">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <AdditionalOptions>

@@ -13,7 +13,7 @@ Scenario: As a user I want to tap on field in send payment screen
 #And .....
 #Then .....
 
-Given I am on the Transaction screen
+# Given I am on the Transaction screen
 
 
 
