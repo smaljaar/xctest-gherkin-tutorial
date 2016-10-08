@@ -11,12 +11,21 @@ import XCTest
 
 class Steps : StepDefiner {
     
-    //Exercise: add verification step
-    
-    
     override func defineSteps() {
         step("I am on the (.*)") {
             XCUIApplication().launch()
+        }
+        
+        step("I tap on the (.*) button on alert with title (.*)") { (matches: [String]) in
+            
+            XCUIApplication().alerts[matches[1]].buttons[matches[0]].tap()
+            
+            
+        }
+        
+        step("I tap on element (.*) with value (.*)") { (matches: [String]) in
+            let accessibilityIdentifer = matches[1]
+            XCUIApplication().descendants(matching: .any)[accessibilityIdentifer].tap()
         }
         
         step("I tap on button (.*)") { (buttonAccId : String) in
@@ -38,7 +47,7 @@ class Steps : StepDefiner {
         
         step("I see the element (.*)") { (match : String) in
             let element = XCUIApplication().descendants(matching: .any)[match]
-            self.test.waitForElementToAppear(element: element)
+            XCTAssertTrue(element.exists)
         }
     }
 }

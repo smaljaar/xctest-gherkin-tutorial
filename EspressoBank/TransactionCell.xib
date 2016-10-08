@@ -49,6 +49,9 @@
                     <constraint firstItem="VUu-pH-Z3Y" firstAttribute="leading" secondItem="0SI-lX-krO" secondAttribute="trailing" constant="8" id="yXe-vr-IyZ"/>
                 </constraints>
             </tableViewCellContentView>
+            <accessibility key="accessibilityConfiguration">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
             <connections>
                 <outlet property="amount" destination="re6-wv-cwg" id="ysb-Dl-RJS"/>
                 <outlet property="beneficiaryName" destination="VUu-pH-Z3Y" id="kaj-yS-zv2"/>

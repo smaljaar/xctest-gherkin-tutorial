@@ -31,14 +31,19 @@ extension TransactionsTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let payment = transactions[indexPath.row]
         
-        let alert = UIAlertController(title: "Payment", message: "Send a payemnt to \(payment.name)", preferredStyle: .alert)
+        var message = ""
+        if let descr = payment.paymentDescription {
+            message = "Name: \(payment.name)\n IBAN: \(payment.iban)\n Description: \(descr)"
+        } else {
+            message = "Name: \(payment.name)\n IBAN: \(payment.iban)\n No description was provided."
+        }
+        
+        let alert = UIAlertController(title: "Transaction", message: message, preferredStyle: .alert)
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { _ in
             self.tableView.deselectRow(at: indexPath, animated: true)
         }
         
         let sendPayment = UIAlertAction(title: "Send payment", style: .default) { alertAction in
-            print("start payment")
-            
             let paymentVC = self.storyboard!.instantiateViewController(withIdentifier: "paymentVC") as! SendPaymentViewController
             let _ = paymentVC.view
             self.orchestrator.paymentFlowVC.flowDataDelegate = paymentVC
@@ -49,6 +54,7 @@ extension TransactionsTableViewController {
             
             self.orchestrator.paymentNavigation.show(paymentVC, sender: nil)
             self.orchestrator.state = .payment
+            self.orchestrator.paymentFlowVC.paymentFlowButton.setTitle(self.orchestrator.navigationButtonTitle(), for: .normal)
         }
         alert.addAction(cancel)
         alert.addAction(sendPayment)
@@ -89,6 +95,7 @@ extension TransactionsTableViewController {
         }
         
         cell.amount.text = "\(prefix) € \(abs(myAmount).description)"
+        cell.accessibilityIdentifier = "\(cell.beneficiaryName.text!), \(cell.iban.text!), \(cell.amount.text!)"
         
         return cell
     }

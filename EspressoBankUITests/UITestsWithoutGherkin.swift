@@ -9,7 +9,7 @@
 import Foundation
 import XCTest
 
-class SecondFailureTests: XCTestCase {
+class UITestsWithoutGherkin: XCTestCase {
     
     let app = XCUIApplication()
     
