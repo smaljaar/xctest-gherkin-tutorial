@@ -88,8 +88,8 @@ class SendPaymentViewController: BaseViewController, FlowPaymentDataDelegate {
     func keyboardWillShow(notification: NSNotification) {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if view.frame.origin.y >= 0 && paymentDescription.isEditing {
-                self.view.frame.origin.y -= 0.2*keyboardSize.height
+            if view.frame.origin.y >= 0 && (paymentDescription.isEditing || amount.isEditing) {
+                self.view.frame.origin.y -= 0.3*keyboardSize.height
             }
         }
         
@@ -98,7 +98,7 @@ class SendPaymentViewController: BaseViewController, FlowPaymentDataDelegate {
     func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y != 0 {
-                self.view.frame.origin.y += 0.2*keyboardSize.height
+                self.view.frame.origin.y += 0.3*keyboardSize.height
             }
         }
     }

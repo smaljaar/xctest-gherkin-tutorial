@@ -343,7 +343,7 @@
 				TargetAttributes = {
 					1C77046E1D511569005A6459 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = M6E5M9S9AS;
+						DevelopmentTeam = ZQ6ZH4F869;
 						LastSwiftMigration = 0800;
 					};
 					1C7704821D511569005A6459 = {
@@ -580,7 +580,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = M6E5M9S9AS;
+				DEVELOPMENT_TEAM = ZQ6ZH4F869;
 				INFOPLIST_FILE = EspressoBank/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Capgemini.EspressoBank;
@@ -595,7 +595,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = M6E5M9S9AS;
+				DEVELOPMENT_TEAM = ZQ6ZH4F869;
 				INFOPLIST_FILE = EspressoBank/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Capgemini.EspressoBank;
