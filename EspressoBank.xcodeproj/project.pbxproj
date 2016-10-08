@@ -23,11 +23,12 @@
 		1C0ECB9A1D8D6C8700C75AB5 /* ParseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB8C1D8D6C8700C75AB5 /* ParseState.swift */; };
 		1C0ECB9C1D8D6CCB00C75AB5 /* features in Resources */ = {isa = PBXBuildFile; fileRef = 1C0ECB9B1D8D6CCB00C75AB5 /* features */; };
 		1C0ECB9E1D8D6D8E00C75AB5 /* StepsGlueCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB9D1D8D6D8E00C75AB5 /* StepsGlueCode.swift */; };
+		1C3CE3AD1DA58CFA00EF95BA /* UITestsWithoutGherkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3CE3AC1DA58CFA00EF95BA /* UITestsWithoutGherkin.swift */; };
 		1C7704731D511569005A6459 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7704721D511569005A6459 /* AppDelegate.swift */; };
 		1C77047A1D511569005A6459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C7704791D511569005A6459 /* Assets.xcassets */; };
 		1C77047D1D511569005A6459 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C77047B1D511569005A6459 /* LaunchScreen.storyboard */; };
 		1C7704881D511569005A6459 /* EspressoBankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7704871D511569005A6459 /* EspressoBankTests.swift */; };
-		1C7704931D511569005A6459 /* EspressoBankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7704921D511569005A6459 /* EspressoBankUITests.swift */; };
+		1C7704931D511569005A6459 /* UITestsWithGherkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7704921D511569005A6459 /* UITestsWithGherkin.swift */; };
 		1C7C7D861D69F20C00E1A7E6 /* SendPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C7D851D69F20C00E1A7E6 /* SendPaymentViewController.swift */; };
 		1C7C7D881D69F43900E1A7E6 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C7D871D69F43900E1A7E6 /* ConfirmationViewController.swift */; };
 		1CB7023C1D78AB2F00E821A9 /* PaymentHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB7023B1D78AB2F00E821A9 /* PaymentHistory.swift */; };
@@ -38,7 +39,6 @@
 		1CECD9811D5127E700CD2773 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CECD9801D5127E700CD2773 /* TransactionCell.swift */; };
 		1CEE53701D9EEF10007CCABE /* PaymentFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE536F1D9EEF10007CCABE /* PaymentFlowViewController.swift */; };
 		1CEE53721D9FF18D007CCABE /* PaymentFlowOrchestrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE53711D9FF18D007CCABE /* PaymentFlowOrchestrator.swift */; };
-		1CEE53741DA04F3D007CCABE /* PaymentFlowNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE53731DA04F3D007CCABE /* PaymentFlowNavigationController.swift */; };
 		1CEE53791DA110C5007CCABE /* PaymentFlowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE53781DA110C5007CCABE /* PaymentFlowButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +76,7 @@
 		1C0ECB8C1D8D6C8700C75AB5 /* ParseState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseState.swift; sourceTree = "<group>"; };
 		1C0ECB9B1D8D6CCB00C75AB5 /* features */ = {isa = PBXFileReference; lastKnownFileType = folder; path = features; sourceTree = "<group>"; };
 		1C0ECB9D1D8D6D8E00C75AB5 /* StepsGlueCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsGlueCode.swift; sourceTree = "<group>"; };
+		1C3CE3AC1DA58CFA00EF95BA /* UITestsWithoutGherkin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestsWithoutGherkin.swift; sourceTree = "<group>"; };
 		1C77046F1D511569005A6459 /* EspressoBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EspressoBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C7704721D511569005A6459 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C7704791D511569005A6459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,7 +86,7 @@
 		1C7704871D511569005A6459 /* EspressoBankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspressoBankTests.swift; sourceTree = "<group>"; };
 		1C7704891D511569005A6459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C77048E1D511569005A6459 /* EspressoBankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EspressoBankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C7704921D511569005A6459 /* EspressoBankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspressoBankUITests.swift; sourceTree = "<group>"; };
+		1C7704921D511569005A6459 /* UITestsWithGherkin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestsWithGherkin.swift; sourceTree = "<group>"; };
 		1C7704941D511569005A6459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C7C7D851D69F20C00E1A7E6 /* SendPaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendPaymentViewController.swift; sourceTree = "<group>"; };
 		1C7C7D871D69F43900E1A7E6 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +98,6 @@
 		1CECD9801D5127E700CD2773 /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionCell.swift; path = ../TransactionCell.swift; sourceTree = "<group>"; };
 		1CEE536F1D9EEF10007CCABE /* PaymentFlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFlowViewController.swift; sourceTree = "<group>"; };
 		1CEE53711D9FF18D007CCABE /* PaymentFlowOrchestrator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFlowOrchestrator.swift; sourceTree = "<group>"; };
-		1CEE53731DA04F3D007CCABE /* PaymentFlowNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFlowNavigationController.swift; sourceTree = "<group>"; };
 		1CEE53781DA110C5007CCABE /* PaymentFlowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFlowButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,11 +208,12 @@
 		1C7704911D511569005A6459 /* EspressoBankUITests */ = {
 			isa = PBXGroup;
 			children = (
-				1C7704921D511569005A6459 /* EspressoBankUITests.swift */,
+				1C7704921D511569005A6459 /* UITestsWithGherkin.swift */,
 				1C0ECB9D1D8D6D8E00C75AB5 /* StepsGlueCode.swift */,
 				1C0ECB9B1D8D6CCB00C75AB5 /* features */,
 				1C0ECB7C1D8D6C8700C75AB5 /* XCTest-Gherkin */,
 				1C7704941D511569005A6459 /* Info.plist */,
+				1CF3C63A1DA8EF7900EBF213 /* UITestsWithoutGherkin */,
 			);
 			path = EspressoBankUITests;
 			sourceTree = "<group>";
@@ -245,7 +246,6 @@
 				1CB7023B1D78AB2F00E821A9 /* PaymentHistory.swift */,
 				1CEE536F1D9EEF10007CCABE /* PaymentFlowViewController.swift */,
 				1CEE53711D9FF18D007CCABE /* PaymentFlowOrchestrator.swift */,
-				1CEE53731DA04F3D007CCABE /* PaymentFlowNavigationController.swift */,
 				1CEE53781DA110C5007CCABE /* PaymentFlowButton.swift */,
 			);
 			name = PaymentFlow;
@@ -265,6 +265,14 @@
 				1C7C7D871D69F43900E1A7E6 /* ConfirmationViewController.swift */,
 			);
 			name = ConfirmPayment;
+			sourceTree = "<group>";
+		};
+		1CF3C63A1DA8EF7900EBF213 /* UITestsWithoutGherkin */ = {
+			isa = PBXGroup;
+			children = (
+				1C3CE3AC1DA58CFA00EF95BA /* UITestsWithoutGherkin.swift */,
+			);
+			name = UITestsWithoutGherkin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,7 +343,7 @@
 				TargetAttributes = {
 					1C77046E1D511569005A6459 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = ZQ6ZH4F869;
+						DevelopmentTeam = M6E5M9S9AS;
 						LastSwiftMigration = 0800;
 					};
 					1C7704821D511569005A6459 = {
@@ -345,6 +353,7 @@
 					};
 					1C77048D1D511569005A6459 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = M6E5M9S9AS;
 						LastSwiftMigration = 0800;
 						TestTargetID = 1C77046E1D511569005A6459;
 					};
@@ -409,7 +418,6 @@
 				1C7704731D511569005A6459 /* AppDelegate.swift in Sources */,
 				1CB702401D79FDDF00E821A9 /* TransactionViewController.swift in Sources */,
 				1CB7023C1D78AB2F00E821A9 /* PaymentHistory.swift in Sources */,
-				1CEE53741DA04F3D007CCABE /* PaymentFlowNavigationController.swift in Sources */,
 				1C7C7D861D69F20C00E1A7E6 /* SendPaymentViewController.swift in Sources */,
 				1CECD9811D5127E700CD2773 /* TransactionCell.swift in Sources */,
 				1CEE53791DA110C5007CCABE /* PaymentFlowButton.swift in Sources */,
@@ -434,10 +442,11 @@
 				1C0ECB951D8D6C8700C75AB5 /* NativeExample.swift in Sources */,
 				1C0ECB901D8D6C8700C75AB5 /* Example.swift in Sources */,
 				1C0ECB921D8D6C8700C75AB5 /* StepDefiner.swift in Sources */,
+				1C3CE3AD1DA58CFA00EF95BA /* UITestsWithoutGherkin.swift in Sources */,
 				1C0ECB9E1D8D6D8E00C75AB5 /* StepsGlueCode.swift in Sources */,
 				1C0ECB961D8D6C8700C75AB5 /* NativeFeature.swift in Sources */,
 				1C0ECB971D8D6C8700C75AB5 /* NativeFeatureParser.swift in Sources */,
-				1C7704931D511569005A6459 /* EspressoBankUITests.swift in Sources */,
+				1C7704931D511569005A6459 /* UITestsWithGherkin.swift in Sources */,
 				1C0ECB911D8D6C8700C75AB5 /* Step.swift in Sources */,
 				1C0ECB8F1D8D6C8700C75AB5 /* ColorLog.swift in Sources */,
 				1C0ECB941D8D6C8700C75AB5 /* XCTestCase+Gherkin.swift in Sources */,
@@ -571,6 +580,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = M6E5M9S9AS;
 				INFOPLIST_FILE = EspressoBank/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Capgemini.EspressoBank;
@@ -585,6 +595,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = M6E5M9S9AS;
 				INFOPLIST_FILE = EspressoBank/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Capgemini.EspressoBank;
@@ -623,6 +634,7 @@
 		1C77049E1D511569005A6459 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = M6E5M9S9AS;
 				INFOPLIST_FILE = EspressoBankUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Capgemini.EspressoBankUITests;
@@ -635,6 +647,7 @@
 		1C77049F1D511569005A6459 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = M6E5M9S9AS;
 				INFOPLIST_FILE = EspressoBankUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Capgemini.EspressoBankUITests;

@@ -15,7 +15,7 @@ class Steps : StepDefiner {
     
     
     override func defineSteps() {
-        step("I am on the dashboard") {
+        step("I am on the (.*)") {
             XCUIApplication().launch()
         }
         
@@ -34,6 +34,29 @@ class Steps : StepDefiner {
         
         step("my test has passed") {
             //done
+        }
+        
+        step("I see the element (.*)") { (match : String) in
+            let element = XCUIApplication().descendants(matching: .any)[match]
+            self.test.waitForElementToAppear(element: element)
+        }
+    }
+}
+
+extension XCTestCase {
+    
+    func waitForElementToAppear(element: XCUIElement, file: String = #file, line: UInt = #line) {
+        let existsPredicate = NSPredicate(format: "exists == true")
+        expectation(for: existsPredicate,
+                    evaluatedWith: element, handler: nil)
+        
+        waitForExpectations(timeout: 2) { (error) -> Void in
+            if (error != nil) {
+                let message = "Failed to find \(element) after 2 seconds."
+                XCTFail(message)
+                
+//                self.recordFailure(withDescription: message, inFile: file, atLine: line, expected: true)
+            }
         }
     }
 }

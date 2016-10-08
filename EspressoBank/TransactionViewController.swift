@@ -15,7 +15,7 @@ class TransactionViewController: BaseViewController {
         
         navigationItem.hidesBackButton = true
         
-        PaymentFlowOrchestrator.sharedInstance.paymentNavigation = navigationController as! PaymentFlowNavigationController
+        PaymentFlowOrchestrator.sharedInstance.paymentNavigation = navigationController 
     }
 
     override func didReceiveMemoryWarning() {

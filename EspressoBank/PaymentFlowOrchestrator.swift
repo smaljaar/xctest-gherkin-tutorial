@@ -15,7 +15,9 @@ class PaymentFlowOrchestrator {
     static let sharedInstance = PaymentFlowOrchestrator()
     fileprivate init(){}
     
-    var paymentNavigation: PaymentFlowNavigationController!
+    var paymentNavigation: UINavigationController!
+    
+    var paymentFlowVC: PaymentFlowViewController!
     
     var state = PaymentFlowState.transactions
     

@@ -8,16 +8,11 @@
 
 import UIKit
 
-
 class TransactionsTableViewController: UITableViewController {
-
+    let orchestrator = PaymentFlowOrchestrator.sharedInstance
     let transactions = PaymentHistory.sharedInstance.payments
     
     override func viewDidLoad() {
-        tableView.tableHeaderView = nil
-        let frame = view.frame
-        let contentinsets = tableView.contentInset
-        print("\(frame) insets \(contentinsets)")
         super.viewDidLoad()
     }
 
@@ -30,6 +25,39 @@ class TransactionsTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
 }
+
+extension TransactionsTableViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let payment = transactions[indexPath.row]
+        
+        let alert = UIAlertController(title: "Payment", message: "Send a payemnt to \(payment.name)", preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            self.tableView.deselectRow(at: indexPath, animated: true)
+        }
+        
+        let sendPayment = UIAlertAction(title: "Send payment", style: .default) { alertAction in
+            print("start payment")
+            
+            let paymentVC = self.storyboard!.instantiateViewController(withIdentifier: "paymentVC") as! SendPaymentViewController
+            let _ = paymentVC.view
+            self.orchestrator.paymentFlowVC.flowDataDelegate = paymentVC
+
+            paymentVC.name.text = payment.name
+            paymentVC.iban.text = payment.iban
+            paymentVC.delegate = self.orchestrator.paymentFlowVC
+            
+            self.orchestrator.paymentNavigation.show(paymentVC, sender: nil)
+            self.orchestrator.state = .payment
+        }
+        alert.addAction(cancel)
+        alert.addAction(sendPayment)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+}
+
 
 extension TransactionsTableViewController {
     // MARK: - Table view data source

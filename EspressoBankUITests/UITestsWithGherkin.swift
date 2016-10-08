@@ -8,11 +8,17 @@
 
 import XCTest
 
-class EspressoBankUITests: NativeTestCase {
+class UITestsWithGherkin: NativeTestCase {
         
     override class open func path() -> URL? {
         let bundle = Bundle(for: self)
-        return bundle.resourceURL?.appendingPathComponent("features/payment.feature")
+        return bundle.resourceURL?.appendingPathComponent("features/")
+    }
+    
+    override func setUp() {
+        continueAfterFailure = false
+        super.setUp()
     }
     
 }
+

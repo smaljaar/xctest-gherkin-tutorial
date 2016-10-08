@@ -107,13 +107,14 @@ class PaymentFlowViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        orchestrator.paymentFlowVC = self
+        
         //Balance
         accountBalance.text = "€ \(PaymentHistory.sharedInstance.currentBalance().description)"
         accountBalance.accessibilityIdentifier = "accountBalance"
         
         //Button
         paymentFlowButton.setTitle(orchestrator.navigationButtonTitle(), for: .normal)
-        paymentFlowButton.accessibilityIdentifier = paymentFlowButton.titleLabel?.text
         
     }
     

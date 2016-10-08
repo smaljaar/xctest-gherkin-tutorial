@@ -15,4 +15,9 @@ class PaymentFlowButton: UIButton {
             backgroundColor = isHighlighted ? #colorLiteral(red: 0.2745098039, green: 0.3529411765, blue: 0.3921568627, alpha: 1) : #colorLiteral(red: 0.5411764706, green: 0.7803921569, blue: 0.8980392157, alpha: 1)
         }
     }
+    
+    override func setTitle(_ title: String?, for state: UIControlState) {
+        accessibilityIdentifier = title
+        super.setTitle(title, for: state)
+    }
 }
