@@ -5,22 +5,32 @@
 # The beginning is there. Just add some steps
 # Good luck!
 
-Feature: payment
-Scenario: As a user I want to tap on field in send payment screen
+# Extra Instructions:
+# -------------------
+# Steps you need to finish this assignment, prefixed each with either Given, When, Then or And:
+# I tap on button (.*)
+# I enter (.*) in the (.*) field
+
+Feature: Payments
+Scenario: As a user I want to make a payment
 
 #Given ......
 #When .....
 #And .....
 #Then .....
-
-# Given I am on the Transaction screen
-
+Given I tap on button Transfer
 
 
 
 # (2) add a scenario to the payment feature by only writing Gherkin.
 # now tap a transaction and then complete the payment
-# Start by un-commenting the next line and then add Given-When-Then lines.
+# Start by un-commenting the line starting with Scenario: and then add Given-When-Then lines.
+#
+# Extra Instructions:
+# -------------------
+# Extra step you need to finish this assignment, prefixed each with either Given, When, Then or And:
+# I tap on element (.*) with value (.*)
+# I tap on the (.*) button on alert with title (.*)
 
 # Scenario: As a user I want to quickly do a payment to a person from the transaction list.
 
@@ -34,4 +44,11 @@ Scenario: As a user I want to tap on field in send payment screen
 
 
 
-# (4)
+# (4) iOS only challenge: Until now you have navigated through the app, and typed text. This only contains implicit verification.
+# Now it is time to add explicit verification steps.
+# Find the verification step in the glue code and add it to the previous three scenarios.
+# Good luck!
+
+
+# (5) iOS only challenge: exception flow
+# Write a Gherkin test script that verifies the popup after submitting an incomplete payment.

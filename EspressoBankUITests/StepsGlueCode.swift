@@ -11,11 +11,7 @@ import XCTest
 
 class Steps : StepDefiner {
     
-    override func defineSteps() {
-        step("I am on the (.*)") {
-            XCUIApplication().launch()
-        }
-        
+    override func defineSteps() {        
         step("I tap on the (.*) button on alert with title (.*)") { (matches: [String]) in
             XCUIApplication().alerts[matches[1]].buttons[matches[0]].tap()
         }

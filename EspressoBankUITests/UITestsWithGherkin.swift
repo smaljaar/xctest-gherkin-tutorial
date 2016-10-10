@@ -16,8 +16,10 @@ class UITestsWithGherkin: NativeTestCase {
     }
     
     override func setUp() {
-        continueAfterFailure = false
         super.setUp()
+        
+        continueAfterFailure = false
+        XCUIApplication().launch()
     }
     
 }

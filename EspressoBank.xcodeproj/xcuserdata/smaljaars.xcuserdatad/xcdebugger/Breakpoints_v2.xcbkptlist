@@ -57,41 +57,9 @@
             timestampString = "497621830.828031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "tapNext(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EspressoBank/PaymentFlowViewController.swift"
-            timestampString = "497621830.828031"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
             endingLineNumber = "61"
             landmarkName = "tapNext(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EspressoBank/PaymentFlowViewController.swift"
-            timestampString = "497621314.108347"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "backButtonTapped()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -118,11 +86,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EspressoBankUITests/StepsGlueCode.swift"
-            timestampString = "497621314.108347"
+            timestampString = "497817841.873135"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68">
+            startingLineNumber = "64"
+            endingLineNumber = "64">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -228,7 +196,7 @@
                   moduleName = "EspressoBank"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/smaljaars/code/EspressoBank/EspressoBank/SendPaymentViewController.swift"
-                  timestampString = "497624302.15901"
+                  timestampString = "497815100.367799"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -243,7 +211,7 @@
                   moduleName = "EspressoBank"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/smaljaars/code/EspressoBank/EspressoBank/SendPaymentViewController.swift"
-                  timestampString = "497624302.160209"
+                  timestampString = "497815100.368914"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
