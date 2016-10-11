@@ -11,6 +11,7 @@ Then I see the element <Transaction done>
 
 |amount|name|account number|Transaction done|
 |1.10|test name|NL69 INGB 0123 4567 89|test name, NL69 INGB 0123 4567 89, - € 1.1|
+|2.0 |jelle    |385378327             |jelle                                     |
 
 
 Scenario: As a user I want to quickly do a payment to a person from the transaction list.

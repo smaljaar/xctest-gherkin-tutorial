@@ -38,6 +38,12 @@ class Steps : StepDefiner {
             let element = XCUIApplication().descendants(matching: .any)[match]
             XCTAssertTrue(element.exists)
         }
+        
+        step("I see the account balance with value (.*)") { (expectedBalance : String) in
+            let element = XCUIApplication().descendants(matching: .any)["accountBalance"]
+            let value = element.label
+            XCTAssertEqual(value, expectedBalance)
+        }
     }
 }
 
