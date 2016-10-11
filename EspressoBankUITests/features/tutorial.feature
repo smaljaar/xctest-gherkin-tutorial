@@ -14,10 +14,6 @@
 Feature: Payments
 Scenario: As a user I want to make a payment
 
-#Given ......
-#When .....
-#And .....
-#Then .....
 Given I tap on button Transfer
 
 
@@ -43,12 +39,14 @@ Given I tap on button Transfer
 # Scenario: As a user I want to be able to navigate back to transactions if I do not want to confirm the payment.
 
 
-
-# (4) iOS only challenge: Until now you have navigated through the app, and typed text. This only contains implicit verification.
+# (4) Challenge: Until now you have navigated through the app, and typed text. This only contains implicit verification.
 # Now it is time to add explicit verification steps.
 # Find the verification step in the glue code and add it to the previous three scenarios.
 # Good luck!
 
 
-# (5) iOS only challenge: exception flow
-# Write a Gherkin test script that verifies the popup after submitting an incomplete payment.
+# (5) Challenge: exception flow
+# Scenario: As a user I would like to see a popup after submitting an incomplete payment form.
+
+# (6) Challenge: check account balance value
+# Scenario: As a user I would like to see the account balance before and after confirming a new payment
