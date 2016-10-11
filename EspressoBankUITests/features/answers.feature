@@ -1,6 +1,6 @@
 Feature: Payments
 
-Scenario: As a user I want to make a payment
+Scenario Outline: As a user I want to make a payment
 Given I tap on button Transfer
 And I enter <amount> in the Amount field
 And I enter <name> in the Name field
