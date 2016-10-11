@@ -76,6 +76,7 @@
 		1C0ECB8C1D8D6C8700C75AB5 /* ParseState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseState.swift; sourceTree = "<group>"; };
 		1C0ECB9B1D8D6CCB00C75AB5 /* features */ = {isa = PBXFileReference; lastKnownFileType = folder; path = features; sourceTree = "<group>"; };
 		1C0ECB9D1D8D6D8E00C75AB5 /* StepsGlueCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsGlueCode.swift; sourceTree = "<group>"; };
+		1C13D93C1DAD39FC00EA2945 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1C3CE3AC1DA58CFA00EF95BA /* UITestsWithoutGherkin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestsWithoutGherkin.swift; sourceTree = "<group>"; };
 		1C77046F1D511569005A6459 /* EspressoBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EspressoBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C7704721D511569005A6459 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +167,7 @@
 		1C7704661D511569005A6459 = {
 			isa = PBXGroup;
 			children = (
+				1C13D93C1DAD39FC00EA2945 /* README.md */,
 				1C7704711D511569005A6459 /* EspressoBank */,
 				1C7704861D511569005A6459 /* EspressoBankTests */,
 				1C7704911D511569005A6459 /* EspressoBankUITests */,
