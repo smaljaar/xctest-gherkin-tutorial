@@ -184,7 +184,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="xFm-Xw-Fh8">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="xFm-Xw-Fh8">
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rhj-ZX-gNO">
                                         <color key="tintColor" red="0.27450980390000002" green="0.35294117650000001" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -218,6 +218,7 @@
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xFm-Xw-Fh8" firstAttribute="width" secondItem="rbK-aS-j98" secondAttribute="width" multiplier="0.9" id="5TN-9O-vuK"/>
+                            <constraint firstItem="xFm-Xw-Fh8" firstAttribute="height" secondItem="rbK-aS-j98" secondAttribute="height" multiplier="0.3" id="Af4-Vl-uVz"/>
                             <constraint firstItem="xFm-Xw-Fh8" firstAttribute="centerX" secondItem="rbK-aS-j98" secondAttribute="centerX" id="vhQ-Z2-Z2N"/>
                             <constraint firstItem="xFm-Xw-Fh8" firstAttribute="centerY" secondItem="rbK-aS-j98" secondAttribute="centerY" id="zhF-nN-G9K"/>
                         </constraints>
