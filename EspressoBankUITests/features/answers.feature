@@ -13,7 +13,7 @@ Then I see the element <Transaction done>
 |1.10|test name|NL69 INGB 0123 4567 89|test name, NL69 INGB 0123 4567 89, - € 1.1|
 |2.0 |jelle    |385378327             |jelle                                     |
 
-
+@tapTransferButton
 Scenario: As a user I want to quickly do a payment to a person from the transaction list.
 Given I tap on element transaction with value <Transaction info>
 And I tap on the Send payment button on alert with title Transaction

@@ -85,8 +85,8 @@ open class NativeTestCase : XCTestCase {
         }
         
         let allScenarioStepsDefined = scenario.stepDescriptions.map(self.state.matchingGherkinStepExpressionFound).reduce(true) { $0 && $1 }
-        var allFeatureBackgroundStepsDefined = true
         
+        var allFeatureBackgroundStepsDefined = true
         if let defined = feature.background?.stepDescriptions.map(self.state.matchingGherkinStepExpressionFound).reduce(true, { $0 && $1 }) {
             allFeatureBackgroundStepsDefined = defined
         }
@@ -95,11 +95,21 @@ open class NativeTestCase : XCTestCase {
             XCTFail("Some step definitions not found for the scenario: \(scenario.scenarioDescription)")
             return
         }
+
+        if let tagDescription = scenario.tag {
+            self.performBeforeStep(expression: tagDescription)
+        }
         
         if let background = feature.background {
             background.stepDescriptions.forEach(self.performStep)
         }
+                
         scenario.stepDescriptions.forEach(self.performStep)
+        
+        if let tagDescription = scenario.tag {
+            self.performAfterStep(expression: tagDescription)
+        }
+        
     }
     
     // MARK: Auxiliary
@@ -117,7 +127,7 @@ open class NativeTestCase : XCTestCase {
         let selector = sel_registerName(scenario.selectorCString)
         let method = class_getInstanceMethod(self, #selector(featureScenarioTest))
         let success = class_addMethod(self, selector, method_getImplementation(method), method_getTypeEncoding(method))
-        XCTAssertTrue(success)
+        assert(success, "Could not swizzle feature test method!")
     }
     
 }

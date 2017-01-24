@@ -20,6 +20,20 @@ open class StepDefiner {
     }
     
     /**
+     Create a new After step
+     */
+    open func afterStep(expression: String, file: String = #file, line: Int = #line, f0: @escaping ()->()) {
+        self.test.addAfterStep(expression, file: file, line: line) { (ignored:[String]) in f0() }
+    }
+    
+    /**
+     Create a new Before step
+     */
+    open func beforeStep(expression: String, file: String = #file, line: Int = #line, f0: @escaping ()->()) {
+        self.test.addBeforeStep(expression, file: file, line: line) { (ignored:[String]) in f0() }
+    }
+    
+    /**
       Override this to create your own step definitions
      */
     open func defineSteps() -> Void { }

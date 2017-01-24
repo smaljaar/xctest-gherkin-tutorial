@@ -44,6 +44,16 @@ class Steps : StepDefiner {
             let value = element.label
             XCTAssertEqual(value, expectedBalance)
         }
+        
+        beforeStep(expression: "@tapTransferButton") {
+            XCTAssertTrue(false)
+
+        }
+
+        afterStep(expression: "@tapTransferButton") {
+            XCTAssertTrue(false)
+            
+        }
     }
 }
 

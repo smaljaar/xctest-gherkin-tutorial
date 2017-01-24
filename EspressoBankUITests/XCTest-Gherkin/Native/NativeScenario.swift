@@ -9,6 +9,7 @@
 import Foundation
 
 class NativeScenario : CustomStringConvertible {
+    var tag: String?
     let scenarioDescription: String
     let stepDescriptions: [String]
 
@@ -24,7 +25,8 @@ class NativeScenario : CustomStringConvertible {
         get { return strdup(self.selectorString) }
     }
     
-    required init(_ description: String, steps: [String]) {
+    required init(tag: String?, description: String, steps: [String]) {
+        self.tag = tag
         self.scenarioDescription = description
         self.stepDescriptions = steps
     }

@@ -15,12 +15,14 @@ class ParseState {
     var steps: [String]
     var exampleLines: [ (lineNumber:Int, line:String) ]
     var parsingBackground: Bool
+    var tag: String?
 
     convenience init() {
-        self.init(description: nil)
+        self.init(tag: nil, description: nil)
     }
     
-    required init(description: String?, parsingBackground: Bool = false) {
+    required init(tag: String?, description: String?, parsingBackground: Bool = false) {
+        self.tag = tag
         self.description = description
         steps = []
         exampleLines = []
@@ -60,11 +62,11 @@ class ParseState {
     func background() -> NativeBackground? {
         guard parsingBackground, let description = self.description , self.steps.count > 0 else { return nil }
         
-        return NativeBackground(description, steps: self.steps)
+        return NativeBackground(tag: nil, description: description, steps: self.steps)
     }
     
     func scenarios() -> [NativeScenario]? {
-        guard let description = self.description , self.steps.count > 0 else { return nil }
+        guard !parsingBackground, let description = self.description , self.steps.count > 0 else { return nil }
         
         var scenarios = Array<NativeScenario>()
         
@@ -88,16 +90,19 @@ class ParseState {
                 
                 // The scenario description must be unique
                 let description = "\(description)_line\(example.lineNumber)"
-                scenarios.append(NativeScenario(description, steps: steps))
-                
+                scenarios.append(NativeScenario(tag: tag, description: description, steps: steps))
+                print("\n native scenario initialized with tag \(tag) and description \(description) \n")
             }
         } else {
-            scenarios.append(NativeScenario(description, steps: self.steps))
+            scenarios.append(NativeScenario(tag: tag, description: description, steps: self.steps))
+            print("\n native scenario initialized with tag \(tag) and description \(description) \n")
+
         }
         
         self.description = nil
         self.steps = []
         self.exampleLines = []
+        self.tag = nil
         
         return scenarios
     }

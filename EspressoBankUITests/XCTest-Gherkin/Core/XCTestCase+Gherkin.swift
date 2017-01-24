@@ -20,6 +20,11 @@ This means that anytime I want to access my extra properties I just do `state.{p
 class GherkinState {
     var test: XCTestCase?
     
+    // The list of Before or After tags the system knows about
+    // We can think of them as Steps because they get executed Before or After a scenario
+    var beforeSteps = Set<Step>()
+    var afterSteps = Set<Step>()
+
     // The list of all steps the system knows about
     var steps = Set<Step>()
     
@@ -38,6 +43,7 @@ class GherkinState {
     fileprivate var missingStepsImplementations = [String]()
     
     func gherkinStepsAndMatchesMatchingExpression(_ expression: String) -> [(step:Step, match:NSTextCheckingResult)] {
+
         let range = NSMakeRange(0, expression.characters.count)
         let matches = self.steps.map { (step: Step) -> (step:Step, match:NSTextCheckingResult)? in
             if let match = step.regex.firstMatch(in: expression, options: [], range: range) {
@@ -45,9 +51,55 @@ class GherkinState {
             } else {
                 return nil
             }
-        }.flatMap { $0! }
-        return matches
+            }.flatMap { $0! }
+        
+        let beforeTagMatches = self.beforeSteps.map { (step: Step) -> (step:Step, match:NSTextCheckingResult)? in
+            if let match = step.regex.firstMatch(in: expression, options: [], range: range) {
+                return (step:step, match:match)
+            } else {
+                return nil
+            }
+            }.flatMap { $0! }
+        
+        let afterTagMatches = self.afterSteps.map { (step: Step) -> (step:Step, match:NSTextCheckingResult)? in
+            if let match = step.regex.firstMatch(in: expression, options: [], range: range) {
+                return (step:step, match:match)
+            } else {
+                return nil
+            }
+            }.flatMap { $0! }
+        
+        return matches + beforeTagMatches + afterTagMatches
     }
+    
+    func beforeStepsAndMatchesMatching(expression: String) -> [(step:Step, match:NSTextCheckingResult)] {
+        return self.beforeSteps.map { (step: Step) -> (step:Step, match:NSTextCheckingResult)? in
+            if let match = step.regex.firstMatch(in: expression, options: [], range: NSMakeRange(0, expression.characters.count)) {
+                return (step:step, match:match)
+            } else {
+                return nil
+            }
+            }.flatMap { $0! }
+    }
+    
+    func beforeStepMatching(expression: String) -> [Step] {
+        return self.beforeStepsAndMatchesMatching(expression: expression).map { $0.step }
+    }
+    
+    func afterStepsAndMatchesMatching(expression: String) -> [(step:Step, match:NSTextCheckingResult)] {
+        return self.afterSteps.map { (step: Step) -> (step:Step, match:NSTextCheckingResult)? in
+            if let match = step.regex.firstMatch(in: expression, options: [], range: NSMakeRange(0, expression.characters.count)) {
+                return (step:step, match:match)
+            } else {
+                return nil
+            }
+            }.flatMap { $0! }
+    }
+    
+    func afterStepMatching(expression: String) -> [Step] {
+        return self.afterStepsAndMatchesMatching(expression: expression).map { $0.step }
+    }
+    
     
     func gherkinStepsMatchingExpression(_ expression: String) -> [Step] {
         return self.gherkinStepsAndMatchesMatchingExpression(expression).map { $0.step }
@@ -85,9 +137,7 @@ class GherkinState {
     func printTemplatedCodeForAllMissingSteps() {
         print(ColorLog.red("Copy paste these steps in a StepDefiner subclass:"))
         print("-------------")
-        self.missingStepsImplementations.forEach({
-            print($0)
-        })
+        self.missingStepsImplementations.forEach { print($0) }
         print("-------------")
     }
     
@@ -236,6 +286,22 @@ public extension XCTestCase {
 */
 extension XCTestCase {
     // MARK: Adding steps
+
+    /**
+     Adds a step to the global store of after steps, but only if this expression isn't already defined with a step
+     */
+    func addAfterStep(_ expression: String, file: String, line: Int, _ function: @escaping ([String])->()) {
+        let step = Step(expression, file: file, line: line, function)
+        state.afterSteps.insert(step);
+    }
+    
+    /**
+     Adds a step to the global store of before steps, but only if this expression isn't already defined with a step
+     */
+    func addBeforeStep(_ expression: String, file: String, line: Int, _ function: @escaping ([String])->()) {
+        let step = Step(expression, file: file, line: line, function)
+        state.beforeSteps.insert(step);
+    }
     
     /**
      Adds a step to the global store of steps, but only if this expression isn't already defined with a step
@@ -244,6 +310,75 @@ extension XCTestCase {
         let step = Step(expression, file: file, line: line, function)
         state.steps.insert(step);
     }
+    
+    
+    fileprivate func performBeforeOrAfter(step: Step, match: NSTextCheckingResult, expression: String) {
+        
+        // Covert them to strings to pass back into the step function
+        // TODO: This should really only need to be a map function :(
+        var matchStrings = Array<String>()
+        for i in 1..<match.numberOfRanges {
+            let range = match.rangeAt(i)
+            let string = range.location != NSNotFound ? (expression as NSString).substring(with: range) : ""
+            matchStrings.append(string)
+        }
+        
+        // If this the first step, debug the test name as well
+        if state.currentStepDepth == 0 {
+            let rawName = String(describing: self.invocation!.selector)
+            let testName = rawName.hasPrefix("test") ? (rawName as NSString).substring(from: 4) : rawName
+            if testName != state.currentTestName {
+                NSLog("steps from \(ColorLog.darkGreen(testName.humanReadableString))")
+                state.currentTestName = testName
+            }
+        }
+        
+        // Debug the step name
+        let coloredExpression = state.currentStepDepth == 0 ? ColorLog.green(expression) : ColorLog.lightGreen(expression)
+        NSLog("step \(currentStepDepthString())\(coloredExpression)")
+        
+        // Run the step
+        state.currentStepDepth += 1
+        step.function(matchStrings)
+        state.currentStepDepth -= 1
+    }
+    
+    func performBeforeStep(expression: String) {
+        
+        // Make sure that we have created our steps
+        self.state.loadAllStepsIfNeeded()
+        
+        // Get the step and the matches inside it
+        guard let (step, match) = self.state.beforeStepsAndMatchesMatching(expression: expression).first else {
+//            if !self.state.matchingGherkinStepExpressionFound(expression) && self.state.shouldPrintTemplateCodeForAllMissingSteps() {
+//                self.state.printStepDefinitions()
+//                self.state.printTemplatedCodeForAllMissingSteps()
+//                self.state.resetMissingSteps()
+//            }
+            return print("Did not find a match for before step with expression \(expression), so ignore.")
+        }
+        
+        performBeforeOrAfter(step: step, match: match, expression: expression)
+    }
+    
+    func performAfterStep(expression: String) {
+        
+        // Make sure that we have created our steps
+        self.state.loadAllStepsIfNeeded()
+        
+        // Get the step and the matches inside it
+        guard let (step, match) = self.state.beforeStepsAndMatchesMatching(expression: expression).first else {
+            //            if !self.state.matchingGherkinStepExpressionFound(expression) && self.state.shouldPrintTemplateCodeForAllMissingSteps() {
+            //                self.state.printStepDefinitions()
+            //                self.state.printTemplatedCodeForAllMissingSteps()
+            //                self.state.resetMissingSteps()
+            //            }
+            return print("Did not find a match for before step with expression \(expression), so ignore.")
+        }
+        
+        performBeforeOrAfter(step: step, match: match, expression: expression)
+    }
+    
     
     /**
      Finds and performs a step test based on expression
