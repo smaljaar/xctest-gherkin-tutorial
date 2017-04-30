@@ -26,7 +26,7 @@ class NativeFeature : CustomStringConvertible {
     let scenarios: [NativeScenario]
     let background: NativeBackground?
     
-    required init(description: String, scenarios:[NativeScenario], background: NativeBackground?) {
+    required init(description: String, scenarios: [NativeScenario], background: NativeBackground?) {
         self.featureDescription = description
         self.scenarios = scenarios
         self.background = background
@@ -58,15 +58,10 @@ extension NativeFeature {
         // Filter comments (#) and tags (@), also filter white lines
         lines = lines.filter { $0.characters.first != "#" &&  $0.characters.first != "@" && $0.characters.count > 0}
 
-        guard lines.count > 0 else {
-            
-            print("\n\nThe feature file is empty. Add Gherkin steps to the file payment.feature.\n\n")
-            
-            return nil
-        }
+        guard lines.count > 0 else { return nil }
         
         // The feature description needs to be on the first line - we'll fail this method if it isn't!
-        let (_,suffixOption) = lines.first!.componentsWithPrefix(FileTags.Feature)
+        let (_, suffixOption) = lines.first!.componentsWithPrefix(FileTags.Feature)
         guard let featureDescription = suffixOption else { return nil }
         
         let feature = NativeFeature.parseLines(lines)
@@ -83,14 +78,14 @@ extension NativeFeature {
         func saveBackgroundOrScenarioAndUpdateParseState(_ lineSuffix: String){
             if let aBackground = state.background() {
                 background = aBackground
-            } else if let newScenarios = state.scenarios() {
+            } else if let newScenarios = state.scenarios(at: scenarios.count) {
                 scenarios.append(contentsOf: newScenarios)
             }
             state = ParseState(description: lineSuffix)
         }
         
         // Go through each line in turn
-        for (lineIndex,line) in lines.enumerated() {
+        for (lineIndex, line) in lines.enumerated() {
             
             if !line.isEmpty {
                 // What kind of line is it?
@@ -132,7 +127,7 @@ extension NativeFeature {
         
         // If we hit the end of the file, we need to make sure we have dealt with
         // the last scenarios
-        if let newScenarios = state.scenarios() {
+        if let newScenarios = state.scenarios(at: scenarios.count) {
             scenarios.append(contentsOf: newScenarios)
         }
     
@@ -146,7 +141,7 @@ private let whitespace = CharacterSet.whitespaces
 extension String {
     
     func componentsWithPrefix(_ prefix: String) -> (String, String?) {
-        guard self.hasPrefix(prefix) else { return (self,nil) }
+        guard self.hasPrefix(prefix) else { return (self, nil) }
         
         let index = (prefix as NSString).length
         let suffix = (self as NSString).substring(from: index).trimmingCharacters(in: whitespace)

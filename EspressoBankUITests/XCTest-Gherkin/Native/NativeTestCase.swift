@@ -11,7 +11,7 @@ import ObjectiveC
 
 import XCTest
 
-open class NativeTestCase : XCTestCase {
+open class NativeTestCase: XCTestCase {
     
     open override class func initialize() {
         super.initialize()
@@ -117,7 +117,7 @@ open class NativeTestCase : XCTestCase {
         let selector = sel_registerName(scenario.selectorCString)
         let method = class_getInstanceMethod(self, #selector(featureScenarioTest))
         let success = class_addMethod(self, selector, method_getImplementation(method), method_getTypeEncoding(method))
-        XCTAssertTrue(success)
+        assert(success, "Could not swizzle feature test method!")
     }
     
 }

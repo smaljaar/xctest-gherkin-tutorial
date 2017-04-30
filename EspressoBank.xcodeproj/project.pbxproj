@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C0ECB8D1D8D6C8700C75AB5 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 1C0ECB7E1D8D6C8700C75AB5 /* .gitkeep */; };
 		1C0ECB8E1D8D6C8700C75AB5 /* ClassHelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB7F1D8D6C8700C75AB5 /* ClassHelperMethods.swift */; };
-		1C0ECB8F1D8D6C8700C75AB5 /* ColorLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB801D8D6C8700C75AB5 /* ColorLog.swift */; };
 		1C0ECB901D8D6C8700C75AB5 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB811D8D6C8700C75AB5 /* Example.swift */; };
 		1C0ECB911D8D6C8700C75AB5 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB821D8D6C8700C75AB5 /* Step.swift */; };
 		1C0ECB921D8D6C8700C75AB5 /* StepDefiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB831D8D6C8700C75AB5 /* StepDefiner.swift */; };
@@ -40,6 +38,8 @@
 		1CEE53701D9EEF10007CCABE /* PaymentFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE536F1D9EEF10007CCABE /* PaymentFlowViewController.swift */; };
 		1CEE53721D9FF18D007CCABE /* PaymentFlowOrchestrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE53711D9FF18D007CCABE /* PaymentFlowOrchestrator.swift */; };
 		1CEE53791DA110C5007CCABE /* PaymentFlowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE53781DA110C5007CCABE /* PaymentFlowButton.swift */; };
+		702E14781EB5BBB3008E660C /* MatchedStringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702E14761EB5BBB3008E660C /* MatchedStringRepresentable.swift */; };
+		702E14791EB5BBB3008E660C /* NativeRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702E14771EB5BBB3008E660C /* NativeRunner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C0ECB7E1D8D6C8700C75AB5 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		1C0ECB7F1D8D6C8700C75AB5 /* ClassHelperMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassHelperMethods.swift; sourceTree = "<group>"; };
-		1C0ECB801D8D6C8700C75AB5 /* ColorLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorLog.swift; sourceTree = "<group>"; };
 		1C0ECB811D8D6C8700C75AB5 /* Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		1C0ECB821D8D6C8700C75AB5 /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		1C0ECB831D8D6C8700C75AB5 /* StepDefiner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepDefiner.swift; sourceTree = "<group>"; };
@@ -100,6 +98,8 @@
 		1CEE536F1D9EEF10007CCABE /* PaymentFlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFlowViewController.swift; sourceTree = "<group>"; };
 		1CEE53711D9FF18D007CCABE /* PaymentFlowOrchestrator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFlowOrchestrator.swift; sourceTree = "<group>"; };
 		1CEE53781DA110C5007CCABE /* PaymentFlowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFlowButton.swift; sourceTree = "<group>"; };
+		702E14761EB5BBB3008E660C /* MatchedStringRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchedStringRepresentable.swift; sourceTree = "<group>"; };
+		702E14771EB5BBB3008E660C /* NativeRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeRunner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,9 +139,8 @@
 		1C0ECB7D1D8D6C8700C75AB5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				1C0ECB7E1D8D6C8700C75AB5 /* .gitkeep */,
+				702E14761EB5BBB3008E660C /* MatchedStringRepresentable.swift */,
 				1C0ECB7F1D8D6C8700C75AB5 /* ClassHelperMethods.swift */,
-				1C0ECB801D8D6C8700C75AB5 /* ColorLog.swift */,
 				1C0ECB811D8D6C8700C75AB5 /* Example.swift */,
 				1C0ECB821D8D6C8700C75AB5 /* Step.swift */,
 				1C0ECB831D8D6C8700C75AB5 /* StepDefiner.swift */,
@@ -154,6 +153,7 @@
 		1C0ECB861D8D6C8700C75AB5 /* Native */ = {
 			isa = PBXGroup;
 			children = (
+				702E14771EB5BBB3008E660C /* NativeRunner.swift */,
 				1C0ECB871D8D6C8700C75AB5 /* NativeExample.swift */,
 				1C0ECB881D8D6C8700C75AB5 /* NativeFeature.swift */,
 				1C0ECB891D8D6C8700C75AB5 /* NativeFeatureParser.swift */,
@@ -404,7 +404,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C0ECB8D1D8D6C8700C75AB5 /* .gitkeep in Resources */,
 				1C0ECB9C1D8D6CCB00C75AB5 /* features in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,11 +446,12 @@
 				1C3CE3AD1DA58CFA00EF95BA /* UITestsWithoutGherkin.swift in Sources */,
 				1C0ECB9E1D8D6D8E00C75AB5 /* StepsGlueCode.swift in Sources */,
 				1C0ECB961D8D6C8700C75AB5 /* NativeFeature.swift in Sources */,
+				702E14791EB5BBB3008E660C /* NativeRunner.swift in Sources */,
 				1C0ECB971D8D6C8700C75AB5 /* NativeFeatureParser.swift in Sources */,
 				1C7704931D511569005A6459 /* UITestsWithGherkin.swift in Sources */,
 				1C0ECB911D8D6C8700C75AB5 /* Step.swift in Sources */,
-				1C0ECB8F1D8D6C8700C75AB5 /* ColorLog.swift in Sources */,
 				1C0ECB941D8D6C8700C75AB5 /* XCTestCase+Gherkin.swift in Sources */,
+				702E14781EB5BBB3008E660C /* MatchedStringRepresentable.swift in Sources */,
 				1C0ECB991D8D6C8700C75AB5 /* NativeTestCase.swift in Sources */,
 				1C0ECB8E1D8D6C8700C75AB5 /* ClassHelperMethods.swift in Sources */,
 				1C0ECB9A1D8D6C8700C75AB5 /* ParseState.swift in Sources */,

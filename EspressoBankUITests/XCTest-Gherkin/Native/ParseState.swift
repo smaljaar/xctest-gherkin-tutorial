@@ -13,7 +13,7 @@ private let whitespace = CharacterSet.whitespaces
 class ParseState {
     var description: String?
     var steps: [String]
-    var exampleLines: [ (lineNumber:Int, line:String) ]
+    var exampleLines: [(lineNumber: Int, line: String)]
     var parsingBackground: Bool
 
     convenience init() {
@@ -27,7 +27,7 @@ class ParseState {
         self.parsingBackground = parsingBackground
     }
     
-    fileprivate var examples:[NativeExample] {
+    private var examples:[NativeExample] {
         get {
             if self.exampleLines.count < 2 { return [] }
             
@@ -58,21 +58,23 @@ class ParseState {
     }
     
     func background() -> NativeBackground? {
-        guard parsingBackground, let description = self.description , self.steps.count > 0 else { return nil }
+        guard parsingBackground, let description = self.description, self.steps.count > 0 else { return nil }
         
         return NativeBackground(description, steps: self.steps)
     }
     
-    func scenarios() -> [NativeScenario]? {
-        guard let description = self.description , self.steps.count > 0 else { return nil }
+    func scenarios(at index: Int) -> [NativeScenario]? {
+        guard let description = self.description, self.steps.count > 0 else { return nil }
         
         var scenarios = Array<NativeScenario>()
         
-        // If we have examples then we need to make more than one scenario
-        if self.examples.count > 0 {
+        // If we have no examples then we have one scenario.
+        // Otherwise we need to make more than one scenario.
+        if self.examples.isEmpty {
+            scenarios.append(NativeScenario(description, steps: self.steps, index: index))
+        } else {
             // Replace each matching placeholder in each line with the example data
-            self.examples.forEach { example in
-                
+            for (exampleIndex, example) in self.examples.enumerated() {
                 // This hoop is because the compiler doesn't seem to
                 // recognize map directly on the state.steps object
                 var steps = self.steps
@@ -88,11 +90,8 @@ class ParseState {
                 
                 // The scenario description must be unique
                 let description = "\(description)_line\(example.lineNumber)"
-                scenarios.append(NativeScenario(description, steps: steps))
-                
+                scenarios.append(NativeScenario(description, steps: steps, index: index + exampleIndex))
             }
-        } else {
-            scenarios.append(NativeScenario(description, steps: self.steps))
         }
         
         self.description = nil
