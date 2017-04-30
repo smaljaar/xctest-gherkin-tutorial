@@ -46,21 +46,3 @@ class Steps : StepDefiner {
         }
     }
 }
-
-extension XCTestCase {
-    
-    func waitForElementToAppear(element: XCUIElement, file: String = #file, line: UInt = #line) {
-        let existsPredicate = NSPredicate(format: "exists == true")
-        expectation(for: existsPredicate,
-                    evaluatedWith: element, handler: nil)
-        
-        waitForExpectations(timeout: 2) { (error) -> Void in
-            if (error != nil) {
-                let message = "Failed to find \(element) after 2 seconds."
-                XCTFail(message)
-                
-//                self.recordFailure(withDescription: message, inFile: file, atLine: line, expected: true)
-            }
-        }
-    }
-}
