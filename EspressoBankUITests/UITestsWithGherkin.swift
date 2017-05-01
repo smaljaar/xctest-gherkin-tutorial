@@ -19,7 +19,7 @@ class UITestsWithGherkin: NativeTestCase {
         super.setUp()
         
         continueAfterFailure = false
-        XCUIApplication().launch()
+        
     }
     
 }
