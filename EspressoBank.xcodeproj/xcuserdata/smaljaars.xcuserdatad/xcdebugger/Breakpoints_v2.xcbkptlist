@@ -90,9 +90,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "Steps"
-            landmarkType = "3">
+            endingLineNumber = "54">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -189,38 +187,6 @@
             endingLineNumber = "89"
             landmarkName = "keyboardWillShow(notification:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EspressoBank.SendPaymentViewController.keyboardWillShow (notification : __ObjC.NSNotification) -&gt; ()"
-                  moduleName = "EspressoBank"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/smaljaars/code/EspressoBank/EspressoBank/SendPaymentViewController.swift"
-                  timestampString = "497815100.367799"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EspressoBank.SendPaymentViewController.keyboardWillShow (notification : __ObjC.NSNotification) -&gt; ()"
-                  moduleName = "EspressoBank"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/smaljaars/code/EspressoBank/EspressoBank/SendPaymentViewController.swift"
-                  timestampString = "497815100.368914"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "915">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
