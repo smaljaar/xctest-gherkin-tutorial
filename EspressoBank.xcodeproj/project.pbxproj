@@ -355,7 +355,7 @@
 					};
 					1C77048D1D511569005A6459 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = M6E5M9S9AS;
+						DevelopmentTeam = ZQ6ZH4F869;
 						LastSwiftMigration = 0800;
 						TestTargetID = 1C77046E1D511569005A6459;
 					};
@@ -636,7 +636,7 @@
 		1C77049E1D511569005A6459 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = M6E5M9S9AS;
+				DEVELOPMENT_TEAM = ZQ6ZH4F869;
 				INFOPLIST_FILE = EspressoBankUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Capgemini.EspressoBankUITests;
@@ -649,7 +649,7 @@
 		1C77049F1D511569005A6459 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = M6E5M9S9AS;
+				DEVELOPMENT_TEAM = ZQ6ZH4F869;
 				INFOPLIST_FILE = EspressoBankUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Capgemini.EspressoBankUITests;
