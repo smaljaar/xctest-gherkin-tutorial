@@ -9,7 +9,7 @@
 import Foundation
 import XCTest
 
-let app=XCUIApplication()
+let app = XCUIApplication()
 
 class Steps : StepDefiner {
     
@@ -22,15 +22,13 @@ class Steps : StepDefiner {
             
             app.descendants(matching:.any)["Amount"].tap()
             app.descendants(matching:.any)["Amount"].typeText("13.37\n")
-            
             app.descendants(matching:.any)["Name"].tap()
-            app.descendants(matching:.any)["Name"].typeText("Yougert\n")
-            
-            
-            
+            app.descendants(matching:.any)["Name"].typeText("Yoghurt\n")
             app.descendants(matching:.any)["IBAN"].tap()
-            app.descendants(matching:.any)["IBAN"].typeText("Melk\n")
+            app.descendants(matching:.any)["IBAN"].typeText("NL69INGB0123456789\n")
+            
             app.descendants(matching:.any)["Send Payment"].tap()
+            
             app.descendants(matching:.any)["Confirm Payment"].tap()
         }
         step("I see a transaction") {
