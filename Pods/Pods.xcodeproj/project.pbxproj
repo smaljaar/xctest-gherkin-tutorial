@@ -1,0 +1,783 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25EF121FD3E2C14B6C2C6FF97FAB1479 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA843761103E81F68FFD49D44F4A72F7 /* Step.swift */; };
+		28CFAEA6AD604FADA52D601FA6665F74 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBDD60AB5EC0183A198A13D9A5D7BCE /* XCTest.framework */; };
+		36BF567297E87A1A0A4F0AD557E03D5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D8173434FE00016739EAFDEFEA9313 /* Foundation.framework */; };
+		459FDF4805E629A103C0AD07570E9C6F /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D485E56B4737379F6183D5CB347EF /* Example.swift */; };
+		491A40E133D4CA7456CF665DD21CCE4B /* NativeFeatureParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4180511F998D3596D6AC1448D6FE654 /* NativeFeatureParser.swift */; };
+		493DAB7B534612C2E9911314031E4DB7 /* ClassHelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A71AA030C15DCCB93CDEF5AD7D8A9F8 /* ClassHelperMethods.swift */; };
+		4BA07A79B37DD599418CE578B8BD2ADD /* XCTest-Gherkin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 859EEE534A4F39F268A1988C9A841E84 /* XCTest-Gherkin-dummy.m */; };
+		4E231C3F9D1D768FC654A60B78B8B09D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D8173434FE00016739EAFDEFEA9313 /* Foundation.framework */; };
+		60A254FB19DD9F2F8AC4781AEEE5A0A7 /* StepDefiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E86212928FCC582C3CEF289A42447B3 /* StepDefiner.swift */; };
+		69EE52FFA90DCD5F1B22AA281B013271 /* ParseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6C7AF87E7DD6D942D6099162680463 /* ParseState.swift */; };
+		6F5544D0AF55C366900259F138572E56 /* Pods-EspressoBank-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4AD3CE5E9744EDA262773BBFD51F39B /* Pods-EspressoBank-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76C6A321011EC937CB70729157CCDDBB /* StringGherkinExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394A3ADE164696A1663E6AA1EF100BEB /* StringGherkinExtension.swift */; };
+		90DB2AECEBF7A9D95C6821865E00E9EB /* Pods-EspressoBankUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4133C36B7A202CF8C28216E1DE58C0CF /* Pods-EspressoBankUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9230A2E10E1B41A6CDB4B1128D1925E4 /* XCTestCase+Gherkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15208CB851BCC729E886708D31A38745 /* XCTestCase+Gherkin.swift */; };
+		9293F9D4FDD0B5217ACE4DAFEF0A3FFA /* MatchedStringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3D5EFDC27CC7B02C8B82BD04F15A41 /* MatchedStringRepresentable.swift */; };
+		93D199E1D7C61EDC2621CC617E609791 /* NativeRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41888F7B77C73A1894759217BB3BEAF /* NativeRunner.swift */; };
+		97D03A57DFCE2EB291F6C35633497E81 /* NativeTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0FAAD57512EA9A453C1158A6E40787 /* NativeTestCase.swift */; };
+		BA74087B4CF97F641319F07941B6C384 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D8173434FE00016739EAFDEFEA9313 /* Foundation.framework */; };
+		BCC690E9E4329F806367DAE66772088F /* NativeScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29312C490C1D119E09A76FED77261F57 /* NativeScenario.swift */; };
+		CE723B11A9A76CD058F67DF80F1AAC83 /* XCTest-Gherkin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B82D60B5BB61A37BD7E40898B1D41D1D /* XCTest-Gherkin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEAC1CBCB77DC76828DB8D62A3A8ECF2 /* NativeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FEBAF38B2C724B9821CAD3B5B0A8C /* NativeFeature.swift */; };
+		EEEBE7E2DAE03CA072F965EE1783E4C4 /* NativeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA9E98652A5C36B9CE8A69B37A56003 /* NativeExample.swift */; };
+		F0182DA74579BE3EB7B593356FA0A31D /* Pods-EspressoBankUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B16DD157FB1914D8821F8B186AD457CA /* Pods-EspressoBankUITests-dummy.m */; };
+		F586C986B6DFF48E14910494F6BB17E7 /* Pods-EspressoBank-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB52A122096C91AFB98B397E968CE6BF /* Pods-EspressoBank-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		424B6F5F04CE867C748F74ACF798EFBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 924A76B7E6D9CEC4615672D3534922CC;
+			remoteInfo = "XCTest-Gherkin";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C8FEBAF38B2C724B9821CAD3B5B0A8C /* NativeFeature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NativeFeature.swift; path = Pod/Native/NativeFeature.swift; sourceTree = "<group>"; };
+		0D91FB3F8F5B8298298EE5CFABFD5178 /* Pods-EspressoBankUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EspressoBankUITests.release.xcconfig"; sourceTree = "<group>"; };
+		15208CB851BCC729E886708D31A38745 /* XCTestCase+Gherkin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "XCTestCase+Gherkin.swift"; path = "Pod/Core/XCTestCase+Gherkin.swift"; sourceTree = "<group>"; };
+		18C22A1A93E7E8DB78C255610939AE28 /* Pods-EspressoBankUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EspressoBankUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		198CB1BF2134AF2A56A9D313ED3628A8 /* Pods_EspressoBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EspressoBank.framework; path = "Pods-EspressoBank.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D5FE082CEB93A9E7B2C8E8BB1DF4BE /* Pods-EspressoBank-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EspressoBank-acknowledgements.markdown"; sourceTree = "<group>"; };
+		29312C490C1D119E09A76FED77261F57 /* NativeScenario.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NativeScenario.swift; path = Pod/Native/NativeScenario.swift; sourceTree = "<group>"; };
+		2A71AA030C15DCCB93CDEF5AD7D8A9F8 /* ClassHelperMethods.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClassHelperMethods.swift; path = Pod/Core/ClassHelperMethods.swift; sourceTree = "<group>"; };
+		2BB7372B2EE08238E9B78E126AA9D407 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C0D21D9ED473D71CFB5836FC3DB566A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30454BE03639D47A2BD8FD8A151AEDBB /* XCTest_Gherkin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XCTest_Gherkin.framework; path = "XCTest-Gherkin.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		321DD75367719EEB8D37842843800E39 /* Pods-EspressoBank-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EspressoBank-acknowledgements.plist"; sourceTree = "<group>"; };
+		394A3ADE164696A1663E6AA1EF100BEB /* StringGherkinExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringGherkinExtension.swift; path = Pod/Core/StringGherkinExtension.swift; sourceTree = "<group>"; };
+		3E86212928FCC582C3CEF289A42447B3 /* StepDefiner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StepDefiner.swift; path = Pod/Core/StepDefiner.swift; sourceTree = "<group>"; };
+		3FBDD60AB5EC0183A198A13D9A5D7BCE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4133C36B7A202CF8C28216E1DE58C0CF /* Pods-EspressoBankUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EspressoBankUITests-umbrella.h"; sourceTree = "<group>"; };
+		4CB999BC8EB0EEF37038ADD73E5D0C02 /* Pods_EspressoBankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EspressoBankUITests.framework; path = "Pods-EspressoBankUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E3FA44FA62D21EA98DCD83132CABEF4 /* Pods-EspressoBankUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EspressoBankUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		631F902B50192C3B5AC4FB09A040F68F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A6C7AF87E7DD6D942D6099162680463 /* ParseState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParseState.swift; path = Pod/Native/ParseState.swift; sourceTree = "<group>"; };
+		7ECBAC8C4ABBF98D7938A43D07E9D55B /* Pods-EspressoBankUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EspressoBankUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F917FD2AF84B82E18079D5672FF3117 /* Pods-EspressoBank.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-EspressoBank.modulemap"; sourceTree = "<group>"; };
+		859EEE534A4F39F268A1988C9A841E84 /* XCTest-Gherkin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XCTest-Gherkin-dummy.m"; sourceTree = "<group>"; };
+		8CAB71DCD76C35944AE03CAEE6287CD3 /* XCTest-Gherkin.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "XCTest-Gherkin.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		976DF62BCC379284C5651F8BC5590E50 /* Pods-EspressoBank-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EspressoBank-frameworks.sh"; sourceTree = "<group>"; };
+		A3A5CFE5F46239E82AFD2B9717E33232 /* Pods-EspressoBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EspressoBank.debug.xcconfig"; sourceTree = "<group>"; };
+		A424A2833666EB8EF7A517DED2FA91F3 /* Pods-EspressoBankUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-EspressoBankUITests.modulemap"; sourceTree = "<group>"; };
+		B16DD157FB1914D8821F8B186AD457CA /* Pods-EspressoBankUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EspressoBankUITests-dummy.m"; sourceTree = "<group>"; };
+		B41888F7B77C73A1894759217BB3BEAF /* NativeRunner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NativeRunner.swift; path = Pod/Native/NativeRunner.swift; sourceTree = "<group>"; };
+		B82D60B5BB61A37BD7E40898B1D41D1D /* XCTest-Gherkin-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XCTest-Gherkin-umbrella.h"; sourceTree = "<group>"; };
+		BA843761103E81F68FFD49D44F4A72F7 /* Step.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Step.swift; path = Pod/Core/Step.swift; sourceTree = "<group>"; };
+		BDB406612DEA50B9455232D4846F7557 /* Pods-EspressoBankUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EspressoBankUITests-frameworks.sh"; sourceTree = "<group>"; };
+		C3C58A71DCF9B4DBC0483FB5396F09D3 /* Pods-EspressoBank-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EspressoBank-resources.sh"; sourceTree = "<group>"; };
+		C3E1939E6E0D95DF00B75BB87AE12F5A /* Pods-EspressoBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EspressoBank.release.xcconfig"; sourceTree = "<group>"; };
+		CBA9E98652A5C36B9CE8A69B37A56003 /* NativeExample.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NativeExample.swift; path = Pod/Native/NativeExample.swift; sourceTree = "<group>"; };
+		CD0FAAD57512EA9A453C1158A6E40787 /* NativeTestCase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NativeTestCase.swift; path = Pod/Native/NativeTestCase.swift; sourceTree = "<group>"; };
+		D04D485E56B4737379F6183D5CB347EF /* Example.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Example.swift; path = Pod/Core/Example.swift; sourceTree = "<group>"; };
+		D29CB74902AE5842C2E959B992153669 /* XCTest-Gherkin-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XCTest-Gherkin-prefix.pch"; sourceTree = "<group>"; };
+		D4180511F998D3596D6AC1448D6FE654 /* NativeFeatureParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NativeFeatureParser.swift; path = Pod/Native/NativeFeatureParser.swift; sourceTree = "<group>"; };
+		D4AD3CE5E9744EDA262773BBFD51F39B /* Pods-EspressoBank-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EspressoBank-umbrella.h"; sourceTree = "<group>"; };
+		DB3D5EFDC27CC7B02C8B82BD04F15A41 /* MatchedStringRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchedStringRepresentable.swift; path = Pod/Core/MatchedStringRepresentable.swift; sourceTree = "<group>"; };
+		DB52A122096C91AFB98B397E968CE6BF /* Pods-EspressoBank-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EspressoBank-dummy.m"; sourceTree = "<group>"; };
+		E5D8173434FE00016739EAFDEFEA9313 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EAF62C2E19FB940ECC5CB4E672463210 /* Pods-EspressoBankUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EspressoBankUITests-resources.sh"; sourceTree = "<group>"; };
+		EF1656C4337F2C253AF1D2906D955190 /* XCTest-Gherkin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "XCTest-Gherkin.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		258E60C65AA26D504C02E0E053B45EB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36BF567297E87A1A0A4F0AD557E03D5B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		489CA415A5C9C78D88C156549D4507C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA74087B4CF97F641319F07941B6C384 /* Foundation.framework in Frameworks */,
+				28CFAEA6AD604FADA52D601FA6665F74 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDFA12721EDE8A6608962EAB6CF9AA6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E231C3F9D1D768FC654A60B78B8B09D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BE34EE7067F7CC8A54539A282682749 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56A885ACFF4FA68EC1A4BE994F1D6AAF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D47F0E0BC39D8DE146D8B70A26515C65 /* Pods-EspressoBank */,
+				BFE0F109EF98FED49D867AC6591F3957 /* Pods-EspressoBankUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6EB7FA5625880609D8E316D13E20C1CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				198CB1BF2134AF2A56A9D313ED3628A8 /* Pods_EspressoBank.framework */,
+				4CB999BC8EB0EEF37038ADD73E5D0C02 /* Pods_EspressoBankUITests.framework */,
+				30454BE03639D47A2BD8FD8A151AEDBB /* XCTest_Gherkin.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		748CB0A1639AAF63BE3C569DC452A8A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99ED0C30C330D393BB04ACB34C87D811 /* XCTest-Gherkin */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7BE34EE7067F7CC8A54539A282682749 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E5D8173434FE00016739EAFDEFEA9313 /* Foundation.framework */,
+				3FBDD60AB5EC0183A198A13D9A5D7BCE /* XCTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				748CB0A1639AAF63BE3C569DC452A8A1 /* Pods */,
+				6EB7FA5625880609D8E316D13E20C1CD /* Products */,
+				56A885ACFF4FA68EC1A4BE994F1D6AAF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		99ED0C30C330D393BB04ACB34C87D811 /* XCTest-Gherkin */ = {
+			isa = PBXGroup;
+			children = (
+				FF46606F361D4CC9FBBCA886E8816579 /* Core */,
+				FD87407F18364721603CDDA638D7DB36 /* Native */,
+				F7F765D1553AA37C9A57BFB342FDF874 /* Support Files */,
+			);
+			name = "XCTest-Gherkin";
+			path = "XCTest-Gherkin";
+			sourceTree = "<group>";
+		};
+		BFE0F109EF98FED49D867AC6591F3957 /* Pods-EspressoBankUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2BB7372B2EE08238E9B78E126AA9D407 /* Info.plist */,
+				A424A2833666EB8EF7A517DED2FA91F3 /* Pods-EspressoBankUITests.modulemap */,
+				5E3FA44FA62D21EA98DCD83132CABEF4 /* Pods-EspressoBankUITests-acknowledgements.markdown */,
+				18C22A1A93E7E8DB78C255610939AE28 /* Pods-EspressoBankUITests-acknowledgements.plist */,
+				B16DD157FB1914D8821F8B186AD457CA /* Pods-EspressoBankUITests-dummy.m */,
+				BDB406612DEA50B9455232D4846F7557 /* Pods-EspressoBankUITests-frameworks.sh */,
+				EAF62C2E19FB940ECC5CB4E672463210 /* Pods-EspressoBankUITests-resources.sh */,
+				4133C36B7A202CF8C28216E1DE58C0CF /* Pods-EspressoBankUITests-umbrella.h */,
+				7ECBAC8C4ABBF98D7938A43D07E9D55B /* Pods-EspressoBankUITests.debug.xcconfig */,
+				0D91FB3F8F5B8298298EE5CFABFD5178 /* Pods-EspressoBankUITests.release.xcconfig */,
+			);
+			name = "Pods-EspressoBankUITests";
+			path = "Target Support Files/Pods-EspressoBankUITests";
+			sourceTree = "<group>";
+		};
+		D47F0E0BC39D8DE146D8B70A26515C65 /* Pods-EspressoBank */ = {
+			isa = PBXGroup;
+			children = (
+				2C0D21D9ED473D71CFB5836FC3DB566A /* Info.plist */,
+				7F917FD2AF84B82E18079D5672FF3117 /* Pods-EspressoBank.modulemap */,
+				23D5FE082CEB93A9E7B2C8E8BB1DF4BE /* Pods-EspressoBank-acknowledgements.markdown */,
+				321DD75367719EEB8D37842843800E39 /* Pods-EspressoBank-acknowledgements.plist */,
+				DB52A122096C91AFB98B397E968CE6BF /* Pods-EspressoBank-dummy.m */,
+				976DF62BCC379284C5651F8BC5590E50 /* Pods-EspressoBank-frameworks.sh */,
+				C3C58A71DCF9B4DBC0483FB5396F09D3 /* Pods-EspressoBank-resources.sh */,
+				D4AD3CE5E9744EDA262773BBFD51F39B /* Pods-EspressoBank-umbrella.h */,
+				A3A5CFE5F46239E82AFD2B9717E33232 /* Pods-EspressoBank.debug.xcconfig */,
+				C3E1939E6E0D95DF00B75BB87AE12F5A /* Pods-EspressoBank.release.xcconfig */,
+			);
+			name = "Pods-EspressoBank";
+			path = "Target Support Files/Pods-EspressoBank";
+			sourceTree = "<group>";
+		};
+		F7F765D1553AA37C9A57BFB342FDF874 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				631F902B50192C3B5AC4FB09A040F68F /* Info.plist */,
+				EF1656C4337F2C253AF1D2906D955190 /* XCTest-Gherkin.modulemap */,
+				8CAB71DCD76C35944AE03CAEE6287CD3 /* XCTest-Gherkin.xcconfig */,
+				859EEE534A4F39F268A1988C9A841E84 /* XCTest-Gherkin-dummy.m */,
+				D29CB74902AE5842C2E959B992153669 /* XCTest-Gherkin-prefix.pch */,
+				B82D60B5BB61A37BD7E40898B1D41D1D /* XCTest-Gherkin-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/XCTest-Gherkin";
+			sourceTree = "<group>";
+		};
+		FD87407F18364721603CDDA638D7DB36 /* Native */ = {
+			isa = PBXGroup;
+			children = (
+				CBA9E98652A5C36B9CE8A69B37A56003 /* NativeExample.swift */,
+				0C8FEBAF38B2C724B9821CAD3B5B0A8C /* NativeFeature.swift */,
+				D4180511F998D3596D6AC1448D6FE654 /* NativeFeatureParser.swift */,
+				B41888F7B77C73A1894759217BB3BEAF /* NativeRunner.swift */,
+				29312C490C1D119E09A76FED77261F57 /* NativeScenario.swift */,
+				CD0FAAD57512EA9A453C1158A6E40787 /* NativeTestCase.swift */,
+				7A6C7AF87E7DD6D942D6099162680463 /* ParseState.swift */,
+			);
+			name = Native;
+			sourceTree = "<group>";
+		};
+		FF46606F361D4CC9FBBCA886E8816579 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2A71AA030C15DCCB93CDEF5AD7D8A9F8 /* ClassHelperMethods.swift */,
+				D04D485E56B4737379F6183D5CB347EF /* Example.swift */,
+				DB3D5EFDC27CC7B02C8B82BD04F15A41 /* MatchedStringRepresentable.swift */,
+				BA843761103E81F68FFD49D44F4A72F7 /* Step.swift */,
+				3E86212928FCC582C3CEF289A42447B3 /* StepDefiner.swift */,
+				394A3ADE164696A1663E6AA1EF100BEB /* StringGherkinExtension.swift */,
+				15208CB851BCC729E886708D31A38745 /* XCTestCase+Gherkin.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		47C2675BABB71A48D005F0F86322216E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE723B11A9A76CD058F67DF80F1AAC83 /* XCTest-Gherkin-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AD12067AD2540996DC22A55BCBD2A74 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90DB2AECEBF7A9D95C6821865E00E9EB /* Pods-EspressoBankUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99B46CF514548A0ACDD959018C6EFE16 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F5544D0AF55C366900259F138572E56 /* Pods-EspressoBank-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		06EA6899E75CFC954B07266B5C082310 /* Pods-EspressoBankUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2186E54D47AF6AAB80893F196403930F /* Build configuration list for PBXNativeTarget "Pods-EspressoBankUITests" */;
+			buildPhases = (
+				D48F49B35D52022DB460C269A0A9F2E9 /* Sources */,
+				258E60C65AA26D504C02E0E053B45EB5 /* Frameworks */,
+				4AD12067AD2540996DC22A55BCBD2A74 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C467D7F440A031145EF55D6FAF187E80 /* PBXTargetDependency */,
+			);
+			name = "Pods-EspressoBankUITests";
+			productName = "Pods-EspressoBankUITests";
+			productReference = 4CB999BC8EB0EEF37038ADD73E5D0C02 /* Pods_EspressoBankUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		924A76B7E6D9CEC4615672D3534922CC /* XCTest-Gherkin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEF3D128353A8132F0B35FCA4A5AC71E /* Build configuration list for PBXNativeTarget "XCTest-Gherkin" */;
+			buildPhases = (
+				E3F0C6A6337C14E756E30DBEACD63B1D /* Sources */,
+				489CA415A5C9C78D88C156549D4507C9 /* Frameworks */,
+				47C2675BABB71A48D005F0F86322216E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "XCTest-Gherkin";
+			productName = "XCTest-Gherkin";
+			productReference = 30454BE03639D47A2BD8FD8A151AEDBB /* XCTest_Gherkin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F78564B1604299541321434EF92E1733 /* Pods-EspressoBank */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFE5A7FF2B50497679525B6B7CE00377 /* Build configuration list for PBXNativeTarget "Pods-EspressoBank" */;
+			buildPhases = (
+				7F85D4CD0830327548772A0CA8D03D99 /* Sources */,
+				CDFA12721EDE8A6608962EAB6CF9AA6B /* Frameworks */,
+				99B46CF514548A0ACDD959018C6EFE16 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-EspressoBank";
+			productName = "Pods-EspressoBank";
+			productReference = 198CB1BF2134AF2A56A9D313ED3628A8 /* Pods_EspressoBank.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 6EB7FA5625880609D8E316D13E20C1CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F78564B1604299541321434EF92E1733 /* Pods-EspressoBank */,
+				06EA6899E75CFC954B07266B5C082310 /* Pods-EspressoBankUITests */,
+				924A76B7E6D9CEC4615672D3534922CC /* XCTest-Gherkin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F85D4CD0830327548772A0CA8D03D99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F586C986B6DFF48E14910494F6BB17E7 /* Pods-EspressoBank-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48F49B35D52022DB460C269A0A9F2E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0182DA74579BE3EB7B593356FA0A31D /* Pods-EspressoBankUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3F0C6A6337C14E756E30DBEACD63B1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493DAB7B534612C2E9911314031E4DB7 /* ClassHelperMethods.swift in Sources */,
+				459FDF4805E629A103C0AD07570E9C6F /* Example.swift in Sources */,
+				9293F9D4FDD0B5217ACE4DAFEF0A3FFA /* MatchedStringRepresentable.swift in Sources */,
+				EEEBE7E2DAE03CA072F965EE1783E4C4 /* NativeExample.swift in Sources */,
+				CEAC1CBCB77DC76828DB8D62A3A8ECF2 /* NativeFeature.swift in Sources */,
+				491A40E133D4CA7456CF665DD21CCE4B /* NativeFeatureParser.swift in Sources */,
+				93D199E1D7C61EDC2621CC617E609791 /* NativeRunner.swift in Sources */,
+				BCC690E9E4329F806367DAE66772088F /* NativeScenario.swift in Sources */,
+				97D03A57DFCE2EB291F6C35633497E81 /* NativeTestCase.swift in Sources */,
+				69EE52FFA90DCD5F1B22AA281B013271 /* ParseState.swift in Sources */,
+				25EF121FD3E2C14B6C2C6FF97FAB1479 /* Step.swift in Sources */,
+				60A254FB19DD9F2F8AC4781AEEE5A0A7 /* StepDefiner.swift in Sources */,
+				76C6A321011EC937CB70729157CCDDBB /* StringGherkinExtension.swift in Sources */,
+				4BA07A79B37DD599418CE578B8BD2ADD /* XCTest-Gherkin-dummy.m in Sources */,
+				9230A2E10E1B41A6CDB4B1128D1925E4 /* XCTestCase+Gherkin.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C467D7F440A031145EF55D6FAF187E80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "XCTest-Gherkin";
+			target = 924A76B7E6D9CEC4615672D3534922CC /* XCTest-Gherkin */;
+			targetProxy = 424B6F5F04CE867C748F74ACF798EFBA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		052A5379061C5EE17D8CA6D1BFF846EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D91FB3F8F5B8298298EE5CFABFD5178 /* Pods-EspressoBankUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EspressoBankUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EspressoBankUITests/Pods-EspressoBankUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EspressoBankUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A435462FDF8E171ED894DECC2110FC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3A5CFE5F46239E82AFD2B9717E33232 /* Pods-EspressoBank.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EspressoBank/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EspressoBank/Pods-EspressoBank.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EspressoBank;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5FEC678BD4631CA9F12CDE00475F8FBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CAB71DCD76C35944AE03CAEE6287CD3 /* XCTest-Gherkin.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/XCTest-Gherkin/XCTest-Gherkin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XCTest-Gherkin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XCTest-Gherkin/XCTest-Gherkin.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = XCTest_Gherkin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		88837CDFA13EE8AD8117112F9F4DF077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CAB71DCD76C35944AE03CAEE6287CD3 /* XCTest-Gherkin.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/XCTest-Gherkin/XCTest-Gherkin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XCTest-Gherkin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XCTest-Gherkin/XCTest-Gherkin.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = XCTest_Gherkin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BE1BEB9040FAEA122D8C2811CDC37F84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3E1939E6E0D95DF00B75BB87AE12F5A /* Pods-EspressoBank.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EspressoBank/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EspressoBank/Pods-EspressoBank.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EspressoBank;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EED546DBB23FC32035C9BDC4E22B30BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FE96ECD2622E1B2D8264D553F5BE6DA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ECBAC8C4ABBF98D7938A43D07E9D55B /* Pods-EspressoBankUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EspressoBankUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EspressoBankUITests/Pods-EspressoBankUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EspressoBankUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2186E54D47AF6AAB80893F196403930F /* Build configuration list for PBXNativeTarget "Pods-EspressoBankUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE96ECD2622E1B2D8264D553F5BE6DA0 /* Debug */,
+				052A5379061C5EE17D8CA6D1BFF846EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED546DBB23FC32035C9BDC4E22B30BD /* Debug */,
+				157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFE5A7FF2B50497679525B6B7CE00377 /* Build configuration list for PBXNativeTarget "Pods-EspressoBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A435462FDF8E171ED894DECC2110FC2 /* Debug */,
+				BE1BEB9040FAEA122D8C2811CDC37F84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEF3D128353A8132F0B35FCA4A5AC71E /* Build configuration list for PBXNativeTarget "XCTest-Gherkin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88837CDFA13EE8AD8117112F9F4DF077 /* Debug */,
+				5FEC678BD4631CA9F12CDE00475F8FBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

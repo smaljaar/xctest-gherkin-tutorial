@@ -7,25 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C0ECB8E1D8D6C8700C75AB5 /* ClassHelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB7F1D8D6C8700C75AB5 /* ClassHelperMethods.swift */; };
-		1C0ECB901D8D6C8700C75AB5 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB811D8D6C8700C75AB5 /* Example.swift */; };
-		1C0ECB911D8D6C8700C75AB5 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB821D8D6C8700C75AB5 /* Step.swift */; };
-		1C0ECB921D8D6C8700C75AB5 /* StepDefiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB831D8D6C8700C75AB5 /* StepDefiner.swift */; };
-		1C0ECB931D8D6C8700C75AB5 /* StringGherkinExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB841D8D6C8700C75AB5 /* StringGherkinExtension.swift */; };
-		1C0ECB941D8D6C8700C75AB5 /* XCTestCase+Gherkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB851D8D6C8700C75AB5 /* XCTestCase+Gherkin.swift */; };
-		1C0ECB951D8D6C8700C75AB5 /* NativeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB871D8D6C8700C75AB5 /* NativeExample.swift */; };
-		1C0ECB961D8D6C8700C75AB5 /* NativeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB881D8D6C8700C75AB5 /* NativeFeature.swift */; };
-		1C0ECB971D8D6C8700C75AB5 /* NativeFeatureParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB891D8D6C8700C75AB5 /* NativeFeatureParser.swift */; };
-		1C0ECB981D8D6C8700C75AB5 /* NativeScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB8A1D8D6C8700C75AB5 /* NativeScenario.swift */; };
-		1C0ECB991D8D6C8700C75AB5 /* NativeTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB8B1D8D6C8700C75AB5 /* NativeTestCase.swift */; };
-		1C0ECB9A1D8D6C8700C75AB5 /* ParseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB8C1D8D6C8700C75AB5 /* ParseState.swift */; };
 		1C0ECB9C1D8D6CCB00C75AB5 /* features in Resources */ = {isa = PBXBuildFile; fileRef = 1C0ECB9B1D8D6CCB00C75AB5 /* features */; };
 		1C0ECB9E1D8D6D8E00C75AB5 /* StepsGlueCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0ECB9D1D8D6D8E00C75AB5 /* StepsGlueCode.swift */; };
 		1C3CE3AD1DA58CFA00EF95BA /* UITestsWithoutGherkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3CE3AC1DA58CFA00EF95BA /* UITestsWithoutGherkin.swift */; };
 		1C7704731D511569005A6459 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7704721D511569005A6459 /* AppDelegate.swift */; };
 		1C77047A1D511569005A6459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C7704791D511569005A6459 /* Assets.xcassets */; };
 		1C77047D1D511569005A6459 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C77047B1D511569005A6459 /* LaunchScreen.storyboard */; };
-		1C7704881D511569005A6459 /* EspressoBankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7704871D511569005A6459 /* EspressoBankTests.swift */; };
 		1C7704931D511569005A6459 /* UITestsWithGherkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7704921D511569005A6459 /* UITestsWithGherkin.swift */; };
 		1C7C7D861D69F20C00E1A7E6 /* SendPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C7D851D69F20C00E1A7E6 /* SendPaymentViewController.swift */; };
 		1C7C7D881D69F43900E1A7E6 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C7D871D69F43900E1A7E6 /* ConfirmationViewController.swift */; };
@@ -38,18 +25,11 @@
 		1CEE53701D9EEF10007CCABE /* PaymentFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE536F1D9EEF10007CCABE /* PaymentFlowViewController.swift */; };
 		1CEE53721D9FF18D007CCABE /* PaymentFlowOrchestrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE53711D9FF18D007CCABE /* PaymentFlowOrchestrator.swift */; };
 		1CEE53791DA110C5007CCABE /* PaymentFlowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE53781DA110C5007CCABE /* PaymentFlowButton.swift */; };
-		702E14781EB5BBB3008E660C /* MatchedStringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702E14761EB5BBB3008E660C /* MatchedStringRepresentable.swift */; };
-		702E14791EB5BBB3008E660C /* NativeRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702E14771EB5BBB3008E660C /* NativeRunner.swift */; };
+		4C4DD924E5F2E42F306F5C24 /* Pods_EspressoBankUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEF6277C38828E9C4A03EFA /* Pods_EspressoBankUITests.framework */; };
+		E3613ED6FF2A70ACB1B1E8CD /* Pods_EspressoBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0B06103D4589C15AE8D6C7 /* Pods_EspressoBank.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1C7704841D511569005A6459 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1C7704671D511569005A6459 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1C77046E1D511569005A6459;
-			remoteInfo = EspressoBank;
-		};
 		1C77048F1D511569005A6459 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1C7704671D511569005A6459 /* Project object */;
@@ -60,18 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C0ECB7F1D8D6C8700C75AB5 /* ClassHelperMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassHelperMethods.swift; sourceTree = "<group>"; };
-		1C0ECB811D8D6C8700C75AB5 /* Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
-		1C0ECB821D8D6C8700C75AB5 /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
-		1C0ECB831D8D6C8700C75AB5 /* StepDefiner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepDefiner.swift; sourceTree = "<group>"; };
-		1C0ECB841D8D6C8700C75AB5 /* StringGherkinExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringGherkinExtension.swift; sourceTree = "<group>"; };
-		1C0ECB851D8D6C8700C75AB5 /* XCTestCase+Gherkin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Gherkin.swift"; sourceTree = "<group>"; };
-		1C0ECB871D8D6C8700C75AB5 /* NativeExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeExample.swift; sourceTree = "<group>"; };
-		1C0ECB881D8D6C8700C75AB5 /* NativeFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeFeature.swift; sourceTree = "<group>"; };
-		1C0ECB891D8D6C8700C75AB5 /* NativeFeatureParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeFeatureParser.swift; sourceTree = "<group>"; };
-		1C0ECB8A1D8D6C8700C75AB5 /* NativeScenario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeScenario.swift; sourceTree = "<group>"; };
-		1C0ECB8B1D8D6C8700C75AB5 /* NativeTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeTestCase.swift; sourceTree = "<group>"; };
-		1C0ECB8C1D8D6C8700C75AB5 /* ParseState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseState.swift; sourceTree = "<group>"; };
+		0866A06309B44A476E2ABC8B /* Pods-EspressoBankUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EspressoBankUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EspressoBankUITests/Pods-EspressoBankUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1C0ECB9B1D8D6CCB00C75AB5 /* features */ = {isa = PBXFileReference; lastKnownFileType = folder; path = features; sourceTree = "<group>"; };
 		1C0ECB9D1D8D6D8E00C75AB5 /* StepsGlueCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsGlueCode.swift; sourceTree = "<group>"; };
 		1C13D93C1DAD39FC00EA2945 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -81,9 +50,6 @@
 		1C7704791D511569005A6459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C77047C1D511569005A6459 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C77047E1D511569005A6459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C7704831D511569005A6459 /* EspressoBankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EspressoBankTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C7704871D511569005A6459 /* EspressoBankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspressoBankTests.swift; sourceTree = "<group>"; };
-		1C7704891D511569005A6459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C77048E1D511569005A6459 /* EspressoBankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EspressoBankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C7704921D511569005A6459 /* UITestsWithGherkin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestsWithGherkin.swift; sourceTree = "<group>"; };
 		1C7704941D511569005A6459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,8 +64,11 @@
 		1CEE536F1D9EEF10007CCABE /* PaymentFlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFlowViewController.swift; sourceTree = "<group>"; };
 		1CEE53711D9FF18D007CCABE /* PaymentFlowOrchestrator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFlowOrchestrator.swift; sourceTree = "<group>"; };
 		1CEE53781DA110C5007CCABE /* PaymentFlowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFlowButton.swift; sourceTree = "<group>"; };
-		702E14761EB5BBB3008E660C /* MatchedStringRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchedStringRepresentable.swift; sourceTree = "<group>"; };
-		702E14771EB5BBB3008E660C /* NativeRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeRunner.swift; sourceTree = "<group>"; };
+		5AC8F8E6380BF8BAD0B7751D /* Pods-EspressoBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EspressoBank.release.xcconfig"; path = "Pods/Target Support Files/Pods-EspressoBank/Pods-EspressoBank.release.xcconfig"; sourceTree = "<group>"; };
+		784C8BA9B662A71337CD8703 /* Pods-EspressoBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EspressoBank.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EspressoBank/Pods-EspressoBank.debug.xcconfig"; sourceTree = "<group>"; };
+		ABEF6277C38828E9C4A03EFA /* Pods_EspressoBankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EspressoBankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9E80CCB12CF5901ECB8BAFA /* Pods-EspressoBankUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EspressoBankUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EspressoBankUITests/Pods-EspressoBankUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC0B06103D4589C15AE8D6C7 /* Pods_EspressoBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EspressoBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,13 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1C7704801D511569005A6459 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				E3613ED6FF2A70ACB1B1E8CD /* Pods_EspressoBank.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,57 +84,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4DD924E5F2E42F306F5C24 /* Pods_EspressoBankUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C0ECB7C1D8D6C8700C75AB5 /* XCTest-Gherkin */ = {
-			isa = PBXGroup;
-			children = (
-				1C0ECB7D1D8D6C8700C75AB5 /* Core */,
-				1C0ECB861D8D6C8700C75AB5 /* Native */,
-			);
-			path = "XCTest-Gherkin";
-			sourceTree = "<group>";
-		};
-		1C0ECB7D1D8D6C8700C75AB5 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				702E14761EB5BBB3008E660C /* MatchedStringRepresentable.swift */,
-				1C0ECB7F1D8D6C8700C75AB5 /* ClassHelperMethods.swift */,
-				1C0ECB811D8D6C8700C75AB5 /* Example.swift */,
-				1C0ECB821D8D6C8700C75AB5 /* Step.swift */,
-				1C0ECB831D8D6C8700C75AB5 /* StepDefiner.swift */,
-				1C0ECB841D8D6C8700C75AB5 /* StringGherkinExtension.swift */,
-				1C0ECB851D8D6C8700C75AB5 /* XCTestCase+Gherkin.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		1C0ECB861D8D6C8700C75AB5 /* Native */ = {
-			isa = PBXGroup;
-			children = (
-				702E14771EB5BBB3008E660C /* NativeRunner.swift */,
-				1C0ECB871D8D6C8700C75AB5 /* NativeExample.swift */,
-				1C0ECB881D8D6C8700C75AB5 /* NativeFeature.swift */,
-				1C0ECB891D8D6C8700C75AB5 /* NativeFeatureParser.swift */,
-				1C0ECB8A1D8D6C8700C75AB5 /* NativeScenario.swift */,
-				1C0ECB8B1D8D6C8700C75AB5 /* NativeTestCase.swift */,
-				1C0ECB8C1D8D6C8700C75AB5 /* ParseState.swift */,
-			);
-			path = Native;
-			sourceTree = "<group>";
-		};
 		1C7704661D511569005A6459 = {
 			isa = PBXGroup;
 			children = (
 				1C13D93C1DAD39FC00EA2945 /* README.md */,
 				1C7704711D511569005A6459 /* EspressoBank */,
-				1C7704861D511569005A6459 /* EspressoBankTests */,
 				1C7704911D511569005A6459 /* EspressoBankUITests */,
 				1C7704701D511569005A6459 /* Products */,
+				492F442E65E29B05A2630230 /* Pods */,
+				C72EF197FD4F6B0E58810667 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				1C77046F1D511569005A6459 /* EspressoBank.app */,
-				1C7704831D511569005A6459 /* EspressoBankTests.xctest */,
 				1C77048E1D511569005A6459 /* EspressoBankUITests.xctest */,
 			);
 			name = Products;
@@ -198,22 +125,12 @@
 			path = EspressoBank;
 			sourceTree = "<group>";
 		};
-		1C7704861D511569005A6459 /* EspressoBankTests */ = {
-			isa = PBXGroup;
-			children = (
-				1C7704871D511569005A6459 /* EspressoBankTests.swift */,
-				1C7704891D511569005A6459 /* Info.plist */,
-			);
-			path = EspressoBankTests;
-			sourceTree = "<group>";
-		};
 		1C7704911D511569005A6459 /* EspressoBankUITests */ = {
 			isa = PBXGroup;
 			children = (
 				1C7704921D511569005A6459 /* UITestsWithGherkin.swift */,
 				1C0ECB9D1D8D6D8E00C75AB5 /* StepsGlueCode.swift */,
 				1C0ECB9B1D8D6CCB00C75AB5 /* features */,
-				1C0ECB7C1D8D6C8700C75AB5 /* XCTest-Gherkin */,
 				1C7704941D511569005A6459 /* Info.plist */,
 				1CF3C63A1DA8EF7900EBF213 /* UITestsWithoutGherkin */,
 			);
@@ -277,6 +194,26 @@
 			name = UITestsWithoutGherkin;
 			sourceTree = "<group>";
 		};
+		492F442E65E29B05A2630230 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				784C8BA9B662A71337CD8703 /* Pods-EspressoBank.debug.xcconfig */,
+				5AC8F8E6380BF8BAD0B7751D /* Pods-EspressoBank.release.xcconfig */,
+				B9E80CCB12CF5901ECB8BAFA /* Pods-EspressoBankUITests.debug.xcconfig */,
+				0866A06309B44A476E2ABC8B /* Pods-EspressoBankUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C72EF197FD4F6B0E58810667 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC0B06103D4589C15AE8D6C7 /* Pods_EspressoBank.framework */,
+				ABEF6277C38828E9C4A03EFA /* Pods_EspressoBankUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C7704971D511569005A6459 /* Build configuration list for PBXNativeTarget "EspressoBank" */;
 			buildPhases = (
+				A908B12243FFBB182708D58F /* [CP] Check Pods Manifest.lock */,
 				1C77046B1D511569005A6459 /* Sources */,
 				1C77046C1D511569005A6459 /* Frameworks */,
 				1C77046D1D511569005A6459 /* Resources */,
+				3DF8F13731EC4745C15B6D39 /* [CP] Embed Pods Frameworks */,
+				D95297902D9D1ECA060B548E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -297,31 +237,16 @@
 			productReference = 1C77046F1D511569005A6459 /* EspressoBank.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1C7704821D511569005A6459 /* EspressoBankTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1C77049A1D511569005A6459 /* Build configuration list for PBXNativeTarget "EspressoBankTests" */;
-			buildPhases = (
-				1C77047F1D511569005A6459 /* Sources */,
-				1C7704801D511569005A6459 /* Frameworks */,
-				1C7704811D511569005A6459 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1C7704851D511569005A6459 /* PBXTargetDependency */,
-			);
-			name = EspressoBankTests;
-			productName = EspressoBankTests;
-			productReference = 1C7704831D511569005A6459 /* EspressoBankTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		1C77048D1D511569005A6459 /* EspressoBankUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C77049D1D511569005A6459 /* Build configuration list for PBXNativeTarget "EspressoBankUITests" */;
 			buildPhases = (
+				EDE05F60FBF35F43327B10A2 /* [CP] Check Pods Manifest.lock */,
 				1C77048A1D511569005A6459 /* Sources */,
 				1C77048B1D511569005A6459 /* Frameworks */,
 				1C77048C1D511569005A6459 /* Resources */,
+				725AF5F4CB7ADDBCE15A06CD /* [CP] Embed Pods Frameworks */,
+				1D569A90350C07644C864E9B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -348,11 +273,6 @@
 						DevelopmentTeam = ZQ6ZH4F869;
 						LastSwiftMigration = 0800;
 					};
-					1C7704821D511569005A6459 = {
-						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
-						TestTargetID = 1C77046E1D511569005A6459;
-					};
 					1C77048D1D511569005A6459 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = ZQ6ZH4F869;
@@ -375,7 +295,6 @@
 			projectRoot = "";
 			targets = (
 				1C77046E1D511569005A6459 /* EspressoBank */,
-				1C7704821D511569005A6459 /* EspressoBankTests */,
 				1C77048D1D511569005A6459 /* EspressoBankUITests */,
 			);
 		};
@@ -393,13 +312,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1C7704811D511569005A6459 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1C77048C1D511569005A6459 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,6 +321,108 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D569A90350C07644C864E9B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EspressoBankUITests/Pods-EspressoBankUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DF8F13731EC4745C15B6D39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EspressoBank/Pods-EspressoBank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		725AF5F4CB7ADDBCE15A06CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EspressoBankUITests/Pods-EspressoBankUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/XCTest-Gherkin/XCTest_Gherkin.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCTest_Gherkin.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EspressoBankUITests/Pods-EspressoBankUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A908B12243FFBB182708D58F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EspressoBank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D95297902D9D1ECA060B548E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EspressoBank/Pods-EspressoBank-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDE05F60FBF35F43327B10A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EspressoBankUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1C77046B1D511569005A6459 /* Sources */ = {
@@ -428,46 +442,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1C77047F1D511569005A6459 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1C7704881D511569005A6459 /* EspressoBankTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1C77048A1D511569005A6459 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C0ECB951D8D6C8700C75AB5 /* NativeExample.swift in Sources */,
-				1C0ECB901D8D6C8700C75AB5 /* Example.swift in Sources */,
-				1C0ECB921D8D6C8700C75AB5 /* StepDefiner.swift in Sources */,
 				1C3CE3AD1DA58CFA00EF95BA /* UITestsWithoutGherkin.swift in Sources */,
 				1C0ECB9E1D8D6D8E00C75AB5 /* StepsGlueCode.swift in Sources */,
-				1C0ECB961D8D6C8700C75AB5 /* NativeFeature.swift in Sources */,
-				702E14791EB5BBB3008E660C /* NativeRunner.swift in Sources */,
-				1C0ECB971D8D6C8700C75AB5 /* NativeFeatureParser.swift in Sources */,
 				1C7704931D511569005A6459 /* UITestsWithGherkin.swift in Sources */,
-				1C0ECB911D8D6C8700C75AB5 /* Step.swift in Sources */,
-				1C0ECB941D8D6C8700C75AB5 /* XCTestCase+Gherkin.swift in Sources */,
-				702E14781EB5BBB3008E660C /* MatchedStringRepresentable.swift in Sources */,
-				1C0ECB991D8D6C8700C75AB5 /* NativeTestCase.swift in Sources */,
-				1C0ECB8E1D8D6C8700C75AB5 /* ClassHelperMethods.swift in Sources */,
-				1C0ECB9A1D8D6C8700C75AB5 /* ParseState.swift in Sources */,
-				1C0ECB981D8D6C8700C75AB5 /* NativeScenario.swift in Sources */,
-				1C0ECB931D8D6C8700C75AB5 /* StringGherkinExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1C7704851D511569005A6459 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1C77046E1D511569005A6459 /* EspressoBank */;
-			targetProxy = 1C7704841D511569005A6459 /* PBXContainerItemProxy */;
-		};
 		1C7704901D511569005A6459 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1C77046E1D511569005A6459 /* EspressoBank */;
@@ -579,6 +566,7 @@
 		};
 		1C7704981D511569005A6459 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 784C8BA9B662A71337CD8703 /* Pods-EspressoBank.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -594,6 +582,7 @@
 		};
 		1C7704991D511569005A6459 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AC8F8E6380BF8BAD0B7751D /* Pods-EspressoBank.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -607,34 +596,9 @@
 			};
 			name = Release;
 		};
-		1C77049B1D511569005A6459 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = EspressoBankTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Capgemini.EspressoBankTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EspressoBank.app/EspressoBank";
-			};
-			name = Debug;
-		};
-		1C77049C1D511569005A6459 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = EspressoBankTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Capgemini.EspressoBankTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EspressoBank.app/EspressoBank";
-			};
-			name = Release;
-		};
 		1C77049E1D511569005A6459 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9E80CCB12CF5901ECB8BAFA /* Pods-EspressoBankUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = ZQ6ZH4F869;
 				INFOPLIST_FILE = EspressoBankUITests/Info.plist;
@@ -648,6 +612,7 @@
 		};
 		1C77049F1D511569005A6459 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0866A06309B44A476E2ABC8B /* Pods-EspressoBankUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = ZQ6ZH4F869;
 				INFOPLIST_FILE = EspressoBankUITests/Info.plist;
@@ -676,15 +641,6 @@
 			buildConfigurations = (
 				1C7704981D511569005A6459 /* Debug */,
 				1C7704991D511569005A6459 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1C77049A1D511569005A6459 /* Build configuration list for PBXNativeTarget "EspressoBankTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1C77049B1D511569005A6459 /* Debug */,
-				1C77049C1D511569005A6459 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

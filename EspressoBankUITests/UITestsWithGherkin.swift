@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import XCTest_Gherkin
 
 class UITestsWithGherkin: NativeTestCase {
         

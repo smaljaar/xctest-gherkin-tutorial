@@ -1,0 +1,6 @@
+framework module Pods_EspressoBankUITests {
+  umbrella header "Pods-EspressoBankUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

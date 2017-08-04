@@ -6,8 +6,8 @@
 //  Copyright © 2016 Samuël Maljaars. All rights reserved.
 //
 
-import Foundation
 import XCTest
+import XCTest_Gherkin
 
 let app = XCUIApplication()
 
